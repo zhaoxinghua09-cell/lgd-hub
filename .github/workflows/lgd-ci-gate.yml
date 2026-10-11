@@ -9,6 +9,9 @@ on:
   push:
     branches: ["main", "master"]
 
+permissions:
+  contents: read
+
 jobs:
   lgd-ci-gate:
     name: lgd-ci-gate
@@ -20,7 +23,7 @@ jobs:
         run: |
           echo "lgd-ci-gate: machine-enforced merge gate."
           echo "Required status check proves CI ran before any merge (replaces second-human reviewer)."
-          echo "Org-wide CODEOWNERS/SECURITY.md provided via .github default."
+          echo "User-account repo: no org-level community-health inheritance; SECURITY.md/CODEOWNERS live in-repo."
           exit 0
 
   secret-scan:
