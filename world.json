@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "title": "lgd-world-map",
+  "generated": "2026-10-15",
+  "entry_points": [
+    "any skill",
+    "any repo",
+    "paper/DOI",
+    "badge",
+    "awesome list",
+    "ITU contribution",
+    "ORCID",
+    "Zenodo",
+    "SWH archive"
+  ],
+  "assets": {
+    "theory": [
+      "lgd-theory",
+      "theoriturgy",
+      "uibc-core",
+      "xlgd",
+      "silent-failure-catalog"
+    ],
+    "skills_marketplace": "https://github.com/zhaoxinghua09-cell/lgd-skill-marketplace",
+    "skills": [
+      "skill-skeleton-generator",
+      "prompt-injection-guard",
+      "context-token-budget",
+      "silent-failure-scanner",
+      "badge-studio",
+      "llms-generator",
+      "skill-quality-gate",
+      "skill-registry",
+      "skill-scorecard",
+      "lgd-guardrails"
+    ],
+    "list": "https://github.com/zhaoxinghua09-cell/awesome-trusted-agents",
+    "scoring": "https://github.com/zhaoxinghua09-cell/skill-scorecard",
+    "identity": {
+      "orcid": "0009-0001-0512-1237",
+      "zenodo_doi": "10.5281/zenodo.23385209",
+      "swh": "https://archive.softwareheritage.org/browse/origin/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Flgd-hub",
+      "itu_fg_tida": "https://github.com/FG-TIDA"
+    }
+  },
+  "ai_channels": [
+    "llms.txt",
+    "AGENTS.md",
+    "CITATION.cff",
+    "codemeta.json",
+    ".well-known/agents.txt"
+  ]
+}
