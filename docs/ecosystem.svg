@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="460" viewBox="0 0 800 460" font-family="Segoe UI,Arial,sans-serif">
+<rect width="800" height="460" fill="#f8fafc"/>
+<text x="400" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#0f172a">LGD Ecosystem — enter from ANY point</text>
+<text x="400" y="50" text-anchor="middle" font-size="12" fill="#64748b">任何一个接触点都可进入整个世界 · 每个节点双向互链</text>
+<line x1="400" y1="120" x2="170" y2="120" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="400" y1="120" x2="630" y2="120" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="400" y1="120" x2="400" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="400" y1="120" x2="170" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="400" y1="120" x2="630" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="400" y1="120" x2="400" y2="360" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="400" y1="120" x2="170" y2="360" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="400" y1="120" x2="630" y2="360" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="170" y1="120" x2="400" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="630" y1="120" x2="400" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="170" y1="240" x2="400" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="630" y1="240" x2="400" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="400" y1="360" x2="400" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="170" y1="360" x2="400" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="630" y1="360" x2="400" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="315.0" y="98.0" width="170" height="44" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="400" y="116" text-anchor="middle" font-size="12" font-weight="600" fill="#2563eb">lgd-hub</text>
+<text x="400" y="132" text-anchor="middle" font-size="9.5" fill="#64748b">WORLD MAP</text>
+<rect x="95.0" y="101.0" width="150" height="38" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<text x="170" y="117" text-anchor="middle" font-size="12" font-weight="600" fill="#0d9488">Theory 18 repos</text>
+<rect x="555.0" y="101.0" width="150" height="38" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+<text x="630" y="117" text-anchor="middle" font-size="12" font-weight="600" fill="#16a34a">Skill Marketplace</text>
+<text x="630" y="132" text-anchor="middle" font-size="9.5" fill="#64748b">10 skills</text>
+<rect x="325.0" y="221.0" width="150" height="38" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="400" y="237" text-anchor="middle" font-size="12" font-weight="600" fill="#7c3aed">awesome-trusted-agents</text>
+<text x="400" y="252" text-anchor="middle" font-size="9.5" fill="#64748b">44 entries</text>
+<rect x="95.0" y="221.0" width="150" height="38" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="170" y="237" text-anchor="middle" font-size="12" font-weight="600" fill="#2563eb">skill-scorecard</text>
+<text x="170" y="252" text-anchor="middle" font-size="9.5" fill="#64748b">four-angle</text>
+<rect x="555.0" y="221.0" width="150" height="38" rx="10" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+<text x="630" y="237" text-anchor="middle" font-size="12" font-weight="600" fill="#0d9488">Papers / DOI / Zenodo</text>
+<rect x="325.0" y="341.0" width="150" height="38" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+<text x="400" y="357" text-anchor="middle" font-size="12" font-weight="600" fill="#f59e0b">Badges / LGD VERIFIED</text>
+<rect x="95.0" y="341.0" width="150" height="38" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+<text x="170" y="357" text-anchor="middle" font-size="12" font-weight="600" fill="#7c3aed">ORCID · ITU FG-TIDA · SWH</text>
+<rect x="555.0" y="341.0" width="150" height="38" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+<text x="630" y="357" text-anchor="middle" font-size="12" font-weight="600" fill="#16a34a">MCP / Agents protocols</text>
+</svg>
