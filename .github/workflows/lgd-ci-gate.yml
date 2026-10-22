@@ -24,7 +24,7 @@ jobs:
       contents: read
     steps:
       # 需要 checkout 才能读到 tools/ 下的门禁脚本；pinned 到 commit SHA。
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
 
       - name: repo-gate (structure, can fail)
         run: python3 tools/repo_gate_check.py check --root .
