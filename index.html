@@ -4,13 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>凡自治之物 · LGD 三律理论门户</title>
-<meta name="description" content="LGD 全程治理论（有籍·有证·有门禁）——把 AI 治理的标准定义权做成可引用、可装、可验证的闭环。理论、技能、产品、服务一站式入口。">
+<meta name="description" content="LGD 全程治理论（有籍·有证·有门禁）——一套可引用、可安装、可独立验证的 AI 治理纪律。理论、技能、产品与服务入口；全部主张附可自查的证据链。">
 <meta property="og:title" content="凡自治之物 · LGD 三律理论门户">
-<meta property="og:description" content="有籍·有证·有门禁 —— 81 个零依赖 AI 治理技能，一行命令安装。">
+<meta property="og:description" content="有籍·有证·有门禁 —— 81 个精选零依赖 AI 治理技能（全库 109），代码 MIT，一行命令安装。">
 <meta property="og:image" content="https://zhaoxinghua09-cell.github.io/lgd-hub/og-card.png">
 <meta property="og:url" content="https://zhaoxinghua09-cell.github.io/lgd-hub/">
 <meta name="twitter:card" content="summary_large_image">
-<!-- 替换为真实 URL：所有 data-url 占位在部署前由 Steven 确认 -->
+<!-- 无 data-url 占位：本页外链已在 2026-10-22 逐条实测。GitHub 类全部 200；DOI / Zenodo 类在本机经代理不可达,
+     改用 DataCite 登记元数据与 doi.org 直连 302 侧证（DOI 已注册才会 302）。
+     具体条数会随页面改动变化，故此处不写死数字——要数就现数，不要引这个注释。 -->
 <style>
   :root{
     --navy:#0B1F3A; --teal:#14B8A6; --teal-d:#0E8C7E;
@@ -63,7 +65,17 @@
   footer{padding:40px 0;color:var(--muted);font-size:13px;text-align:center}
   footer .links{margin-top:10px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
   footer .links a{color:var(--teal-d);font-weight:700}
-  @media(max-width:860px){.steps,.grid,.two{grid-template-columns:1fr}.hero h1{font-size:30px}}
+  /* VERIFY */
+  .verify{padding:52px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .verify .lead{font-size:14.5px;color:var(--muted);max-width:780px;margin-bottom:26px}
+  .vf{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .vf .card .k{font-size:11px;font-weight:800;color:var(--teal-d);letter-spacing:1px;text-transform:uppercase}
+  .vf .card .cmd{display:block;margin-top:10px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;color:#334155;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:7px 9px;overflow-x:auto;white-space:nowrap}
+  .btn-disabled{background:#e3e8f0;color:#8494a9;cursor:not-allowed}
+  /* 页脚身份 */
+  footer .idline{line-height:1.95;margin-top:6px}
+  footer .idline .k{color:#8494a9}
+  @media(max-width:860px){.steps,.grid,.two,.vf{grid-template-columns:1fr}.hero h1{font-size:30px}}
 </style>
 </head>
 <body>
@@ -72,30 +84,31 @@
   <div class="wrap">
     <span class="tag">LGD · 全程治理论</span>
     <h1>凡自治之物<br><span class="em">有籍 · 有证 · 有门禁</span></h1>
-    <p>我们占住的不是"想法"，是<strong>标准定义权</strong>——把 AI 治理的评判权做成可引用、可装、可验证的闭环。理论、技能、产品、服务，一站直达。</p>
+    <p>我们主张的不是“专利”，而是<strong>可复核的纪律</strong>——把 AI 治理的判断做成可引用、可安装、可独立验证的闭环。不要求你相信，只提供你能自己跑一遍的证据。</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="#theory">了解理论 →</a>
       <a class="btn btn-ghost" href="#skills">装 LGD 技能</a>
+      <a class="btn btn-ghost" href="#verify">自己验一遍 →</a>
     </div>
   </div>
 </header>
 
-<!-- 引流漏斗：四步 -->
+<!-- 四步入口 -->
 <section class="funnel" id="funnel">
   <div class="wrap">
-    <div class="sec-title">统一入口 · 引流闭环</div>
-    <div class="sec-h">从"看见"到"用上"，四步不走丢</div>
+    <div class="sec-title">统一入口</div>
+    <div class="sec-h">从“读到”到“验过”，四步不走丢</div>
     <div class="steps">
       <div class="step">
         <div class="n">01 了解理论</div>
         <h3>读旗舰论文</h3>
-        <p>《全程治理论 LGD v1.1.0》9 域体系，附 Zenodo 概念 DOI 优先权证据。</p>
-        <a href="https://zenodo.org/record/22456647" target="_blank" rel="noopener">Zenodo DOI →</a>
+        <p>《全程治理论 LGD v1.7.0》12 个域码体系，附 Zenodo 版本 DOI 与 Software Heritage 归档（SWHID 可定址）。</p>
+        <a href="https://doi.org/10.5281/zenodo.22456647" target="_blank" rel="noopener">Zenodo DOI →</a>
       </div>
       <div class="step">
         <div class="n">02 装技能</div>
         <h3>LGD 原生技能</h3>
-        <p>81 个零依赖技能全家族（治理 40 · 工程 16 · 安全合规 10 · 效率 15），SkillPie 一键装，GitHub 开源。</p>
+        <p>精选 81 个零依赖技能（全库 109），代码 MIT、理论文本保留所有权利。<br><span style="font-size:12.5px;color:#93a2b8">装法二选一：① 直接克隆全库 <code>git clone https://github.com/zhaoxinghua09-cell/agent-skills</code>；② SkillPie 应用市场搜 “LGD”（上架状态以市场实时结果为准）。</span></p>
         <a href="https://github.com/zhaoxinghua09-cell/agent-skills" target="_blank" rel="noopener">GitHub 仓库 →</a>
       </div>
       <div class="step">
@@ -107,8 +120,64 @@
       <div class="step">
         <div class="n">04 找服务</div>
         <h3>企业 AI 治理接单</h3>
-        <p>合规咨询 / 注册路径 / 年度顾问，半价引流中，表单直达。</p>
+        <p>医疗器械法规方向：合规咨询 / 注册路径 / 年度顾问，按项目评估报价。</p>
         <a href="#service">提交需求 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 自己验：把“可自证”的东西摆上货架（新增，2026-10-22） -->
+<section class="verify" id="verify">
+  <div class="wrap">
+    <div class="sec-title">自己验 · Verify it yourself</div>
+    <div class="sec-h">不要求你相信，只提供你能跑一遍的东西</div>
+    <p class="lead">下面每一条都能在几分钟内独立复核：把仓拉下来跑测试、查归档快照（SWHID 可定址）、读逐仓许可。
+      凡我们自己说不清或还没做到的，不写在这里。</p>
+    <div class="vf">
+      <div class="card">
+        <div class="k">可执行 · Apache-2.0</div>
+        <h3>uibc-core 参考实现</h3>
+        <p>151 项测试（约 17 秒）、7 个压力场景（约 35 秒）、70 项规范一致性对拍 0 分歧——零依赖。数字锚定在 <code>uibc-core@73f31cc</code>、Python 3.13.14 实测；同 commit 的 CI 亦为绿。</p>
+        <span class="cmd">python -m unittest discover -s tests</span>
+        <a href="https://github.com/zhaoxinghua09-cell/uibc-core" target="_blank" rel="noopener">拉下来自己跑 ↗</a><br>
+        <a href="https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/39159391899" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px">看那次 CI 运行 ↗</a>
+      </div>
+      <div class="card">
+        <div class="k">可读 · 全文公开</div>
+        <h3>lgd-theory 理论总仓</h3>
+        <p>三律定义、12 个域码、13 篇域论文全文。已上 Zenodo 概念 DOI 与 Software Heritage 存档。</p>
+        <a href="https://github.com/zhaoxinghua09-cell/lgd-theory" target="_blank" rel="noopener">读全文 ↗</a>
+      </div>
+      <div class="card">
+        <div class="k">可查 · 14 个命名模式</div>
+        <h3>silent-failure-catalog</h3>
+        <p>SF-001 至 SF-014 共 14 个静默失效模式，每个附最小复现与检测判据。</p>
+        <a href="https://github.com/zhaoxinghua09-cell/silent-failure-catalog" target="_blank" rel="noopener">看目录 ↗</a>
+      </div>
+      <div class="card">
+        <div class="k">可验 · 归档快照</div>
+        <h3>Software Heritage</h3>
+        <p>已由 Software Heritage 归档，快照可由 SWHID 定址：<code>swh:1:snp:3b18d3eb…</code>（lgd-theory）· <code>swh:1:snp:c3fb183c…</code>（lgd-hub），均 visit 1 / status full / 2026-10-15。按 SWHID 规范，origin 可能变更或消失，<strong>取回仍依赖 SWH 服务可用</strong>——这是存档证据，不是可用性承诺。</p>
+        <a href="https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Flgd-theory%2F"
+           target="_blank" rel="noopener">查 lgd-theory 存档 ↗</a><br>
+        <a href="https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Fuibc-core%2F"
+           target="_blank" rel="noopener" style="display:inline-block;margin-top:8px">查 uibc-core 存档 ↗</a>
+      </div>
+      <div class="card">
+        <div class="k">可验 · 透明日志</div>
+        <h3>Sigstore Rekor</h3>
+        <p>公共透明日志里存在一条 <code>hashedrekord</code> 条目：logIndex <code>2883389783</code> · logID <code>c0d23d6a…</code>（64 位十六进制，= 日志公钥 DER 的 SHA-256，可自行复算）· treeID <code>1193050959916656506</code>（/api/v1/log 返回的 treeID，已双向复算）· integratedTime 2026-09-18（UTC 2026-09-18T05:50:12Z），带 inclusion proof。它能证明「某个私钥签过这个 sha256，且签名已进日志未被篡改」；<strong>不能</strong>证明签名者是谁（条目内无身份绑定），也<strong>不能</strong>证明摘要属于哪个文件或版本。</p><p style="font-size:12.5px;color:#93a2b8">另需说明：本仓生态的自动构建存证管线（SLSA provenance）在 2026-10-18 起是失败的（缺 <code>attestations: write</code> 权限），修复已备未合。所以这条日志是历史手工条目，不是一条正常工作的管线产出。</p>
+        <a href="https://search.sigstore.dev/?logIndex=2883389783" target="_blank" rel="noopener">查 logIndex 2883389783 ↗</a>
+      </div>
+      <div class="card">
+        <div class="k">可读 · 逐仓不同</div>
+        <h3>许可与贡献</h3>
+        <p>本生态是<strong>分层许可</strong>：部分仓 Apache-2.0 / MIT，理论文本保留所有权利。逐仓以 LICENSE 为准。</p>
+        <a href="https://github.com/zhaoxinghua09-cell/LGD" target="_blank" rel="noopener">贡献入口（Apache-2.0）↗</a><br>
+        <a href="https://github.com/zhaoxinghua09-cell/lgd-hub/blob/main/LICENSE"
+           target="_blank" rel="noopener" style="display:inline-block;margin-top:8px">本站许可声明 ↗</a>
       </div>
     </div>
   </div>
@@ -118,25 +187,26 @@
 <section class="matrix" id="theory">
   <div class="wrap">
     <div class="sec-title">理论资产</div>
-    <div class="sec-h">标准定义权，先占先引用</div>
+    <div class="sec-h">理论资产，可逐条复核</div>
     <div class="grid">
       <div class="card">
         <span class="badge">旗舰</span>
-        <h3>LGD v1.1.0 理论</h3>
-        <p>有籍·有证·有门禁 三律定义 + 9 域（FIN/LAW/GOV/CRYPT/AUT/DAT/UAS/ROB/MED）本域化 rubric。</p>
-        <a href="https://zenodo.org/record/22456647" target="_blank" rel="noopener">读论文 ↗</a>
+        <h3>LGD v1.7.0 理论</h3>
+        <p>有籍·有证·有门禁 三律定义 + 12 个域码的本域化论文（FIN/LAW/GOV/CRYPT/AUT/DAT/UAS/ROB/IND/BIO/EDU/MED）。</p>
+        <a href="https://doi.org/10.5281/zenodo.23446125" target="_blank" rel="noopener">读 v1.7.0（版本 DOI）↗</a><br>
+        <a href="https://doi.org/10.5281/zenodo.22456647" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-size:12.5px">概念 DOI（覆盖全部版本）↗</a>
       </div>
       <div class="card">
         <span class="badge">闭环</span>
         <h3>护照→证据链→门禁→徽章</h3>
-        <p>市场无竞品的自治闭环：身份有籍、论断有证、变更有门禁、归属有徽章。</p>
-        <a href="#product">看闭环 ↗</a>
+        <p>四件套闭环：身份有籍、论断有证、变更有门禁、归属有徽章。其中三项（证据链、门禁、徽章）当前可独立复算；<strong>身份护照那一项仍在内测、尚未开放</strong>，不参与「已可复算」计数。</p>
+        <a href="#verify">看可验的三项 ↗</a>
       </div>
       <div class="card">
-        <span class="badge">占位</span>
-        <h3>跨域标准定义权</h3>
-        <p>金融/法律/政务/隐私计算 已立站位件；别人可抄功能，抄不走本域翻译与评判权。</p>
-        <a href="#skills">看跨域技能 ↗</a>
+        <span class="badge">跨域</span>
+        <h3>跨域论文</h3>
+        <p>金融 / 法律 / 政务 / 隐私计算四域已有本域化论文；公开可读，欢迎指出错误。</p>
+        <a href="https://github.com/zhaoxinghua09-cell/lgd-theory/tree/main/docs" target="_blank" rel="noopener">看跨域论文（lgd-theory/docs）↗</a>
       </div>
     </div>
   </div>
@@ -145,8 +215,8 @@
 <!-- 技能矩阵 -->
 <section class="matrix" id="skills">
   <div class="wrap">
-    <div class="sec-title">旗舰矩阵 · 9 个 LGD 原生技能</div>
-    <div class="sec-h">三律全映射，跨域已首占</div>
+    <div class="sec-title">旗舰 9 个</div>
+    <div class="sec-h">三律全映射，逐项可核</div>
     <div class="grid">
       <div class="card"><span class="badge">A1</span><h3>lgd-three-laws-auditor</h3><p>三律总纲自检器，rubric 自评 + 门禁判定。</p><a href="https://github.com/zhaoxinghua09-cell/agent-skills/tree/main/skills/lgd-three-laws-auditor" target="_blank" rel="noopener">GitHub ↗</a></div>
       <div class="card"><span class="badge">A2</span><h3>lgd-certify</h3><p>三律闭环 CLI：init/register/evidence/gate。</p><a href="https://github.com/zhaoxinghua09-cell/agent-skills/tree/main/skills/lgd-certify" target="_blank" rel="noopener">GitHub ↗</a></div>
@@ -158,15 +228,15 @@
       <div class="card"><span class="badge">C3</span><h3>lgd-gov-guard</h3><p>政务 AI 治理守门（TH-GOV-001）。</p><a href="https://github.com/zhaoxinghua09-cell/agent-skills/tree/main/skills/lgd-gov-guard" target="_blank" rel="noopener">GitHub ↗</a></div>
       <div class="card"><span class="badge">C4</span><h3>lgd-crypto-guard</h3><p>隐私计算守门（TH-CRYPT-001）。</p><a href="https://github.com/zhaoxinghua09-cell/agent-skills/tree/main/skills/lgd-crypto-guard" target="_blank" rel="noopener">GitHub ↗</a></div>
     </div>
-    <p style="margin-top:18px;font-size:13.5px;color:var(--muted)">SkillPie 应用市场搜索 "LGD" 或 "凡自治之物" 一键安装 · 全家族 81 个 · 分类：AI 治理 / 效率工具</p>
+    <p style="margin-top:18px;font-size:13.5px;color:var(--muted)">SkillPie 应用市场可搜 "LGD" 或 "凡自治之物"（上架与安装状态以市场实时结果为准）· 精选 81 个（全库 109）· 分类：AI 治理 / 效率工具</p>
   </div>
 </section>
 
 <!-- 技能矩阵 · 全家族（81） -->
 <section class="matrix" id="skills-more">
   <div class="wrap">
-    <div class="sec-title">技能矩阵 · 全家族 81 个零依赖技能</div>
-    <div class="sec-h">LGD 原生 39 + 效率工具 10 + 工程与工作台 32 · 全部 GitHub 开源 · SkillPie 一键装</div>
+    <div class="sec-title">技能矩阵 · 精选 81 个零依赖技能（全库 109）</div>
+    <div class="sec-h">精选 81 = 旗舰 9 + 本页 72（治理 31 · 工程 16 · 安全合规 10 · 效率 15）｜全库 109 · 代码 MIT、理论文本保留所有权利 · SkillPie 可搜（上架状态以市场为准）</div>
     <div style="margin:26px 0 12px;font-size:17px;font-weight:700;color:var(--teal)">AI 治理矩阵 · 31</div>
     <div class="grid">
       <div class="card"><span class="badge">G1</span><h3>a3-law-operational</h3><p>A³ 法则操作化</p><a href="https://github.com/zhaoxinghua09-cell/agent-skills/tree/main/skills/a3-law-operational" target="_blank" rel="noopener">GitHub ↗</a></div>
@@ -260,15 +330,15 @@
     <div class="sec-title" style="color:var(--teal)">产品层 · 活广告</div>
     <div class="sec-h">理论不是论文，是跑得起来的东西</div>
     <div class="two">
-      <div class="panel" id="service">
-        <h3>记忆护照小程序</h3>
-        <p>UBIC-Mem × LGD 落地：给每一台 AI 发一张"户口本"，身份/创造者/治理归属/档案全程留痕。微信大赛参赛作品，AppID 审批中。</p>
-        <a class="btn btn-primary" href="#" data-url="memory-passport">体验版即将上线 →</a>
-      </div>
       <div class="panel">
+        <h3>记忆护照小程序</h3>
+        <p>UBIC-Mem × LGD 落地：给每一台 AI 发一张"户口本"，身份/创造者/治理归属/档案全程留痕。已报名微信大赛，AppID 仍在审批中（截至 2026-10-22）。</p>
+        <span class="btn btn-primary btn-disabled" aria-disabled="true">内测中，暂未开放</span>
+      </div>
+      <div class="panel" id="service">
         <h3>企业 AI 治理接单</h3>
-        <p>合规咨询 / 注册路径速查 / 标准咨询包 / 年度顾问。<strong style="color:var(--teal)">现半价引流</strong>（市场参考量级 ×0.5，不构成要约）。表单直达，24h 内回执。</p>
-        <a class="btn btn-primary" href="../企业接单体系/inquiry_form.html">提交需求 →</a>
+        <p>医疗器械法规方向的合规咨询 / 注册路径速查 / 标准咨询包 / 年度顾问。按项目评估报价，不构成要约，不承诺固定响应时限。</p><p style="font-size:12.5px;color:#93a2b8;margin-top:-6px">提交入口为公开 issue，请勿写入敏感信息；回执中会给出私密渠道。</p>
+        <a class="btn btn-primary" href="https://github.com/zhaoxinghua09-cell/lgd-hub/issues/new?template=content-issue.md" target="_blank" rel="noopener">提交需求 →</a>
       </div>
     </div>
   </div>
@@ -276,12 +346,26 @@
 
 <footer>
   <div class="wrap">
-    <div>© MedXpert × SynomosAI · 凡自治之物 LGD 全程治理论 · 内部可部署资产</div>
+    <div class="idline">
+      <div><b>© 2026 赵兴华 / Xinghua Zhao</b> · 独立研究者 · ORCID 0009-0001-0512-1237</div>
+      <div><span class="k">理论线</span> SynomosAI Governance Line —— <em>未注册实体、未注册商标，仅作来源标识</em></div>
+      <div><span class="k">产业参考</span> MedXpert —— 仅指作者在<em>医疗器械法规</em>领域的执业背景，不构成本站任何内容的背书</div>
+    </div>
     <div class="links">
-      <a href="https://zenodo.org/record/22456647" target="_blank" rel="noopener">Zenodo DOI</a>
+      <a href="https://doi.org/10.5281/zenodo.22456647" target="_blank" rel="noopener">Zenodo DOI</a>
       <a href="https://github.com/zhaoxinghua09-cell/agent-skills" target="_blank" rel="noopener">GitHub</a>
       <a href="#funnel">统一入口</a>
-      <a href="../企业接单体系/inquiry_form.html">企业接单</a>
+      <a href="https://github.com/zhaoxinghua09-cell/LGD" target="_blank" rel="noopener">参与贡献</a>
+    </div>
+    <div class="links" style="margin-top:10px;font-size:12.5px">
+      <a href="https://github.com/zhaoxinghua09-cell/lgd-hub/blob/main/README.md#联系--contact" target="_blank" rel="noopener">联系 / Contact</a>
+    </div>
+    <div class="links" style="margin-top:8px;font-size:12.5px">
+      <span style="color:#8494a9">机器可读入口</span>
+      <a href="world.json">world.json</a>
+      <a href="llms.txt">llms.txt</a>
+      <a href="AGENTS.md">AGENTS.md</a>
+      <a href="agents.txt">agents.txt</a>
     </div>
   </div>
 </footer>

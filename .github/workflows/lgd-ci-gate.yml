@@ -1,7 +1,11 @@
-# L0 · lgd-ci-gate —— 机器强制合并门禁（solo-mode A³ 第二审稿人）
+# L0 · lgd-ci-gate —— 合并门禁（solo-mode）
 # 阻塞式 required status check：任何 PR 合并前，本工作流必须跑出绿勾。
-# 设计：trivial-pass 不自杀锁；security-scan 为非阻塞告警（不阻合并）。
-# 零外部 action 依赖：不引用 actions/checkout，兼容组织级 "selected actions + SHA pinning" 策略。
+#
+# 2026-10-22 修（红队 S2 打穿）：此前这一步只有 3 个 echo + exit 0，
+# 等于「一个永远绿的必需门禁」——正是 tools/repo_gate_check.py docstring 里
+# 批评的那种东西（a required status check that cannot fail proves nothing）。
+# 现改为真跑两道本仓门禁：结构门 repo_gate_check + 数字/货不对板门 counts_drift_check。
+# 二者都是零依赖 stdlib 脚本，任一非零退出即判红，从而真正能阻合并。
 name: lgd-ci-gate
 on:
   pull_request:
@@ -19,12 +23,17 @@ jobs:
     permissions:
       contents: read
     steps:
-      - name: Merge gate (machine-enforced, single-account solo-mode A³)
-        run: |
-          echo "lgd-ci-gate: machine-enforced merge gate."
-          echo "Required status check proves CI ran before any merge (replaces second-human reviewer)."
-          echo "User-account repo: no org-level community-health inheritance; SECURITY.md/CODEOWNERS live in-repo."
-          exit 0
+      # 需要 checkout 才能读到 tools/ 下的门禁脚本；pinned 到 commit SHA。
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: repo-gate (structure, can fail)
+        run: python3 tools/repo_gate_check.py check --root .
+
+      - name: counts-drift (numbers + phantom artifacts + licences, can fail)
+        run: python3 tools/counts_drift_check.py
+
+      - name: Prove both gates can fail (negative control)
+        run: python3 tools/repo_gate_check.py selftest
 
   secret-scan:
     name: secret-scan (non-blocking)
