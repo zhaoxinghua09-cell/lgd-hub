@@ -64,7 +64,7 @@
 
 我们不只在自己说「可自检」，还把**别人审我们**的记录摆在仓里：
 
-- [AUDITS/](AUDITS/)：2026-10-22 外部第三方审计的**逐字原文**、结构化整理版，以及八条必须改的逐条处置对照。
+- [AUDITS/](https://github.com/zhaoxinghua09-cell/lgd-hub/tree/main/AUDITS)：2026-10-22 外部第三方审计的**逐字原文**（[.extracted.txt](https://github.com/zhaoxinghua09-cell/lgd-hub/blob/main/AUDITS/2026-10-22-external-audit.extracted.txt)）、结构化整理版，以及八条必须改的逐条处置对照。
 - 该次审计结论为「改完再说」，同时确认计数、归档、签名日志、许可表、测试数字**无一造假**；八条已全部处置。
 
 ## 联系 / Contact
