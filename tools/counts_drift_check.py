@@ -206,6 +206,31 @@ def check_claims(doc):
             s = ln.strip()
             if re.fullmatch(r"\\[1-9]", s) or re.search(r'<span class="cmd">\s*\\[1-9]\s*</span>', ln):
                 fails.append((f"{name}:{i}", f"出现回代残留「{s[:40]}」——替换模板未展开"))
+            # 形态三：XML/SVG 文本节点，如 <text>\1</text>（2026-10-23 复核 R2）
+            if re.search(r">\s*\\[1-9]\s*<", ln):
+                fails.append((f"{name}:{i}", f"SVG/XML 文本节点是回代残留「{s[:40]}」"))
+
+    # 形态四：JSON 字符串值本身就是回代残留（2026-10-23 复核 R1）
+    # 只加扫描面不加形态等于没修：world.json 里的自然形态是 "cmd": "\\1"，
+    # 既不是整行、也没有 cmd 样式包着，旧断言全部放行。
+    for jf in ("world.json", "codemeta.json", "package.json"):
+        jp = ROOT / jf
+        if not jp.exists():
+            continue
+        try:
+            jdata = json.loads(jp.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        stack2 = [(jf, jdata)]
+        while stack2:
+            jpath, node = stack2.pop()
+            if isinstance(node, str):
+                if re.fullmatch(r"\\[1-9]", node.strip()):
+                    fails.append((jpath, f"JSON 字符串值就是回代残留「{node.strip()}」"))
+            elif isinstance(node, dict):
+                stack2.extend((f"{jpath}.{k}", v) for k, v in node.items())
+            elif isinstance(node, list):
+                stack2.extend((f"{jpath}[{i2}]", v) for i2, v in enumerate(node))
 
     by_repo = doc.get("license", {}).get("by_repo", {})
     for r in LICENSE_TABLE_EXPECTED:
@@ -297,6 +322,18 @@ NEGATIVE_MUTANTS = [
      r"解压到 C:\Users\1\lgd-hub 即可" + "\n\n## 联系 / Contact"),
     ("合法的 sed 反向引用", "README.md", "## 联系 / Contact",
      r"sed -E 's/x([0-9]+)/y\1/' file" + "\n\n## 联系 / Contact"),
+]
+
+
+# 2026-10-23 复核席 R1/R2：只加扫描面不加识别形态等于没修。
+# 补两个「文件里的自然形态」变异体：JSON 字符串值、SVG 文本节点。
+_BS = chr(92)
+MUTANTS += [
+    ("world.json 的 command 变成回代残留", "world.json",
+     '"command": "python -m unittest discover -s tests"',
+     '"command": "' + _BS + _BS + '1"'),
+    ("SVG 文本节点变成回代残留", "docs/ecosystem.svg",
+     "<text", "<text>" + _BS + "1</text><text"),
 ]
 
 
