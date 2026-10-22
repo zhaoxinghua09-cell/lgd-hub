@@ -65,7 +65,12 @@
     "uibc_core_stress_scenarios": 7,
     "verified_on": "2026-10-22",
     "verification_note": "recomputed from the live repositories on 2026-10-22, not copied from earlier READMEs",
-    "domain_codes": 12
+    "domain_codes": 12,
+    "skills_flagship": 9,
+    "skills_gov": 31,
+    "skills_eng": 16,
+    "skills_sec": 10,
+    "skills_eff": 15
   },
   "identity_layers": {
     "policy": "do not merge",
