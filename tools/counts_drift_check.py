@@ -59,9 +59,9 @@ PATTERNS = [
     (r"(\d+)\s*SVGs?\b", "badge_svgs", ()),
     (r"(\d+)\s*(?:directions|个方向)", "badge_directions", ()),
     (r"(\d+)\s*(?:tests|项测试)", "uibc_core_tests", ("stress", "cross", "compared")),
-    (r"(\d+)\s*个场景", "uibc_core_stress_scenarios", ()),
+    (r"(\d+)\s*个[^，。\n]{0,6}场景", "uibc_core_stress_scenarios", ()),  # 容「7 个压力场景」
     (r"(\d+)\s*项[^，。\n]{0,10}对拍", "uibc_core_cross_checks", ()),  # 容「70 项规范一致性对拍」这类中间插字
-    (r"SF-001\s*(?:…|\.\.\.)?\s*SF-0(\d+)", "silent_failure_patterns", ()),
+    (r"SF-001\s*(?:…|\.\.\.|至|–|-)?\s*SF-0(\d+)", "silent_failure_patterns", ()),  # 容「至」「–」
 ]
 
 INTERNAL_PAIRS = [
@@ -173,6 +173,25 @@ def check_internal(doc, truth):
             fails.append((vkey, "counts 缺键 " + ckey))
         elif str(want) not in exp:
             fails.append((vkey, f"counts.{ckey}={want}，verify.{vkey}.expected=「{exp}」"))
+    # 页面自述「9 + 31 + 16 + 10 + 15 = 81」，此前这条算术零门禁（2026-10-23 复核低-3）
+    idx = ROOT / "index.html"
+    if idx.exists():
+        ih = idx.read_text(encoding="utf-8", errors="replace")
+        # 用「标题原文 + 末尾数字」精确锚定；不能只搜关键词——「治理」在正文出现多次，
+        # 2026-10-23 自检实测：模糊搜会锚到别处数字，导致这条断言形同虚设（变异体逃逸）
+        for label, key in (("AI 治理矩阵 · ", "skills_gov"), ("AI 工程方法 · ", "skills_eng"),
+                           ("AI 安全 · 合规 · ", "skills_sec"), ("效率 · 工作台 · 学习 · ", "skills_eff"),
+                           ("旗舰 ", "skills_flagship")):
+            if key not in truth:
+                continue
+            m = re.search(re.escape(label) + r"(\d+)", ih)
+            if m and int(m.group(1)) != truth[key]:
+                fails.append((f"index.html 分组「{label}」", f"写的是 {m.group(1)}，真源是 {truth[key]}"))
+        if all(k in truth for k in ("skills_flagship", "skills_gov", "skills_eng", "skills_sec", "skills_eff")):
+            s = sum(truth[k] for k in ("skills_flagship", "skills_gov", "skills_eng", "skills_sec", "skills_eff"))
+            if s != truth.get("skills_curated"):
+                fails.append(("counts", f"9+31+16+10+15={s} ≠ skills_curated {truth.get('skills_curated')}"))
+
     if truth.get("badge_svgs") != truth.get("badge_directions", 0) * 2:
         fails.append(("badge", f"badge_svgs={truth.get('badge_svgs')} ≠ badge_directions×2"))
     if "#11" not in doc.get("counts", {}).get("domain_papers_note", ""):
@@ -213,6 +232,10 @@ def check_claims(doc):
             s = ln.strip()
             if re.fullmatch(r"\\[1-9]", s) or re.search(r'<span class="cmd">\s*\\[1-9]\s*</span>', ln):
                 fails.append((f"{name}:{i}", f"出现回代残留「{s[:40]}」——替换模板未展开"))
+            # 形态五：正文句中夹带（标签后 40 字内出现回代），排除 `C:////1` / `s/\\1/` 这类合法前缀
+            if re.search(r"<[a-z0-9]+>[^<]{0,40}(?<![:/\\A-Za-z0-9])\\[1-9]", ln):
+                fails.append((f"{name}:{i}", f"正文句中夹带回代残留「{s[:40]}」"))
+
             # 形态三：XML/SVG 文本节点，如 <text>\1</text>（2026-10-23 复核 R2）
             if re.search(r">\s*\\[1-9]\s*<", ln):
                 fails.append((f"{name}:{i}", f"SVG/XML 文本节点是回代残留「{s[:40]}」"))
@@ -349,6 +372,9 @@ MUTANTS += [
      '"command": "' + _BS + _BS + '1"'),
     ("SVG 文本节点变成回代残留", "docs/ecosystem.svg",
      "<text", "<text>" + _BS + "1</text><text"),
+    ("压力场景 7→9（中-1 形态）", "index.html", "7 个压力场景", "9 个压力场景"),
+    ("正文句中夹带回代（中-2 形态）", "index.html", "151 项测试", _BS + "1 151 项测试"),
+    ("分组数 31→32（低-3 形态）", "index.html", "AI 治理矩阵 · 31", "AI 治理矩阵 · 32"),
 ]
 
 

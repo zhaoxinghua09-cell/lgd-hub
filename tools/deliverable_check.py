@@ -240,7 +240,7 @@ def selftest():
 
 def main():
     args = sys.argv[1:]
-    if "selftest" in args:
+    if {"selftest", "--selftest"} & set(args):   # 文档写的是 --selftest；实测曾因只认无横线版而 RC=2
         return selftest()
     if any(a not in ("--staged", "--quiet") for a in args):
         print(__doc__)
