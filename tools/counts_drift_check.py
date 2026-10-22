@@ -35,6 +35,8 @@ import tempfile
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 TRUTH = ROOT / "world.json"
 
+# 注意：AUDITS/ 有意不在扫描面内 —— 该目录逐字引用审计原文，而原文本身就要引述 `\1` 这类
+# 缺陷形态；若纳入会自我误报。例外须在代码里写明理由，不靠口头约定。
 PROSE_SURFACES = [
     "README.md", "llms.txt", "index.html", "AGENTS.md",
     "agents.txt", "docs/ecosystem.svg", "CITATION.cff", "codemeta.json",
