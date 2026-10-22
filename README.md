@@ -60,6 +60,12 @@
 - 本仓 `llms.txt` 与 `world.json` 是**描述性索引**，不是实体归一（entity resolution）指令，见上方「身份分层声明」
 
 ---
+## 自己跑一遍 · Run it yourself
+
+不想读、只想验：`python demo/verify.py` —— 克隆参考实现、切到页面锚定的 commit、跑三条命令、自动比对 151 / 7 / 70，任何一项不符即非零退出。详见 [demo/](https://github.com/zhaoxinghua09-cell/lgd-hub/tree/main/demo)。
+
+发布前该跑哪些检查、每项的判据是什么，写在 [PREDELIVER.md](https://github.com/zhaoxinghua09-cell/lgd-hub/blob/main/PREDELIVER.md)：八项，全绿才发。
+
 ## 外部审计 · External audit
 
 我们不只在自己说「可自检」，还把**别人审我们**的记录摆在仓里：
