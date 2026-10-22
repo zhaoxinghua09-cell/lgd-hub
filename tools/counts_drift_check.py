@@ -189,6 +189,16 @@ def check_claims(doc):
                              if re.sub(r"\s+", "", ln.lower()).find(key) >= 0), 0)
                 fails.append((f"{name}:{line}", f"出现禁用说法「{word}」——{why}"))
 
+    # 回代残留：编辑脚本用 re.search 手动拼接时，替换模板里的 \\1 可能被当字面量写进文件。
+    # 2026-10-22 实测发生过一次（验真卡的主命令被一条 \\1 吃掉，线上可见）。
+    for name in prose_files:
+        p2 = ROOT / name
+        if not p2.exists():
+            continue
+        for i, ln in enumerate(p2.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
+            if re.search(r"\\[1-9]", ln):
+                fails.append((f"{name}:{i}", f"出现回代残留「{ln.strip()[:40]}」——替换模板未展开"))
+
     by_repo = doc.get("license", {}).get("by_repo", {})
     for r in LICENSE_TABLE_EXPECTED:
         if r not in by_repo:
@@ -268,6 +278,7 @@ MUTANTS = [
     ("榜单 45 → 44（README）", "README.md", "首批 45 条目", "首批 44 条目"),
     ("lgd-glossary CC BY → ARR（world）", "world.json", "CC BY 4.0 (commercial use allowed with attribution)", "All Rights Reserved"),
     ("151 项测试 → 999（index）", "index.html", "151 项测试", "999 项测试"),
+    ("命令被回代残留吃掉（index）", "index.html", "<span class=\"cmd\">python -m unittest discover -s tests</span>", "\\1"),
 ]
 
 
