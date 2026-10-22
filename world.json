@@ -55,7 +55,7 @@
     "skills_curated": 81,
     "skills_curated_note": "human-curated subset of the 109; not machine-derivable, so read it as a curation statement rather than a computable count",
     "domain_papers": 13,
-    "domain_papers_note": "numbered #1-#14, #11 unpublished; the 12 domain codes are AUT/BIO/CRYPT/DAT/EDU/FIN/GOV/IND/LAW/MED/ROB/UAS. Some codes carry two papers (FIN-001/002, MED-002), and MED-001 is unpublished like #11.",
+    "domain_papers_note": "13 papers numbered #1-#14; the missing number is #11, which is MED-001 (unpublished). The 12 domain codes are AUT/BIO/CRYPT/DAT/EDU/FIN/GOV/IND/LAW/MED/ROB/UAS; FIN and MED each carry two papers (FIN-001/002, MED-002), which is why 12 codes yield 13 papers.",
     "badge_directions": 16,
     "badge_svgs": 32,
     "badge_note": "16 directions x EN/CN = 32 SVGs; badge count is not paper count",
@@ -188,7 +188,8 @@
       "log_id_method": "SHA-256 of the log's DER public key (the Sigstore definition of logID); recomputable from https://rekor.sigstore.dev/api/v1/log/publicKey",
       "tree_id": 1193050959916656506,
       "tree_id_note": "value returned by /api/v1/log as treeID; independently recomputed by two reviewers on 2026-10-22 and confirmed equal. It also happens to equal the first 8 bytes of this entry's UUID — noted so a reader who notices is not confused; it is a tree identifier, not an identity claim.",
-      "integrated_time_utc": "2026-09-18T05:50:12Z"
+      "integrated_time_utc": "2026-09-18T05:50:12Z",
+      "kind_note": "the value is read from the entry body (body.kind); the entries API returns entry.kind = null at the top level, so a reader checking entry.kind will see null and may think the field is missing"
     }
   },
   "ai_channels": [

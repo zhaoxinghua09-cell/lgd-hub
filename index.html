@@ -140,12 +140,14 @@
         <div class="k">可执行 · Apache-2.0</div>
         <h3>uibc-core 参考实现</h3>
         <p>151 项测试（约 17 秒）、7 个压力场景（约 35 秒）、70 项规范一致性对拍 0 分歧——零依赖。数字锚定在 <code>uibc-core@73f31cc</code>、Python 3.13.14 实测；同 commit 的 CI 亦为绿。</p>
-        <span class="cmd">python -m unittest discover -s tests</span>
+        \1
+        <span class="cmd">python -m unittest tests.stress_test</span>
+        <span class="cmd">python independent_verifier/cross_check.py</span>
         <a href="https://github.com/zhaoxinghua09-cell/uibc-core" target="_blank" rel="noopener">拉下来自己跑 ↗</a><br>
         <a href="https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/39159391899" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px">看那次 CI 运行 ↗</a>
       </div>
       <div class="card">
-        <div class="k">可读 · 全文公开</div>
+        <div class="k">可读 · 全文公开（许可：ARR，非开源）</div>
         <h3>lgd-theory 理论总仓</h3>
         <p>三律定义、12 个域码、13 篇域论文全文。已上 Zenodo 概念 DOI 与 Software Heritage 存档。</p>
         <a href="https://github.com/zhaoxinghua09-cell/lgd-theory" target="_blank" rel="noopener">读全文 ↗</a>
@@ -159,11 +161,14 @@
       <div class="card">
         <div class="k">可验 · 归档快照</div>
         <h3>Software Heritage</h3>
-        <p>已由 Software Heritage 归档，快照可由 SWHID 定址：<code>swh:1:snp:3b18d3eb…</code>（lgd-theory）· <code>swh:1:snp:c3fb183c…</code>（lgd-hub），均 visit 1 / status full / 2026-10-15。按 SWHID 规范，origin 可能变更或消失，<strong>取回仍依赖 SWH 服务可用</strong>——这是存档证据，不是可用性承诺。</p>
-        <a href="https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Flgd-theory%2F"
-           target="_blank" rel="noopener">查 lgd-theory 存档 ↗</a><br>
-        <a href="https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Fuibc-core%2F"
-           target="_blank" rel="noopener" style="display:inline-block;margin-top:8px">查 uibc-core 存档 ↗</a>
+        <p>已由 Software Heritage 归档，每个快照可用 <strong>SWHID</strong> 直接定址（下面三个都是完整 40 位十六进制，不是省略号）：</p>
+        <span class="cmd">swh:1:snp:3b18d3eb73efd6a57279bc9c3dd1ae0a0955b4cb · lgd-theory · visit 1 · full · 2026-10-15</span>
+        <span class="cmd">swh:1:snp:c3fb183cdefe49f292d81f603800062c619b941d · lgd-hub · visit 1 · full · 2026-10-15</span>
+        <span class="cmd">swh:1:snp:4e8ca8afe5bc0c5f3a9b07f4f83ac16d988ffa0a · uibc-core · visit 3 · full · 2026-10-15</span>
+        <p style="font-size:12.5px;color:#93a2b8">按 SWHID 规范，origin 可能变更或消失，<strong>取回仍依赖 SWH 服务可用</strong>——这是存档证据，不是可用性承诺。</p>
+        <a href="https://archive.softwareheritage.org/api/1/snapshot/3b18d3eb73efd6a57279bc9c3dd1ae0a0955b4cb/" target="_blank" rel="noopener">查 lgd-theory 快照 API ↗</a><br>
+        <a href="https://archive.softwareheritage.org/api/1/snapshot/c3fb183cdefe49f292d81f603800062c619b941d/" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px">查 lgd-hub 快照 API ↗</a><br>
+        <a href="https://archive.softwareheritage.org/api/1/snapshot/4e8ca8afe5bc0c5f3a9b07f4f83ac16d988ffa0a/" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px">查 uibc-core 快照 API ↗</a>
       </div>
       <div class="card">
         <div class="k">可验 · 透明日志</div>
@@ -217,6 +222,10 @@
   <div class="wrap">
     <div class="sec-title">旗舰 9 个</div>
     <div class="sec-h">三律全映射，逐项可核</div>
+    <p style="margin:10px 0 4px;font-size:13px;color:var(--muted)">装法（任选其一）：
+      <code>git clone https://github.com/zhaoxinghua09-cell/agent-skills</code>
+      ／ 克隆单仓 <code>lgd-skill-marketplace</code>
+      ／ <a href="https://skillpie.cn" target="_blank" rel="noopener">SkillPie</a> 市场搜 “LGD”（上架状态以市场实时结果为准）</p>
     <div class="grid">
       <div class="card"><span class="badge">A1</span><h3>lgd-three-laws-auditor</h3><p>三律总纲自检器，rubric 自评 + 门禁判定。</p><a href="https://github.com/zhaoxinghua09-cell/agent-skills/tree/main/skills/lgd-three-laws-auditor" target="_blank" rel="noopener">GitHub ↗</a></div>
       <div class="card"><span class="badge">A2</span><h3>lgd-certify</h3><p>三律闭环 CLI：init/register/evidence/gate。</p><a href="https://github.com/zhaoxinghua09-cell/agent-skills/tree/main/skills/lgd-certify" target="_blank" rel="noopener">GitHub ↗</a></div>
@@ -338,7 +347,7 @@
       <div class="panel" id="service">
         <h3>企业 AI 治理接单</h3>
         <p>医疗器械法规方向的合规咨询 / 注册路径速查 / 标准咨询包 / 年度顾问。按项目评估报价，不构成要约，不承诺固定响应时限。</p><p style="font-size:12.5px;color:#93a2b8;margin-top:-6px">提交入口为公开 issue，请勿写入敏感信息；回执中会给出私密渠道。</p>
-        <a class="btn btn-primary" href="https://github.com/zhaoxinghua09-cell/lgd-hub/issues/new?template=content-issue.md" target="_blank" rel="noopener">提交需求 →</a>
+        <a class="btn btn-primary" href="https://github.com/zhaoxinghua09-cell/lgd-hub/issues/new?template=service-inquiry.md" target="_blank" rel="noopener">提交需求 →</a>
       </div>
     </div>
   </div>
@@ -366,6 +375,8 @@
       <a href="llms.txt">llms.txt</a>
       <a href="AGENTS.md">AGENTS.md</a>
       <a href="agents.txt">agents.txt</a>
+    <a href="CITATION.cff">CITATION.cff</a>
+    <a href="codemeta.json">codemeta.json</a>
     </div>
   </div>
 </footer>
