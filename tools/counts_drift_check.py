@@ -191,13 +191,21 @@ def check_claims(doc):
 
     # 回代残留：编辑脚本用 re.search 手动拼接时，替换模板里的 \\1 可能被当字面量写进文件。
     # 2026-10-22 实测发生过一次（验真卡的主命令被一条 \\1 吃掉，线上可见）。
-    for name in prose_files:
+    #
+    # 2026-10-22 红队 Q2 修正：初版用 r"\\[1-9]" 直接搜整行，会误伤合法写法
+    #   （`解压到 C://Users//1//lgd-hub`、`sed -E 's/x([0-9]+)/y\1/'`），
+    # 而且只扫 5 个面，漏了 world.json 与 docs/ecosystem.svg。
+    # 现在：① 只认「整行就是一个回代」或「回代被 cmd 样式包着」两种形态；
+    #       ② 扫描面与 A 段对齐（PROSE_SURFACES 8 面）；
+    #       ③ selftest 同时有正例（必须判红）与反例（必须不判红）。
+    for name in PROSE_SURFACES:
         p2 = ROOT / name
         if not p2.exists():
             continue
         for i, ln in enumerate(p2.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
-            if re.search(r"\\[1-9]", ln):
-                fails.append((f"{name}:{i}", f"出现回代残留「{ln.strip()[:40]}」——替换模板未展开"))
+            s = ln.strip()
+            if re.fullmatch(r"\\[1-9]", s) or re.search(r'<span class="cmd">\s*\\[1-9]\s*</span>', ln):
+                fails.append((f"{name}:{i}", f"出现回代残留「{s[:40]}」——替换模板未展开"))
 
     by_repo = doc.get("license", {}).get("by_repo", {})
     for r in LICENSE_TABLE_EXPECTED:
@@ -282,40 +290,70 @@ MUTANTS = [
 ]
 
 
+# 反例：形似回代残留、但属合法写法，必须**不**判红（误报对照）。
+# 2026-10-22 红队 Q2 实测：初版断言对这两类合法写法误伤，故固化为反例。
+NEGATIVE_MUTANTS = [
+    ("合法 Windows 路径 C:\\Users\\1", "README.md", "## 联系 / Contact",
+     r"解压到 C:\Users\1\lgd-hub 即可" + "\n\n## 联系 / Contact"),
+    ("合法的 sed 反向引用", "README.md", "## 联系 / Contact",
+     r"sed -E 's/x([0-9]+)/y\1/' file" + "\n\n## 联系 / Contact"),
+]
+
+
 def selftest():
-    print(f"selftest：{len(MUTANTS)} 个变异体，每个都必须让本门判红\n")
+    total = len(MUTANTS)
+    print(f"selftest：{total} 个变异体（必须判红）+ {len(NEGATIVE_MUTANTS)} 个反例（必须不判红）\n")
     tmp = pathlib.Path(tempfile.mkdtemp(prefix="lgd_mut_"))
-    escaped, caught = [], 0
+    escaped, caught, false_pos = [], 0, []
+
+    def make_case(tag):
+        # 每个用例一个独立目录：不覆盖、不删除，因此不需要任何 destructive 操作
+        work = tmp / ("case_" + re.sub(r"[^0-9A-Za-z]+", "_", tag))
+        shutil.copytree(ROOT, work, ignore=shutil.ignore_patterns(".git", "__pycache__"))
+        return work
+
+    def run_case(name, fname, old, new, expect_fail):
+        work = make_case(name)
+        target = work / fname
+        if not target.exists():
+            print(f"  [SKIP] {name} —— {fname} 不存在")
+            return None
+        text = target.read_text(encoding="utf-8", errors="replace")
+        if old not in text:
+            print(f"  [SKIP] {name} —— 锚点未命中（文案已变，需更新用例）")
+            return None
+        target.write_text(text.replace(old, new, 1), encoding="utf-8")
+        rc = subprocess.run([sys.executable, str(work / "tools" / "counts_drift_check.py")],
+                            capture_output=True, text=True, encoding="utf-8", errors="replace").returncode
+        if expect_fail:
+            if rc == 1:
+                print(f"  [CAUGHT] {name}")
+                return True
+            print(f"  [ESCAPED] {name}  ← 门没拦住，需补断言")
+            escaped.append(name)
+            return False
+        if rc == 0:
+            print(f"  [OK-NEG] {name} —— 合法写法未误报")
+            return True
+        print(f"  [FALSE-POSITIVE] {name}  ← 合法写法被误判为违规")
+        false_pos.append(name)
+        return False
+
     try:
         for name, fname, old, new in MUTANTS:
-            work = tmp / "repo"
-            if work.exists():
-                shutil.rmtree(work)
-            shutil.copytree(ROOT, work, ignore=shutil.ignore_patterns(".git", "__pycache__"))
-            target = work / fname
-            if not target.exists():
-                print(f"  [SKIP] {name} —— {fname} 不存在")
-                continue
-            text = target.read_text(encoding="utf-8", errors="replace")
-            if old not in text:
-                print(f"  [SKIP] {name} —— 变异锚点未命中（文案已变，需更新变异体）")
-                continue
-            target.write_text(text.replace(old, new, 1), encoding="utf-8")
-            rc = subprocess.run([sys.executable, str(work / "tools" / "counts_drift_check.py")],
-                                capture_output=True, text=True, encoding="utf-8", errors="replace").returncode
-            if rc == 1:
+            if run_case(name, fname, old, new, True):
                 caught += 1
-                print(f"  [CAUGHT] {name}")
-            else:
-                escaped.append(name)
-                print(f"  [ESCAPED] {name}  ← 门没拦住，需补断言")
-        print(f"\n结论：{caught}/{caught + len(escaped)} 个变异体被拦下")
-        if escaped:
-            print("逃逸清单：")
+        for name, fname, old, new in NEGATIVE_MUTANTS:
+            run_case(name, fname, old, new, False)
+        print(f"\n结论：{caught}/{total} 个变异体被拦下；反例误报 {len(false_pos)}/{len(NEGATIVE_MUTANTS)}")
+        if escaped or false_pos:
+            print("问题清单：")
             for e in escaped:
-                print("  -", e)
+                print("  - 逃逸:", e)
+            for e in false_pos:
+                print("  - 误报:", e)
             return 1
-        print("[PASS] 本门对全部已知变异体判红（负对照成立）")
+        print("[PASS] 全变异体判红 + 全反例不判红（双向负对照成立）")
         return 0
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
