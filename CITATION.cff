@@ -1,0 +1,51 @@
+# CITATION.cff — machine-readable citation metadata for the LGD World Map
+# Spec: Citation File Format 1.2.0 (https://citation-file-format.github.io/)
+#
+# 署名口径（与 lgd-theory/CITATION.cff 同源）：
+#   author 字段只写个人 + ORCID；品牌署名（SynomosAI Governance Line）不进 author 字段。
+#   永久红线：不出现雇主公司名。
+
+cff-version: 1.2.0
+message: "If you refer to the LGD world map in a paper, dataset or tool, please cite it using the metadata below."
+
+title: "LGD World Map: a navigable index of the Lifecycle Governance Doctrine ecosystem"
+
+abstract: >-
+  A navigation map for the Lifecycle Governance Doctrine (LGD) ecosystem. It indexes
+  the theory repositories, the skill marketplace, the scoring lists, the identity and
+  archive identifiers (ORCID, Zenodo, Software Heritage, Sigstore Rekor) and the
+  verifiable entry points, so that an outsider arriving at any single asset can reach
+  the whole set and re-check every numeric claim by running the commands listed in
+  world.json. The map is descriptive: it is not an entity-resolution instruction, and
+  the three identity layers it names (person / theory line / industry reference) are
+  related but distinct.
+
+authors:
+  - family-names: Zhao
+    given-names: Xinghua
+    orcid: "https://orcid.org/0009-0001-0512-1237"
+
+type: software
+version: "1.1.0"
+date-released: "2026-10-22"
+license-url: "https://github.com/zhaoxinghua09-cell/lgd-hub/blob/main/LICENSE"
+# 注：本仓为自定义「保留所有权利」，不是 SPDX 标准许可，故用 license-url 指向 LICENSE 正文。
+# CFF 1.2.0 的 license 字段只接受 SPDX 列表内的值，填 LicenseRef-* 会被类库判非法。已实测。
+repository-code: "https://github.com/zhaoxinghua09-cell/lgd-hub"
+url: "https://zhaoxinghua09-cell.github.io/lgd-hub/"
+
+# 本仓无自己的 Zenodo 记录（理论正文的 DOI 属于 lgd-theory，不挂在这里，避免张冠李戴）。
+# 归档标识用 SWHID：Software Heritage 快照（visit 1, full, 2026-10-15）。
+identifiers:
+  - type: swh
+    value: "swh:1:snp:c3fb183cdefe49f292d81f603800062c619b941d"
+    description: "Software Heritage snapshot of lgd-hub (visit 1, status full, 2026-10-15)"
+
+keywords:
+  - lifecycle governance
+  - Evidence-Gated AI Lifecycle Governance
+  - 凡自治之物
+  - 全程治理论
+  - AI governance
+  - ecosystem map
+  - reproducibility

@@ -1,0 +1,6 @@
+# .nojekyll — 关闭 GitHub Pages 的 Jekyll 处理
+#
+# 现状（2026-10-22 修订）：本仓已把 agents.txt 移到仓根，不再依赖 `.well-known/`，
+# 所以「防止点目录被 Jekyll 排除」这个原始理由已不适用。
+# 保留本文件的新理由是：本仓是纯静态资产（index.html / world.json / *.txt / docs/*.svg），
+# 不需要 Jekyll 把 README.md 之类加工成页面；关掉构建链，线上字节 = 仓内字节，便于比对。

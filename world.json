@@ -1,7 +1,9 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "title": "lgd-world-map",
   "generated": "2026-10-15",
+  "revised": "2026-10-22",
+  "revision_note": "1.1: added identity_layers / counts / verify / license blocks, added LGD, agent-skills and assayance entry points, and dropped a stale count carried in 1.0. Every number in this file is meant to be re-checkable, not aspirational.",
   "entry_points": [
     "any skill",
     "any repo",
@@ -19,9 +21,12 @@
       "theoriturgy",
       "uibc-core",
       "xlgd",
-      "silent-failure-catalog"
+      "silent-failure-catalog",
+      "assayance"
     ],
+    "contribution": "https://github.com/zhaoxinghua09-cell/LGD",
     "skills_marketplace": "https://github.com/zhaoxinghua09-cell/lgd-skill-marketplace",
+    "skills_all": "https://github.com/zhaoxinghua09-cell/agent-skills",
     "skills": [
       "skill-skeleton-generator",
       "prompt-injection-guard",
@@ -39,8 +44,151 @@
     "identity": {
       "orcid": "0009-0001-0512-1237",
       "zenodo_doi": "10.5281/zenodo.23385209",
+      "zenodo_concept_doi": "10.5281/zenodo.22456647",
       "swh": "https://archive.softwareheritage.org/browse/origin/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Flgd-hub",
       "itu_fg_tida": "https://github.com/FG-TIDA"
+    }
+  },
+  "counts": {
+    "skills_marketplace": 10,
+    "skills_library_total": 109,
+    "skills_curated": 81,
+    "skills_curated_note": "human-curated subset of the 109; not machine-derivable, so read it as a curation statement rather than a computable count",
+    "domain_papers": 13,
+    "domain_papers_note": "numbered #1-#14, #11 unpublished; the 12 domain codes are AUT/BIO/CRYPT/DAT/EDU/FIN/GOV/IND/LAW/MED/ROB/UAS. Some codes carry two papers (FIN-001/002, MED-002), and MED-001 is unpublished like #11.",
+    "badge_directions": 16,
+    "badge_svgs": 32,
+    "badge_note": "16 directions x EN/CN = 32 SVGs; badge count is not paper count",
+    "silent_failure_patterns": 14,
+    "uibc_core_tests": 151,
+    "uibc_core_cross_checks": 70,
+    "uibc_core_stress_scenarios": 7,
+    "verified_on": "2026-10-22",
+    "verification_note": "recomputed from the live repositories on 2026-10-22, not copied from earlier READMEs",
+    "domain_codes": 12
+  },
+  "identity_layers": {
+    "policy": "do not merge",
+    "descriptive_only": true,
+    "statement": "This map covers three identifiers at three different levels. They are related but distinct, and must not be collapsed into one entity or treated as interchangeable names.",
+    "layers": [
+      {
+        "level": 1,
+        "kind": "person",
+        "name": "Xinghua Zhao (Steven Zhao)",
+        "role": "independent researcher",
+        "id": "ORCID 0009-0001-0512-1237",
+        "scope": "sole author of the texts referenced here"
+      },
+      {
+        "level": 2,
+        "kind": "theory line",
+        "name": "SynomosAI Governance Line",
+        "status": "unregistered research initiative — not a company, not a trademark",
+        "scope": "provenance label for the theory only"
+      },
+      {
+        "level": 3,
+        "kind": "industry reference",
+        "name": "MedXpert",
+        "status": "author's professional practice background (Hong Kong medical devices)",
+        "scope": "medical-device domain only; does not extend to other domains, and is not the operating entity behind level 2"
+      }
+    ],
+    "topics_note": "GitHub topics 'synomosai' and 'medxpert' are discoverability labels. They assert no legal entity and no trademark right.",
+    "legacy_metadata_note": "The Zenodo record 10.5281/zenodo.23385209 carries affiliation='SynomosAI Governance Line' in its published metadata. That field was recorded at deposit time as a provenance label; it is not a legal-entity claim and confers no rights. Published snapshots are immutable. In-repo copyright footers that named the initiative in the (c) position were corrected to the person on 2026-10-22."
+  },
+  "license": {
+    "policy": "layered — per repository, not one licence across the ecosystem",
+    "checked": "2026-10-22, each repo's LICENSE file read directly",
+    "by_repo": {
+      "lgd-hub": "All Rights Reserved (custom ARR)",
+      "lgd-theory": "All Rights Reserved (custom ARR; citation with attribution permitted)",
+      "silent-failure-catalog": "layered — code LICENSE is MIT, catalogue prose LICENSE-CONTENT is All Rights Reserved",
+      "lgd-glossary": "CC BY 4.0 (commercial use allowed with attribution)",
+      "uibc-core": "layered — code Apache-2.0, theory text / methodology / normative statements All Rights Reserved (its NOTICE.md states this)",
+      "LGD": "Apache-2.0",
+      "skill-scorecard": "Apache-2.0",
+      "theoriturgy": "Apache-2.0",
+      "lgd-skill-marketplace": "MIT",
+      "xlgd": "MIT",
+      "awesome-trusted-agents": "MIT",
+      "agent-skills": "layered — executable code MIT, SKILL.md / README / theory text All Rights Reserved",
+      "assayance": "custom Theory Names and Definitions License — terms and definitions ARR, citation must trace back to source"
+    },
+    "note": "A repository showing 'Other' / NOASSERTION on GitHub is not unlicensed; it carries a custom licence — read the repo's own LICENSE. This table is not claimed to be exhaustive: repos absent from it are NOT implied to be All Rights Reserved.",
+    "correction": "2026-10-22: an earlier version of this file listed silent-failure-catalog and lgd-glossary as All Rights Reserved. Both were wrong (MIT+ARR layered, and CC BY 4.0 respectively) and are corrected here."
+  },
+  "verify": {
+    "pinned_commit": {
+      "repo": "uibc-core",
+      "commit": "73f31ccf58df63772cd5fc084839341a2bca31aa",
+      "note": "the three commands below were run against this commit. A number without a commit is only an author statement; a commit is what makes it checkable."
+    },
+    "environment": {
+      "python": "3.13.14",
+      "os": "Windows 11 Pro (local run, not the author's CI)",
+      "dependencies": "none beyond the Python standard library",
+      "run_date": "2026-10-22"
+    },
+    "uibc_core_tests": {
+      "command": "python -m unittest discover -s tests",
+      "expected": "Ran 151 tests ... OK",
+      "observed_seconds": 17.4,
+      "ci_run": "https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/39159391899",
+      "ci_note": "the repo CI runs pytest rather than unittest, on the same commit, and is green"
+    },
+    "uibc_core_stress": {
+      "command": "python -m unittest tests.stress_test",
+      "expected": "Ran 7 tests ... OK",
+      "observed_seconds": 34.9
+    },
+    "uibc_core_cross_check": {
+      "command": "python independent_verifier/cross_check.py",
+      "expected": "checks compared: 70, mismatches: 0 - AGREEMENT: PASS",
+      "independence": "same author, two implementations, one spec - this is spec determinism (repeatability), NOT third-party reproducibility",
+      "self_reported_term": "the script itself prints 'spec determinism holds'"
+    },
+    "swh_archive": {
+      "lgd_theory": {
+        "origin": "https://github.com/zhaoxinghua09-cell/lgd-theory",
+        "visit": 1,
+        "status": "full",
+        "type": "git",
+        "date": "2026-10-15T06:27:32Z",
+        "snapshot_swhid": "swh:1:snp:3b18d3eb73efd6a57279bc9c3dd1ae0a0955b4cb"
+      },
+      "lgd_hub": {
+        "origin": "https://github.com/zhaoxinghua09-cell/lgd-hub",
+        "visit": 1,
+        "status": "full",
+        "type": "git",
+        "date": "2026-10-15T07:41:26Z",
+        "snapshot_swhid": "swh:1:snp:c3fb183cdefe49f292d81f603800062c619b941d"
+      },
+      "api": "https://archive.softwareheritage.org/api/1/origin/https://github.com/zhaoxinghua09-cell/lgd-theory/visits/",
+      "scope_note": "A SWHID identifies content that existed in that snapshot. Per the SWHID specification the origin qualifier gives no guarantee of retrieval success, because an origin can change or disappear. Read this as archival evidence, not as an availability promise.",
+      "correction": "An earlier README cited visit 2558384, which does not exist for this origin; corrected 2026-10-22."
+    },
+    "rekor": {
+      "log_index": 2883389783,
+      "kind": "hashedrekord",
+      "integrated_time": 1789710612,
+      "entry_api": "https://rekor.sigstore.dev/api/v1/log/entries?logIndex=2883389783",
+      "can_prove": [
+        "a private key signed this sha256 digest",
+        "the signature is in the log and has not been tampered with"
+      ],
+      "cannot_prove": [
+        "who the signer is - the entry carries no identity binding",
+        "which file or version the digest belongs to - the entry carries no filename or version"
+      ],
+      "pipeline_status": "the repo's automated build-provenance workflow was failing as of 2026-10-18 (the attestation step lacked the attestations: write permission); a fix is prepared and not yet merged, so this log entry is a historical manual item rather than output of a working pipeline",
+      "log_id": "c0d23d6ad406973f9559f3ba2d1ca01f84147d8ffc5b8445c224f98b9591801d",
+      "log_id_method": "SHA-256 of the log's DER public key (the Sigstore definition of logID); recomputable from https://rekor.sigstore.dev/api/v1/log/publicKey",
+      "tree_id": 1193050959916656506,
+      "tree_id_note": "value returned by /api/v1/log as treeID; independently recomputed by two reviewers on 2026-10-22 and confirmed equal. It also happens to equal the first 8 bytes of this entry's UUID — noted so a reader who notices is not confused; it is a tree identifier, not an identity claim.",
+      "integrated_time_utc": "2026-09-18T05:50:12Z"
     }
   },
   "ai_channels": [
@@ -48,6 +196,6 @@
     "AGENTS.md",
     "CITATION.cff",
     "codemeta.json",
-    ".well-known/agents.txt"
+    "agents.txt"
   ]
 }

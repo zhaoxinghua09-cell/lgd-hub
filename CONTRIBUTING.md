@@ -1,6 +1,6 @@
 # 贡献指引（Contributing）
 
-本仓库（LGD-Hub 理论总仓）由 赵兴华 / Steven Zhao·China（ORCID 0009-0001-0512-1237） 维护。
+本仓库（lgd-hub · LGD 门户 / Tier 0 世界地图）由 赵兴华 / Steven Zhao·China（ORCID 0009-0001-0512-1237） 维护。
 
 ## 如何参与
 

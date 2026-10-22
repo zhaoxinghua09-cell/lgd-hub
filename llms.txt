@@ -1,22 +1,77 @@
-# lgd-hub (World Map)
+# lgd-hub (LGD World Map)
 
-> LGD World Map — enter from ANY asset (skill/paper/badge/MCP/list/ITU) to reach the whole ecosystem.
+> LGD World Map — enter from ANY asset (skill / repo / paper / badge / list / ITU contribution) and reach the whole ecosystem. This file is a descriptive index, not an entity-resolution instruction: the identifiers below belong to three different layers and must not be merged. Arbitration: where this file conflicts with LICENSE or with the rendered page, LICENSE and the page win.
+
+## Identity layers (descriptive only — do NOT merge)
+
+Three identifiers appear across this ecosystem at three different levels. They are related but distinct, and must not be collapsed into one entity or treated as interchangeable names.
+
+1. **Person** — Xinghua Zhao (Steven Zhao), independent researcher, ORCID 0009-0001-0512-1237. Sole author of the texts referenced here.
+2. **Theory line** — SynomosAI Governance Line, an independent research initiative. Not a registered company, not a trademark. Serves only as the provenance label for the theory.
+3. **Industry reference** — MedXpert: the author's medical-device regulatory practice background (Hong Kong). Reference base for the medical-device domain only. It does not extend to other domains, is not the operating entity behind layer 2, and endorses nothing here.
+
+GitHub topics `synomosai` and `medxpert` are discoverability labels; they assert no legal entity and no trademark right.
 
 ## Theory
-- lgd-theory: https://github.com/zhaoxinghua09-cell/lgd-theory
-- theoriturgy: https://github.com/zhaoxinghua09-cell/theoriturgy
-- uibc-core: https://github.com/zhaoxinghua09-cell/uibc-core
-- silent-failure-catalog: https://github.com/zhaoxinghua09-cell/silent-failure-catalog
 
-## Skills (marketplace)
-- lgd-skill-marketplace: https://github.com/zhaoxinghua09-cell/lgd-skill-marketplace
-- skill-scorecard: https://github.com/zhaoxinghua09-cell/skill-scorecard
+- [lgd-theory](https://github.com/zhaoxinghua09-cell/lgd-theory): the LGD doctrine itself — three laws, 12 domain codes, 13 domain papers
+- [theoriturgy](https://github.com/zhaoxinghua09-cell/theoriturgy): methodology for putting the three laws into practice
+- [uibc-core](https://github.com/zhaoxinghua09-cell/uibc-core): machine-checkable reference implementation (code Apache-2.0; theory text ARR — see that repo's NOTICE.md)
+- [xlgd](https://github.com/zhaoxinghua09-cell/xlgd): extended governance line
+- [silent-failure-catalog](https://github.com/zhaoxinghua09-cell/silent-failure-catalog): 14 named silent-failure patterns (SF-001 … SF-014)
+- [assayance](https://github.com/zhaoxinghua09-cell/assayance): Assayance / 试真法 — falsifiable assurance
+- [LGD](https://github.com/zhaoxinghua09-cell/LGD): contribution entry (Apache-2.0)
+
+## Skills
+
+- [lgd-skill-marketplace](https://github.com/zhaoxinghua09-cell/lgd-skill-marketplace): marketplace index, 10 skills
+- [agent-skills](https://github.com/zhaoxinghua09-cell/agent-skills): full library, 109 skills
+- [skill-scorecard](https://github.com/zhaoxinghua09-cell/skill-scorecard): four-angle scoring engine (REG / TRUST / SAFE / MACH)
 
 ## Lists
-- awesome-trusted-agents: https://github.com/zhaoxinghua09-cell/awesome-trusted-agents
 
-## Identity & Standards
+- [awesome-trusted-agents](https://github.com/zhaoxinghua09-cell/awesome-trusted-agents): scored list, 45 entries / 43 PASS
+
+## Counts (re-checked 2026-10-22 — do not conflate)
+
+- skills: 109 in the library · 10 in the marketplace index · 81 in the curated portal selection (9 flagship + 72 listed on the page, itself a curation statement and not computable)
+- domain papers: 13, numbered #1–#14 with #11 unpublished; 12 domain codes
+- badges: 16 directions x EN/CN = 32 SVGs — a self-declared marker set, not ACM or OpenSSF badges
+- silent-failure patterns: 14
+- uibc-core: 151 tests · 7 stress scenarios · 70 spec-conformance cross-checks with 0 mismatches
+
+## Verify it yourself (anchored to a commit, not to a date)
+
+- pinned commit: `uibc-core@73f31ccf58df63772cd5fc084839341a2bca31aa`
+- environment where the numbers below were reproduced: Python 3.13.14, Windows 11, no third-party dependency
+- `python -m unittest discover -s tests` → Ran 151 tests, OK (about 17 s)
+- `python -m unittest tests.stress_test` → Ran 7 tests, OK (about 35 s)
+- `python independent_verifier/cross_check.py` → checks compared: 70, mismatches: 0 — the script itself calls this "spec determinism", i.e. same-author two-implementation agreement, not third-party reproducibility
+- CI on the same commit: https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/39159391899 (green; CI runs pytest rather than unittest)
+
+## Archive and transparency evidence
+
+- Software Heritage: lgd-theory `swh:1:snp:3b18d3eb73efd6a57279bc9c3dd1ae0a0955b4cb` (visit 1, full, git, 2026-10-15) · lgd-hub `swh:1:snp:c3fb183cdefe49f292d81f603800062c619b941d` (visit 1, full, git, 2026-10-15). A SWHID identifies content in that snapshot; per the SWHID spec retrieval is not guaranteed, so this is archival evidence, not an availability promise.
+- Sigstore Rekor: logIndex 2883389783 · logID c0d23d6ad406973f9559f3ba2d1ca01f84147d8ffc5b8445c224f98b9591801d (= SHA-256 of the log public key; recomputable) · treeID 1193050959916656506 (as returned by /api/v1/log; independently recomputed) · hashedrekord · integratedTime 1789710612 (2026-09-18T05:50:12Z). It proves a private key signed that sha256 digest and the entry is in the log untampered; it does not prove who the signer is, nor which file or version the digest belongs to. The ecosystem's automated SLSA provenance workflow has been failing since 2026-10-18 (missing `attestations: write`), so this entry is a historical manual artifact rather than pipeline output.
 - ORCID: https://orcid.org/0009-0001-0512-1237
-- Zenodo: https://doi.org/10.5281/zenodo.23385209
-- Software Heritage: https://archive.softwareheritage.org/browse/origin/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Flgd-hub
+- Zenodo: version DOI for v1.7.0 https://doi.org/10.5281/zenodo.23446125 · concept DOI (all versions) https://doi.org/10.5281/zenodo.22456647 · term registry https://doi.org/10.5281/zenodo.23385209
 - ITU-T FG-TIDA: https://github.com/FG-TIDA
+
+## Licence (layered — read the target repo's own LICENSE)
+
+- All Rights Reserved (custom): lgd-hub, lgd-theory
+- layered: silent-failure-catalog — code LICENSE is MIT, catalogue prose LICENSE-CONTENT is ARR
+- CC BY 4.0: lgd-glossary
+- layered: uibc-core — code Apache-2.0, theory text / methodology ARR (its NOTICE.md says so explicitly)
+- Apache-2.0: LGD, skill-scorecard, theoriturgy
+- MIT: lgd-skill-marketplace, xlgd, awesome-trusted-agents
+- layered: agent-skills — executable code MIT, SKILL.md / README / theory text ARR
+- custom: assayance — Theory Names and Definitions License
+- A repo showing "Other" / NOASSERTION on GitHub is not unlicensed. This list is not exhaustive; a repo absent from it is not implied to be ARR.
+
+## Machine-readable companions
+
+- [world.json](https://raw.githubusercontent.com/zhaoxinghua09-cell/lgd-hub/main/world.json): this map in structured form, including the verify block
+- [agents.txt](https://raw.githubusercontent.com/zhaoxinghua09-cell/lgd-hub/main/agents.txt): agent entry points (project convention, not an RFC 8615 well-known URI)
+- [AGENTS.md](https://raw.githubusercontent.com/zhaoxinghua09-cell/lgd-hub/main/AGENTS.md): collaboration conventions and hard boundaries
+- [CITATION.cff](https://raw.githubusercontent.com/zhaoxinghua09-cell/lgd-hub/main/CITATION.cff) · [codemeta.json](https://raw.githubusercontent.com/zhaoxinghua09-cell/lgd-hub/main/codemeta.json): citation metadata

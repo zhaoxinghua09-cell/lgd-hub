@@ -1,0 +1,38 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "lgd-hub — LGD World Map",
+  "description": "A navigable index of the Lifecycle Governance Doctrine (LGD) ecosystem: theory repositories, skill marketplace, scoring lists, identity and archive identifiers, and reproducible verification entry points. Every numeric claim in this map is re-checkable via the commands recorded in world.json; the map is descriptive and is not an entity-resolution instruction.",
+  "identifier": "https://github.com/zhaoxinghua09-cell/lgd-hub",
+  "version": "1.1.0",
+  "datePublished": "2026-10-22",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Xinghua",
+      "familyName": "Zhao",
+      "alternateName": "Steven Zhao",
+      "affiliation": "independent researcher",
+      "@id": "https://orcid.org/0009-0001-0512-1237"
+    }
+  ],
+  "license": "https://github.com/zhaoxinghua09-cell/lgd-hub/blob/main/LICENSE",
+  "codeRepository": "https://github.com/zhaoxinghua09-cell/lgd-hub",
+  "url": "https://zhaoxinghua09-cell.github.io/lgd-hub/",
+  "programmingLanguage": ["HTML", "Python"],
+  "keywords": [
+    "lifecycle governance",
+    "Evidence-Gated AI Lifecycle Governance",
+    "AI governance",
+    "ecosystem map",
+    "reproducibility",
+    "software heritage",
+    "sigstore rekor"
+  ],
+  "relatedLink": [
+    "https://github.com/zhaoxinghua09-cell/lgd-theory",
+    "https://github.com/zhaoxinghua09-cell/uibc-core",
+    "https://github.com/zhaoxinghua09-cell/agent-skills",
+    "https://doi.org/10.5281/zenodo.22456647"
+  ]
+}
