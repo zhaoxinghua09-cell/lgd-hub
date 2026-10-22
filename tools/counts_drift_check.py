@@ -121,6 +121,11 @@ LAYERED_REQUIRED = {
 }
 
 
+# WARN 级（不判红，只提示）：回代残留「夹在字符串中」这类形态，
+# 可能是合法写法（如 JSON 里存一条 sed 命令），也可能是替换模板残留，需人看。
+WARNS = []
+
+
 def load_truth():
     d = json.loads(TRUTH.read_text(encoding="utf-8"))
     c = dict(d["counts"])
@@ -227,6 +232,9 @@ def check_claims(doc):
             if isinstance(node, str):
                 if re.fullmatch(r"\\[1-9]", node.strip()):
                     fails.append((jpath, f"JSON 字符串值就是回代残留「{node.strip()}」"))
+                elif re.search(r"\\[1-9]", node):
+                    # 夹在串中：不足以判红（可能是合法的 sed 命令），但要求人看一眼
+                    WARNS.append((jpath, f"JSON 字符串值里夹带回代记号「{node.strip()[:50]}」——确认是否替换模板残留"))
             elif isinstance(node, dict):
                 stack2.extend((f"{jpath}.{k}", v) for k, v in node.items())
             elif isinstance(node, list):
@@ -265,6 +273,7 @@ def check_claims(doc):
 
 
 def run_all(verbose=False, quiet=False):
+    WARNS.clear()
     doc, truth = load_truth()
     hits, pf = check_prose(truth, verbose)
     inf = check_internal(doc, truth)
@@ -282,6 +291,10 @@ def run_all(verbose=False, quiet=False):
         print(f"\n[FAIL] B 段内部不一致 {len(inf)} 条：")
         for k, why in inf:
             print(f"  {k}: {why}")
+    if WARNS:
+        print(f"\n[WARN] 需人工确认 {len(WARNS)} 条（不判红）：")
+        for w, why in WARNS:
+            print(f"  {w}: {why}")
     if cf:
         print(f"\n[FAIL] C 段货不对板 {len(cf)} 条：")
         for w, why in cf:
