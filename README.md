@@ -75,8 +75,8 @@
 
 ## 联系 / Contact
 
-- 标准与学术事务：`zhaoxinghua09@gmail.com`
-- 其他公开事务：`zhaoxinghua06@126.com`
+- 标准与学术事务：`zhaoxinghua09 [at] gmail [dot] com`
+- 其他公开事务：`zhaoxinghua06 [at] 126 [dot] com`
 - 公开标准组织列表通信使用 W3C / ITU 注册邮箱（见各组织归档）
 - 身份：赵兴华 / Xinghua Zhao · 独立研究者 · [ORCID 0009-0001-0512-1237](https://orcid.org/0009-0001-0512-1237)
 - 参与：公开 issue / PR（[贡献入口](https://github.com/zhaoxinghua09-cell/LGD)，Apache-2.0）
@@ -93,7 +93,7 @@
   与权利人「赵兴华 / Steven Zhao·China」。
 - **引用的两条限制（与 LICENSE §3 一致）**：引用**须忠实于原意，不得删改原文表述**；也不得使读者误认为权利人已对本仓库内容作出背书。超出合理引用范围的**再发布或演绎，仍需书面许可**。
 - **完整条款**：见仓库根目录 [LICENSE](LICENSE)。
-- **联系**：zhaoxinghua06@126.com ｜ ORCID 0009-0001-0512-1237
+- **联系**：zhaoxinghua06 [at] 126 [dot] com ｜ ORCID 0009-0001-0512-1237
 - **品牌状态限定**：MedXpert、SynomosAI、LGD 等为相关项目标识，
   **均未申请实体注册、未申请商标注册**；出现仅作来源标识，
   不构成对法人实体或商标权的任何主张。
