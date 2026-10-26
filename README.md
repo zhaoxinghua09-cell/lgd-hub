@@ -1,1 +1,111 @@
-DQoNCiMjIFdvcmxkIE1hcCAvIOS4lueVjOWcsOWbvu+8iOS7u+S9leS4gOS4quWFpeWPoyA9IOi/m+WFpeaVtOS4quS4lueVjO+8iQ0KDQo+ICoqRW50ZXIgdGhyb3VnaCBBTlkgYXNzZXQg4oCUIGEgc2tpbGwsIGEgcGFwZXIsIGEgYmFkZ2UsIGFuIE1DUCwgYSBsaXN0IOKAlCBhbmQgeW91IHJlYWNoIHRoZSB3aG9sZSBMR0Qgd29ybGQuKioNCj4gKirku47ku7vmhI/kuIDkuKrotYTkuqfov5vlhaXvvIjmioDog70v6K665paHL+W+veeroC9NQ1Av5qac5Y2V77yJ77yM5bCx5oq16L6+5pW05LiqIExHRCDkuJbnlYzjgIIqKg0KDQo8aW1nIHNyYz0iZG9jcy9lY29zeXN0ZW0uc3ZnIiBhbHQ9IkxHRCBFY29zeXN0ZW0gbWFwIiB3aWR0aD0iODAwIj4NCg0KIyMjIDEuIFRoZW9yeSAvIOeQhuiuug0KLSBbbGdkLXRoZW9yeV0oaHR0cHM6Ly9naXRodWIuY29tL3poYW94aW5naHVhMDktY2VsbC9sZ2QtdGhlb3J5KSDigJQgTEdEIOS4ieW+i+eQhuiuuuacrOS9kw0KLSBbdGhlb3JpdHVyZ3ldKGh0dHBzOi8vZ2l0aHViLmNvbS96aGFveGluZ2h1YTA5LWNlbGwvdGhlb3JpdHVyZ3kpIOKAlCDkuInlvovlrp7ot7Xmlrnms5XorroNCi0gW3VpYmMtY29yZV0oaHR0cHM6Ly9naXRodWIuY29tL3poYW94aW5naHVhMDktY2VsbC91aWJjLWNvcmUpIOKAlCBVSUJDIOayu+eQhueQhuiuuuaguOW/gw0KLSBbeGxnZF0oaHR0cHM6Ly9naXRodWIuY29tL3poYW94aW5naHVhMDktY2VsbC94bGdkKSDigJQg5omp5bGV5rK755CG6K66DQotIDE3IOacr+ivreS9k+ezu++8iFplbm9kbyBbTEdEIFRlcm0gUmVnaXN0cnkgdjEuMF0oaHR0cHM6Ly9kb2kub3JnLzEwLjUyODEvemVub2RvLjIzMzg1MjA5Ke+8jDE3IOS4quacr+ivremAkOadoeacieWumuS5ieS4juafpemHjeiusOW9le+8ie+8mg0KICAtIDEyIOS4qiBgLXVyZ3lgIOWIm+mAoOW3peeoi+acr++8mioqdGhlb3JpdHVyZ3kqKiAvIHN0YW5kYXJkdXJneSAvIHNraWxsdXJneSAvIGJlbmNobWFya3VyZ3kgLyByZXNlYXJjaHVyZ3kgLyBldXJldXJneSAvIGFuYWxvZ3VyZ3kgLyByZWZlcnVyZ3kgLyBzeW50aGVzdXJneSAvIGhvbHVyZ3kgLyBpZGV1cmd5IC8gYnJhaW5zdG9ybXVyZ3kNCiAgLSAyIOS4qiBgLXNoaXBgIOayu+eQhue6v++8mnN5bWJpb3NoaXAgLyBnZW5vc2hpcA0KICAtIOS7t+WAvOWfuuW6p++8mmF4aXVyZ3njgIDCt+OAgEw0IOmhtuaige+8mnNlbGYtaG9zdGluZy1jbG9zdXJl44CAwrfjgIDmiafooYzlsYLvvJpwbGFjZWhvbGR1cmd5DQotIFtzaWxlbnQtZmFpbHVyZS1jYXRhbG9nXShodHRwczovL2dpdGh1Yi5jb20vemhhb3hpbmdodWEwOS1jZWxsL3NpbGVudC1mYWlsdXJlLWNhdGFsb2cpIOKAlCDpnZnpu5jlpLHotKXliIbnsbvnm67lvZUNCi0gW2Fzc2F5YW5jZV0oaHR0cHM6Ly9naXRodWIuY29tL3poYW94aW5naHVhMDktY2VsbC9hc3NheWFuY2UpIOKAlCDor5XnnJ/ms5UgLyDlj6/or4HkvKrkv53or4HvvIhBc3NheWFuY2XvvIkNCg0KIyMjIFJlY29nbml0aW9uIMK3IOadg+WogeS4juWcqOWcug0KDQotICoq55CG6K665a2Y5qGjKirvvJpMaWZlY3ljbGUgR292ZXJuYW5jZSBEb2N0cmluZSAoTEdEKSDigJQgY29uY2VwdCBET0kgMTAuNTI4MS96ZW5vZG8uMjI0NTY2NDfvvIh2MS43LjDvvIwyMDI2LTEwLTE477yJ77yb5pyv6K+t5rOo5YaM6KGoIERPSSAxMC41MjgxL3plbm9kby4yMzM4NTIwOe+8m3VpYmMtY29yZSDova/ku7blrZjnqL8gRE9JIDEwLjUyODEvemVub2RvLjIyODIxODM077ybU2lsZW50IEZhaWx1cmUgQ2F0YWxvZyDmpoLlv7UgRE9JIDEwLjUyODEvemVub2RvLjIzMDUxNjM344CCDQotICoq5qCH5YeG57uE57uHKirvvJpJVFUtVCBGRy1USURBIGNvbnRyaWJ1dG9y77yIdXNlLWNhc2VzIFBSICMxOCDlt7LlkIjlubbvvInvvJtXM0MgQUkgQWdlbnQgTWVtb3J5IEludGVyb3BlcmFiaWxpdHkgQ29tbXVuaXR5IEdyb3VwIHBhcnRpY2lwYW5077yISW5kaXZpZHVhbCBDTEHvvJt1c2UtY2FzZSBjYXRhbG9ndWUg56ysIDYg5p2hIHJldGVudGlvbiDmnaHnm67vvInvvJtXM0MgQWdlbnQgSWRlbnRpdHkgUmVnaXN0cnkgUHJvdG9jb2wgQ29tbXVuaXR5IEdyb3VwIHBhcnRpY2lwYW5077yISW5kaXZpZHVhbCBDTEHvvInvvJtJRVRGIERhdGF0cmFja2VyICMxNjc1MjLvvJtMaW51eCBGb3VuZGF0aW9uIElEIHhpbmdodWF6aGFv44CCDQotICoq6Lqr5Lu96ZSaKirvvJpPUkNJRCAwMDA5LTAwMDEtMDUxMi0xMjM377ybT3BlbkFsZXgg5L2c6ICF6aG1IEE1MTUxNTMyMzAz77ybR2l0SHViIOWbm+WPt++8mnpoYW94aW5naHVhMDktY2VsbO+8iOeQhuiuuuWPt++8icK3IHN0ZXZlbnpoYW8wN++8iOS6p+WTgeWPt++8icK3IExHRC1FdmFs77yI6K+E5rWL5Y+377yJwrcgU3lub21vc0FJIOe7hOe7h+OAgg0KDQojIyMgMi4gU2tpbGxzIC8g5oqA6IO96LaF5biC77yI6L+b5LiA5LiqID0g5byA5YWo5bqX77yJDQotIFtsZ2Qtc2tpbGwtbWFya2V0cGxhY2VdKGh0dHBzOi8vZ2l0aHViLmNvbS96aGFveGluZ2h1YTA5LWNlbGwvbGdkLXNraWxsLW1hcmtldHBsYWNlKSDigJQg5oqA6IO96LaF5biC5oC755uu5b2V77yIMTAg5oqA6IO977yJDQotIOaKgOiDveWFqOWutuahtu+8mnNraWxsLXNrZWxldG9uLWdlbmVyYXRvciAvIHByb21wdC1pbmplY3Rpb24tZ3VhcmQgLyBjb250ZXh0LXRva2VuLWJ1ZGdldCAvIHNpbGVudC1mYWlsdXJlLXNjYW5uZXIgLyBiYWRnZS1zdHVkaW8gLyBsbG1zLWdlbmVyYXRvciAvIHNraWxsLXF1YWxpdHktZ2F0ZSAvIHNraWxsLXJlZ2lzdHJ5IC8gc2tpbGwtc2NvcmVjYXJkIC8gbGdkLWd1YXJkcmFpbHMNCg0KIyMjIDMuIExpc3RzICYgU2NvcmluZyAvIOamnOWNleS4juivhOWIhg0KLSBbYXdlc29tZS10cnVzdGVkLWFnZW50c10oaHR0cHM6Ly9naXRodWIuY29tL3poYW94aW5naHVhMDktY2VsbC9hd2Vzb21lLXRydXN0ZWQtYWdlbnRzKSDigJQg5Zub6KeS5bqm6K+E5YiG57K+6YCJ5riF5Y2V77yIKirpppbmibkgNDUg5p2h55uu77yMNDMg5p2h6YCa6L+HKirvvJvor4TliIbkuLrlhazlvIDotYTmlpnliJ3or4TvvIzmraPlvI/mlLblvZXliY3pgJDmnaHlpI3moLjvvIkNCi0gW3NraWxsLXNjb3JlY2FyZF0oaHR0cHM6Ly9naXRodWIuY29tL3poYW94aW5naHVhMDktY2VsbC9za2lsbC1zY29yZWNhcmQpIOKAlCDlm5vop5Lluqbor4TliIblvJXmk47vvIhSRUcvVFJVU1QvU0FGRS9NQUNI77yJDQoNCiMjIyA0LiBTdGFuZGFyZHMgJiBJZGVudGl0eSAvIOagh+WHhuS4jui6q+S7vQ0KLSAqKklUVS1UIEZHLVRJREEqKu+8mltnaXRodWIuY29tL0ZHLVRJREFdKGh0dHBzOi8vZ2l0aHViLmNvbS9GRy1USURBKSDigJQg5Zu96ZmF5qCH5YeG6K665Z2b5Y+C5LiO77yI55CG6K666LSh54yu77yJDQotICoqT1JDSUQqKu+8mlswMDA5LTAwMDEtMDUxMi0xMjM3XShodHRwczovL29yY2lkLm9yZy8wMDA5LTAwMDEtMDUxMi0xMjM3KQ0KLSAqKlplbm9kbyoq77yaW0RPSSAxMC41MjgxL3plbm9kby4yMzM4NTIwOV0oaHR0cHM6Ly9kb2kub3JnLzEwLjUyODEvemVub2RvLjIzMzg1MjA5KQ0KLSAqKlNvZnR3YXJlIEhlcml0YWdlKirvvJpbYXJjaGl2ZS5zb2Z0d2FyZWhlcml0YWdlLm9yZ10oaHR0cHM6Ly9hcmNoaXZlLnNvZnR3YXJlaGVyaXRhZ2Uub3JnL2Jyb3dzZS9vcmlnaW4vP29yaWdpbl91cmw9aHR0cHMlM0ElMkYlMkZnaXRodWIuY29tJTJGemhhb3hpbmdodWEwOS1jZWxsJTJGbGdkLWh1Yikg4oCUIOW3suW9kuaho++8iHZpc2l0IDEgLyBmdWxsIC8gMjAyNi0xMC0xNe+8jFNXSElEIGBzd2g6MTpzbnA6YzNmYjE4M2PigKZg77yJDQoNCiMjIyA1LiBWZXJpZnkgaXQgeW91cnNlbGYgLyDoh6rlt7HpqowNCg0KPiDmnKzoioLliJflh7rnmoTmr4/kuIDpobnpg73og73ni6znq4vlpI3moLjjgILlvZLmoaPnsbvor4Hmja7nmoTlkKvkuYnmmK/jgIzor6XlhoXlrrnlnKjmn5DkuKrlv6vnhafph4zku6XmraTlk4jluIzlrZjlnKjov4fjgI3vvIwqKuS4jeaYryoq5Y+v55So5oCn5om/6K+64oCU4oCU5oyJIFNXSElEIOinhOiMg++8jG9yaWdpbiDlj6/og73lj5jmm7TmiJbmtojlpLHjgIINCg0KfCDlj6/pqozku4DkuYggfCDmgI7kuYjpqowgfCDlhaXlj6MgfA0KfC0tLXwtLS18LS0tfA0KfCAxNTEg6aG55rWL6K+V55yf6IO96LeRIHwg6Zu25L6d6LWW77yM5Y2V5p2h5ZG95LukIHwgW3VpYmMtY29yZV0oaHR0cHM6Ly9naXRodWIuY29tL3poYW94aW5naHVhMDktY2VsbC91aWJjLWNvcmUp77yI5Luj56CBIEFwYWNoZS0yLjDvvJvnkIborrrmlofmnKwgQVJS77yM6KeB6K+l5LuTIE5PVElDRS5tZO+8icK3IGBweXRob24gLW0gdW5pdHRlc3QgZGlzY292ZXIgLXMgdGVzdHNgIHwNCnwg55CG6K665YWo5paH5piv5ZCm55yf5YWs5byAIHwg55u05o6l6K+7IHwgW2xnZC10aGVvcnldKGh0dHBzOi8vZ2l0aHViLmNvbS96aGFveGluZ2h1YTA5LWNlbGwvbGdkLXRoZW9yeSkgfA0KfCAxNCDkuKrpnZnpu5jlpLHmlYjmqKHlvI8gfCBTRi0wMDHigKZTRi0wMTQg6YCQ5p2h5pyJ5Yik5o2uIHwgW3NpbGVudC1mYWlsdXJlLWNhdGFsb2ddKGh0dHBzOi8vZ2l0aHViLmNvbS96aGFveGluZ2h1YTA5LWNlbGwvc2lsZW50LWZhaWx1cmUtY2F0YWxvZykgfA0KfCDlhoXlrrnmmK/lkKbooqvnrKzkuInmlrnlrZjmoaMgfCDmn6XlvZLmoaPlv6vnhafvvIhTV0hJRO+8iSB8IFtTV0g6IGxnZC10aGVvcnldKGh0dHBzOi8vYXJjaGl2ZS5zb2Z0d2FyZWhlcml0YWdlLm9yZy9icm93c2Uvb3JpZ2luL2RpcmVjdG9yeS8/b3JpZ2luX3VybD1odHRwcyUzQSUyRiUyRmdpdGh1Yi5jb20lMkZ6aGFveGluZ2h1YTA5LWNlbGwlMkZsZ2QtdGhlb3J5JTJGKSDCtyBbU1dIOiB1aWJjLWNvcmVdKGh0dHBzOi8vYXJjaGl2ZS5zb2Z0d2FyZWhlcml0YWdlLm9yZy9icm93c2Uvb3JpZ2luL2RpcmVjdG9yeS8/b3JpZ2luX3VybD1odHRwcyUzQSUyRiUyRmdpdGh1Yi5jb20lMkZ6aGFveGluZ2h1YTA5LWNlbGwlMkZ1aWJjLWNvcmUlMkYpIHwNCnwgKip1aWJjLWNvcmUgdjAuMi4xIOeahCB6aXAqKiDmkZjopoHmmK/lkKbov5vpgI/mmI7ml6Xlv5cgfCDmn6UgbG9nSW5kZXgg5bm25q+U5a+5IHNoYTI1NiBgNTljYzFjOTHigKZgIHwgW1Jla29yIGAyODgzMzg5NzgzYF0oaHR0cHM6Ly9zZWFyY2guc2lnc3RvcmUuZGV2Lz9sb2dJbmRleD0yODgzMzg5NzgzKe+8iOacrOS7k+iHqui6q+ayoeacieetvuWQjeS6p+eJqe+8jOS4u+ivreS4jeaYr+OAjOacrOS7k+WPkeW4g+S7tuOAje+8iSB8DQp8IOWQhOWkhOiuuOWPr+WIsOW6leaYr+S7gOS5iCB8IOmAkOS7k+ivuyBMSUNFTlNFIHwg6KeBIFtOT1RJQ0UubWRdKE5PVElDRS5tZCkg55qE5YiG5bGC6K645Y+v6KGo77yIMTMg5Liq5LuT6YCQ5Liq5qC46L+H77yJ4oCU4oCUKirmnKznlJ/mgIHmmK/liIblsYLorrjlj6/vvIzkuI3mmK/nu5/kuIDlvIDmupDvvIzkuZ/kuI3pg73mmK8gQVJSKiogfA0KfCDmgI7kuYjlj4LkuI4gfCDlhazlvIAgaXNzdWUgLyBQUiB8IFtMR0Qg5Li75LuTXShodHRwczovL2dpdGh1Yi5jb20vemhhb3hpbmdodWEwOS1jZWxsL0xHRCnvvIhBcGFjaGUtMi4w77yJIHwNCg0KIyMjIDYuIFBhcGVycyAvIOiuuuaWhw0KLSDlt7Llj5HooajorrrmloflnYflnKggWmVub2RvIOWFrOW8gOeZu+iusO+8jOWPr+aMieS9nOiAheS4u+S9k+ebtOaOpeajgOe0ou+8jOaXoOmcgOWQkeaIkeS7rOe0ouWPlua4heWNle+8mg0KICAtIOeQhuiuuuS4u+e6v++8iGNvbmNlcHQgRE9J77yJ77yaWzEwLjUyODEvemVub2RvLjIyNDU2NjQ3XShodHRwczovL2RvaS5vcmcvMTAuNTI4MS96ZW5vZG8uMjI0NTY2NDcpIOKAlOKAlCDlvZPliY3niYjmnKwgdjEuNy4wDQogIC0g5pyv6K+t5rOo5YaM77yaWzEwLjUyODEvemVub2RvLjIzMzg1MjA5XShodHRwczovL2RvaS5vcmcvMTAuNTI4MS96ZW5vZG8uMjMzODUyMDkpIOKAlOKAlCBMR0QgVGVybSBSZWdpc3RyeSB2MS4wDQogIC0g5L2c6ICF5qCH6K+G77yaW09SQ0lEIDAwMDktMDAwMS0wNTEyLTEyMzddKGh0dHBzOi8vb3JjaWQub3JnLzAwMDktMDAwMS0wNTEyLTEyMzcp77yI6K+lIE9SQ0lEIOS4i+eahOWFqOmDqOiusOW9le+8iQ0KDQojIyMgNy4gQUkgQWdlbnQgRW50cnkgUG9pbnRzIC8gQUkg5Luj55CG5YWl5Y+jDQotIOacrOaeoue6veS7k+S6lOS7tum9kOWkh++8mmBsbG1zLnR4dGAgLyBgQUdFTlRTLm1kYCAvIGBDSVRBVElPTi5jZmZgIC8gYGNvZGVtZXRhLmpzb25gIC8gYGFnZW50cy50eHRgDQotIOWFhOW8n+S7k+S7peWQhOiHquS7k+WGheeahCBgbGxtcy50eHRgIOS4uuWHhu+8m+S6lOS7tuWll+aMieacrOS7k+iMg+W8j+mAkOatpeihpem9kO+8jCoq5pyq6KGl6b2Q55qE5LiN5pu/5a6D5a6j56ewKioNCi0g6Lev55Sx6KeE5YiZ77yaQUkg5LuO5Lu75oSP6LWE5Lqn6L+b5YWlIOKGkiDor7vor6Xku5MgYGxsbXMudHh0YCDihpIg5Yiw6L6+5pys5LiW55WM5Zyw5Zu+77yIYHdvcmxkLmpzb25g77yJ4oaSIOWFqOi1hOS6p+WPr+WPkeeOsA0KLSDmnKzku5MgYGxsbXMudHh0YCDkuI4gYHdvcmxkLmpzb25gIOaYryoq5o+P6L+w5oCn57Si5byVKirvvIzkuI3mmK/lrp7kvZPlvZLkuIDvvIhlbnRpdHkgcmVzb2x1dGlvbu+8ieaMh+S7pO+8jOingeS4iuaWueOAjOi6q+S7veWIhuWxguWjsOaYjuOAjQ0KDQotLS0NCiMjIOiHquW3sei3keS4gOmBjSDCtyBSdW4gaXQgeW91cnNlbGYNCg0K5LiN5oOz6K+744CB5Y+q5oOz6aqM77yaYHB5dGhvbiBkZW1vL3ZlcmlmeS5weWAg4oCU4oCUIOWFi+mahuWPguiAg+WunueOsOOAgeWIh+WIsOmhtemdoumUmuWumueahCBjb21taXTjgIHot5HkuInmnaHlkb3ku6TjgIHoh6rliqjmr5Tlr7kgMTUxIC8gNyAvIDcw77yM5Lu75L2V5LiA6aG55LiN56ym5Y2z6Z2e6Zu26YCA5Ye644CC6K+m6KeBIFtkZW1vL10oaHR0cHM6Ly9naXRodWIuY29tL3poYW94aW5naHVhMDktY2VsbC9sZ2QtaHViL3RyZWUvbWFpbi9kZW1vKeOAgg0KDQrlj5HluIPliY3or6Xot5Hlk6rkupvmo4Dmn6XjgIHmr4/pobnnmoTliKTmja7mmK/ku4DkuYjvvIzlhpnlnKggW1BSRURFTElWRVIubWRdKGh0dHBzOi8vZ2l0aHViLmNvbS96aGFveGluZ2h1YTA5LWNlbGwvbGdkLWh1Yi9ibG9iL21haW4vUFJFREVMSVZFUi5tZCnvvJrlhavpobnvvIzlhajnu7/miY3lj5HjgIINCg0KIyMg5aSW6YOo5a6h6K6hIMK3IEV4dGVybmFsIGF1ZGl0DQoNCuaIkeS7rOS4jeWPquWcqOiHquW3seivtOOAjOWPr+iHquajgOOAje+8jOi/mOaKiioq5Yir5Lq65a6h5oiR5LusKirnmoTorrDlvZXmkYblnKjku5Pph4zvvJoNCg0KLSBbQVVESVRTL10oaHR0cHM6Ly9naXRodWIuY29tL3poYW94aW5naHVhMDktY2VsbC9sZ2QtaHViL3RyZWUvbWFpbi9BVURJVFMp77yaMjAyNi0xMC0yMiDlpJbpg6jnrKzkuInmlrnlrqHorqHnmoQqKumAkOWtl+WOn+aWhyoq77yIWy5leHRyYWN0ZWQudHh0XShodHRwczovL2dpdGh1Yi5jb20vemhhb3hpbmdodWEwOS1jZWxsL2xnZC1odWIvYmxvYi9tYWluL0FVRElUUy8yMDI2LTEwLTIyLWV4dGVybmFsLWF1ZGl0LmV4dHJhY3RlZC50eHQp77yJ44CB57uT5p6E5YyW5pW055CG54mI77yM5Lul5Y+K5YWr5p2h5b+F6aG75pS555qE6YCQ5p2h5aSE572u5a+554Wn44CCDQotIOivpeasoeWuoeiuoee7k+iuuuS4uuOAjOaUueWujOWGjeivtOOAje+8jOWQjOaXtuehruiupOiuoeaVsOOAgeW9kuaho+OAgeetvuWQjeaXpeW/l+OAgeiuuOWPr+ihqOOAgea1i+ivleaVsOWtlyoq5peg5LiA6YCg5YGHKirvvJvlhavmnaHlt7Llhajpg6jlpITnva7jgIINCg0KIyMg6IGU57O7IC8gQ29udGFjdA0KDQotIOagh+WHhuS4juWtpuacr+S6i+WKoe+8mmB6aGFveGluZ2h1YTA5IFthdF0gZ21haWwgW2RvdF0gY29tYA0KLSDlhbbku5blhazlvIDkuovliqHvvJpgemhhb3hpbmdodWEwNiBbYXRdIDEyNiBbZG90XSBjb21gDQotIOWFrOW8gOagh+WHhue7hOe7h+WIl+ihqOmAmuS/oeS9v+eUqCBXM0MgLyBJVFUg5rOo5YaM6YKu566x77yI6KeB5ZCE57uE57uH5b2S5qGj77yJDQotIOi6q+S7ve+8mui1teWFtOWNjiAvIFhpbmdodWEgWmhhbyDCtyDni6znq4vnoJTnqbbogIUgwrcgW09SQ0lEIDAwMDktMDAwMS0wNTEyLTEyMzddKGh0dHBzOi8vb3JjaWQub3JnLzAwMDktMDAwMS0wNTEyLTEyMzcpDQotIOWPguS4ju+8muWFrOW8gCBpc3N1ZSAvIFBS77yIW+i0oeeMruWFpeWPo10oaHR0cHM6Ly9naXRodWIuY29tL3poYW94aW5naHVhMDktY2VsbC9MR0Qp77yMQXBhY2hlLTIuMO+8iQ0KDQojIyDorrjlj6/or7TmmI4gwrcgTGljZW5zZSBOb3RpY2UNCg0KPiAqKuacrOS7k+W6k+S9v+eUqOiHquWumuS5ieiuuOWPr++8jOS4jeaYryBNSVQgLyBBcGFjaGUtMi4wKirjgILlubPlj7DmmL7npLrkuLogYE90aGVyYO+8iE5PQVNTRVJUSU9O77yJ77yMDQo+IOWxnuivhuWIq+eul+azleeahOato+W4uOe7k+aenO+8jCoq5LiN5Luj6KGo5pys5LuT5bqT5aSE5LqO5peg6K645Y+v54q25oCBKirjgIINCg0KLSAqKuadg+WIqeeKtuaAgSoq77ya5YWo6YOo5YaF5a655L+d55WZ5omA5pyJ5p2D5Yip77yIQWxsIFJpZ2h0cyBSZXNlcnZlZO+8ieOAguacque7j+S5pumdouiuuOWPr++8jA0KICDkuI3lvpflpI3liLbjgIHmlLnnvJbjgIHlho3liIblj5HjgIHlhazlvIDkvKDmkq3miJbnlKjkuo7ooY3nlJ/kvZzlk4HjgIINCi0gKirlj6/lkKblvJXnlKgqKu+8muWPr+S7peOAguWFgeiuuOWcqCoq5rOo5piO5Ye65aSEKirnmoTliY3mj5DkuIvlvJXnlKjkuI7lrabmnK/jgIHlhazlhbHorqjorrrvvJsNCiAg5byV55So5pe26K+35ZCM5pe25qCH5rOo5LuT5bqT5ZCN44CB5Y6f5paH6ZO+5o6lIGBodHRwczovL2dpdGh1Yi5jb20vemhhb3hpbmdodWEwOS1jZWxsL2xnZC1odWJgDQogIOS4juadg+WIqeS6uuOAjOi1teWFtOWNjiAvIFN0ZXZlbiBaaGFvwrdDaGluYeOAjeOAgg0KLSAqKuW8leeUqOeahOS4pOadoemZkOWItu+8iOS4jiBMSUNFTlNFIMKnMyDkuIDoh7TvvIkqKu+8muW8leeUqCoq6aG75b+g5a6e5LqO5Y6f5oSP77yM5LiN5b6X5Yig5pS55Y6f5paH6KGo6L+wKirvvJvkuZ/kuI3lvpfkvb/or7vogIXor6/orqTkuLrmnYPliKnkurrlt7Llr7nmnKzku5PlupPlhoXlrrnkvZzlh7rog4zkuabjgILotoXlh7rlkIjnkIblvJXnlKjojIPlm7TnmoQqKuWGjeWPkeW4g+aIlua8lOe7ju+8jOS7jemcgOS5pumdouiuuOWPryoq44CCDQotICoq5a6M5pW05p2h5qy+KirvvJrop4Hku5PlupPmoLnnm67lvZUgW0xJQ0VOU0VdKExJQ0VOU0Up44CCDQotICoq6IGU57O7KirvvJp6aGFveGluZ2h1YTA2IFthdF0gMTI2IFtkb3RdIGNvbSDvvZwgT1JDSUQgMDAwOS0wMDAxLTA1MTItMTIzNw0KLSAqKuWTgeeJjOeKtuaAgemZkOWumioq77yaTWVkWHBlcnTjgIFTeW5vbW9zQUnjgIFMR0Qg562J5Li655u45YWz6aG555uu5qCH6K+G77yMDQogICoq5Z2H5pyq55Sz6K+35a6e5L2T5rOo5YaM44CB5pyq55Sz6K+35ZWG5qCH5rOo5YaMKirvvJvlh7rnjrDku4XkvZzmnaXmupDmoIfor4bvvIwNCiAg5LiN5p6E5oiQ5a+55rOV5Lq65a6e5L2T5oiW5ZWG5qCH5p2D55qE5Lu75L2V5Li75byg44CCDQotICoq5YWN6LSjKirvvJrmnKzku5PlupPlhoXlrrnkuI3mnoTmiJDms5Xop4TmhI/op4HmiJbms6jlhozku6PnkIbmnI3liqHvvJvlhbPplK7mlbDmja7ku6Xnm5HnrqHmnLrmnoTmnIDmlrDlj5HluIPkuLrlh4bjgIINCg0KLS0tDQoNCipXb3JsZCBNYXAgZ2VuZXJhdGVkIDIwMjYtMTAtMTUgwrcg5pyA6L+R5aSN5qC4IDIwMjYtMTAtMjLvvJrmnKzpobUgR2l0SHViIOexu+WklumTvumAkOadoeWunua1iyAyMDDvvJtET0kvWmVub2RvIOWcqOacrOacuue9kee7nOS4i+S4jeWPr+i+vu+8jOaUueeUqCBEYXRhQ2l0ZSDlhYPmlbDmja7kuI4gZG9pLm9yZyAzMDIg5L6n6K+B77yIKirmnKzmnLrkuI3lj6/ovr4g4omgIOmTvuaOpeWkseaViCoq77yJ44CC6K645Y+v5bey6YCQ5LuT6K+7IExJQ0VOU0Ug5qC45a+577yM6KeBIFtOT1RJQ0UubWRdKE5PVElDRS5tZCkg55qE5YiG5bGC6K645Y+v6KGo44CCKg0K
+> **在线门户 Portal**：https://zhaoxinghua09-cell.github.io/lgd-hub/ — LGD 生态全景渲染页（理论 / 参考实现 / 技能 / 刊物），一跳即达。
+
+
+## World Map / 世界地图（任何一个入口 = 进入整个世界）
+
+> **Enter through ANY asset — a skill, a paper, a badge, an MCP, a list — and you reach the whole LGD world.**
+> **从任意一个资产进入（技能/论文/徽章/MCP/榜单），就抵达整个 LGD 世界。**
+
+<img src="docs/ecosystem.svg" alt="LGD Ecosystem map" width="800">
+
+### 1. Theory / 理论
+- [lgd-theory](https://github.com/zhaoxinghua09-cell/lgd-theory) — LGD 三律理论本体
+- [theoriturgy](https://github.com/zhaoxinghua09-cell/theoriturgy) — 三律实践方法论
+- [uibc-core](https://github.com/zhaoxinghua09-cell/uibc-core) — UIBC 治理理论核心
+- [xlgd](https://github.com/zhaoxinghua09-cell/xlgd) — 扩展治理论
+- 17 术语体系（Zenodo [LGD Term Registry v1.0](https://doi.org/10.5281/zenodo.23385209)，17 个术语逐条有定义与查重记录）：
+  - 12 个 `-urgy` 创造工程术：**theoriturgy** / standardurgy / skillurgy / benchmarkurgy / researchurgy / eureurgy / analogurgy / referurgy / synthesurgy / holurgy / ideurgy / brainstormurgy
+  - 2 个 `-ship` 治理线：symbioship / genoship
+  - 价值基座：axiurgy　·　L4 顶梁：self-hosting-closure　·　执行层：placeholdurgy
+- [silent-failure-catalog](https://github.com/zhaoxinghua09-cell/silent-failure-catalog) — 静默失败分类目录
+- [assayance](https://github.com/zhaoxinghua09-cell/assayance) — 试真法 / 可证伪保证（Assayance）
+
+### Recognition · 权威与在场
+
+- **理论存档**：Lifecycle Governance Doctrine (LGD) — concept DOI 10.5281/zenodo.22456647（v1.7.0，2026-10-18）；术语注册表 DOI 10.5281/zenodo.23385209；uibc-core 软件存稿 DOI 10.5281/zenodo.22821834；Silent Failure Catalog 概念 DOI 10.5281/zenodo.23051637。
+- **标准组织**：ITU-T FG-TIDA contributor（use-cases PR #18 已合并）；W3C AI Agent Memory Interoperability Community Group participant（Individual CLA；use-case catalogue 第 6 条 retention 条目）；W3C Agent Identity Registry Protocol Community Group participant（Individual CLA）；IETF Datatracker #167522；Linux Foundation ID xinghuazhao。
+- **身份锚**：ORCID 0009-0001-0512-1237；OpenAlex 作者页 A5151532303；GitHub 四号：zhaoxinghua09-cell（理论号）· stevenzhao07（产品号）· LGD-Eval（评测号）· SynomosAI 组织。
+
+### 2. Skills / 技能超市（进一个 = 开全店）
+- [lgd-skill-marketplace](https://github.com/zhaoxinghua09-cell/lgd-skill-marketplace) — 技能超市总目录（10 技能）
+- 技能全家桶：skill-skeleton-generator / prompt-injection-guard / context-token-budget / silent-failure-scanner / badge-studio / llms-generator / skill-quality-gate / skill-registry / skill-scorecard / lgd-guardrails
+
+### 3. Lists & Scoring / 榜单与评分
+- [awesome-trusted-agents](https://github.com/zhaoxinghua09-cell/awesome-trusted-agents) — 四角度评分精选清单（**首批 45 条目，43 条通过**；评分为公开资料初评，正式收录前逐条复核）
+- [skill-scorecard](https://github.com/zhaoxinghua09-cell/skill-scorecard) — 四角度评分引擎（REG/TRUST/SAFE/MACH）
+
+### 4. Standards & Identity / 标准与身份
+- **ITU-T FG-TIDA**：[github.com/FG-TIDA](https://github.com/FG-TIDA) — 国际标准论坛参与（理论贡献）
+- **ORCID**：[0009-0001-0512-1237](https://orcid.org/0009-0001-0512-1237)
+- **Zenodo**：[DOI 10.5281/zenodo.23385209](https://doi.org/10.5281/zenodo.23385209)
+- **Software Heritage**：[archive.softwareheritage.org](https://archive.softwareheritage.org/browse/origin/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Flgd-hub) — 已归档（visit 1 / full / 2026-10-15，SWHID `swh:1:snp:c3fb183c…`）
+
+### 5. Verify it yourself / 自己验
+
+> 本节列出的每一项都能独立复核。归档类证据的含义是「该内容在某个快照里以此哈希存在过」，**不是**可用性承诺——按 SWHID 规范，origin 可能变更或消失。
+
+| 可验什么 | 怎么验 | 入口 |
+|---|---|---|
+| 151 项测试真能跑 | 零依赖，单条命令 | [uibc-core](https://github.com/zhaoxinghua09-cell/uibc-core)（代码 Apache-2.0；理论文本 ARR，见该仓 NOTICE.md）· `python -m unittest discover -s tests` |
+| 理论全文是否真公开 | 直接读 | [lgd-theory](https://github.com/zhaoxinghua09-cell/lgd-theory) |
+| 14 个静默失效模式 | SF-001…SF-014 逐条有判据 | [silent-failure-catalog](https://github.com/zhaoxinghua09-cell/silent-failure-catalog) |
+| 内容是否被第三方存档 | 查归档快照（SWHID） | [SWH: lgd-theory](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Flgd-theory%2F) · [SWH: uibc-core](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Fuibc-core%2F) |
+| **uibc-core v0.2.1 的 zip** 摘要是否进透明日志 | 查 logIndex 并比对 sha256 `59cc1c91…` | [Rekor `2883389783`](https://search.sigstore.dev/?logIndex=2883389783)（本仓自身没有签名产物，主语不是「本仓发布件」） |
+| 各处许可到底是什么 | 逐仓读 LICENSE | 见 [NOTICE.md](NOTICE.md) 的分层许可表（13 个仓逐个核过）——**本生态是分层许可，不是统一开源，也不都是 ARR** |
+| 怎么参与 | 公开 issue / PR | [LGD 主仓](https://github.com/zhaoxinghua09-cell/LGD)（Apache-2.0） |
+
+### 6. Papers / 论文
+- 已发表论文均在 Zenodo 公开登记，可按作者主体直接检索，无需向我们索取清单：
+  - 理论主线（concept DOI）：[10.5281/zenodo.22456647](https://doi.org/10.5281/zenodo.22456647) —— 当前版本 v1.7.0
+  - 术语注册：[10.5281/zenodo.23385209](https://doi.org/10.5281/zenodo.23385209) —— LGD Term Registry v1.0
+  - 作者标识：[ORCID 0009-0001-0512-1237](https://orcid.org/0009-0001-0512-1237)（该 ORCID 下的全部记录）
+
+### 7. AI Agent Entry Points / AI 代理入口
+- 本枢纽仓五件齐备：`llms.txt` / `AGENTS.md` / `CITATION.cff` / `codemeta.json` / `agents.txt`
+- 兄弟仓以各自仓内的 `llms.txt` 为准；五件套按本仓范式逐步补齐，**未补齐的不替它宣称**
+- 路由规则：AI 从任意资产进入 → 读该仓 `llms.txt` → 到达本世界地图（`world.json`）→ 全资产可发现
+- 本仓 `llms.txt` 与 `world.json` 是**描述性索引**，不是实体归一（entity resolution）指令，见上方「身份分层声明」
+
+---
+## 自己跑一遍 · Run it yourself
+
+不想读、只想验：`python demo/verify.py` —— 克隆参考实现、切到页面锚定的 commit、跑三条命令、自动比对 151 / 7 / 70，任何一项不符即非零退出。详见 [demo/](https://github.com/zhaoxinghua09-cell/lgd-hub/tree/main/demo)。
+
+发布前该跑哪些检查、每项的判据是什么，写在 [PREDELIVER.md](https://github.com/zhaoxinghua09-cell/lgd-hub/blob/main/PREDELIVER.md)：八项，全绿才发。
+
+## 外部审计 · External audit
+
+我们不只在自己说「可自检」，还把**别人审我们**的记录摆在仓里：
+
+- [AUDITS/](https://github.com/zhaoxinghua09-cell/lgd-hub/tree/main/AUDITS)：2026-10-22 外部第三方审计的**逐字原文**（[.extracted.txt](https://github.com/zhaoxinghua09-cell/lgd-hub/blob/main/AUDITS/2026-10-22-external-audit.extracted.txt)）、结构化整理版，以及八条必须改的逐条处置对照。
+- 该次审计结论为「改完再说」，同时确认计数、归档、签名日志、许可表、测试数字**无一造假**；八条已全部处置。
+
+## 联系 / Contact
+
+- 标准与学术事务：`zhaoxinghua09 [at] gmail [dot] com`
+- 其他公开事务：`zhaoxinghua06 [at] 126 [dot] com`
+- 公开标准组织列表通信使用 W3C / ITU 注册邮箱（见各组织归档）
+- 身份：赵兴华 / Xinghua Zhao · 独立研究者 · [ORCID 0009-0001-0512-1237](https://orcid.org/0009-0001-0512-1237)
+- 参与：公开 issue / PR（[贡献入口](https://github.com/zhaoxinghua09-cell/LGD)，Apache-2.0）
+
+## 许可说明 · License Notice
+
+> **本仓库使用自定义许可，不是 MIT / Apache-2.0**。平台显示为 `Other`（NOASSERTION），
+> 属识别算法的正常结果，**不代表本仓库处于无许可状态**。
+
+- **权利状态**：全部内容保留所有权利（All Rights Reserved）。未经书面许可，
+  不得复制、改编、再分发、公开传播或用于衍生作品。
+- **可否引用**：可以。允许在**注明出处**的前提下引用与学术、公共讨论；
+  引用时请同时标注仓库名、原文链接 `https://github.com/zhaoxinghua09-cell/lgd-hub`
+  与权利人「赵兴华 / Steven Zhao·China」。
+- **引用的两条限制（与 LICENSE §3 一致）**：引用**须忠实于原意，不得删改原文表述**；也不得使读者误认为权利人已对本仓库内容作出背书。超出合理引用范围的**再发布或演绎，仍需书面许可**。
+- **完整条款**：见仓库根目录 [LICENSE](LICENSE)。
+- **联系**：zhaoxinghua06 [at] 126 [dot] com ｜ ORCID 0009-0001-0512-1237
+- **品牌状态限定**：MedXpert、SynomosAI、LGD 等为相关项目标识，
+  **均未申请实体注册、未申请商标注册**；出现仅作来源标识，
+  不构成对法人实体或商标权的任何主张。
+- **免责**：本仓库内容不构成法规意见或注册代理服务；关键数据以监管机构最新发布为准。
+
+---
+
+*World Map generated 2026-10-15 · 最近复核 2026-10-22：本页 GitHub 类外链逐条实测 200；DOI/Zenodo 在本机网络下不可达，改用 DataCite 元数据与 doi.org 302 侧证（**本机不可达 ≠ 链接失效**）。许可已逐仓读 LICENSE 核对，见 [NOTICE.md](NOTICE.md) 的分层许可表。*
