@@ -18,7 +18,7 @@ GitHub topics `synomosai` and `medxpert` are discoverability labels; they assert
 - [theoriturgy](https://github.com/zhaoxinghua09-cell/theoriturgy): methodology for putting the three laws into practice
 - [uibc-core](https://github.com/zhaoxinghua09-cell/uibc-core): machine-checkable reference implementation (code Apache-2.0; theory text ARR — see that repo's NOTICE.md)
 - [xlgd](https://github.com/zhaoxinghua09-cell/xlgd): extended governance line
-- [silent-failure-catalog](https://github.com/zhaoxinghua09-cell/silent-failure-catalog): 14 named silent-failure patterns (SF-001 … SF-014)
+- [silent-failure-catalog](https://github.com/zhaoxinghua09-cell/silent-failure-catalog): 15 named silent-failure patterns (SF-001 … SF-015; SF-015 is a candidate — the citable tag v0.1.3 carries 14)
 - [assayance](https://github.com/zhaoxinghua09-cell/assayance): Assayance / 试真法 — falsifiable assurance
 - [LGD](https://github.com/zhaoxinghua09-cell/LGD): contribution entry (Apache-2.0)
 
