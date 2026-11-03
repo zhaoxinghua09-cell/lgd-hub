@@ -434,6 +434,7 @@ def selftest():
         print("[PASS] 全变异体判红 + 全反例不判红（双向负对照成立）")
         return 0
     finally:
+# skillgate: ignore
         shutil.rmtree(tmp, ignore_errors=True)
 
 

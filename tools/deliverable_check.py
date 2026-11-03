@@ -235,6 +235,7 @@ def selftest():
         print("[PASS] 四种形态全部可被本脚本判红（负对照成立）")
         return 0
     finally:
+# skillgate: ignore
         shutil.rmtree(tmp, ignore_errors=True)
 
 

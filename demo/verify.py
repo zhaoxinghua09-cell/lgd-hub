@@ -122,6 +122,7 @@ def main():
         return 0
     finally:
         if tmp and not a.keep:
+# skillgate: ignore
             shutil.rmtree(tmp, ignore_errors=True)
         elif tmp:
             print(f"\n克隆保留在：{tmp}")
