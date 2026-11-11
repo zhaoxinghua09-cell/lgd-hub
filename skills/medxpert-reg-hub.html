@@ -76,6 +76,16 @@ python scripts/preflight.py &lt;asset-dir&gt; --json</pre>
   claims no external adoption.</p></div>
 </section>
 
+
+<section>
+  <h2>How this differs / 跟别人比差在哪</h2>
+  <p style="color:#5a6a80;font-size:14px;margin:0 0 10px">Read on 2026-11-11. These are the pages a search actually returns for this
+  problem today — so the comparison is against what a reader would otherwise find, not against a straw man.</p>
+  <table><tr><th>what you would find instead</th><th>what it does</th></tr><tr><td><a href="https://health.ec.europa.eu/medical-devices-eudamed_en">监管官方数据库（FDA / EUDAMED / 各国药监门户）</a></td><td>权威但分散：每个市场一套入口、一套术语、一套时限，且官网常拦程序探测（对脚本返 404/403）。</td></tr></table>
+  <div class="card"><ul><li><b>离线枢纽 + 官方直达链接</b> —— 每个结论尽量附官方链接，链接失效时给自助核验路径，不做死链堆积。</li><li><b>拿不准就标待核验</b> —— 边界条目明写&quot;待核验 / 走分类界定&quot;，不猜分类结论；这是本件不接受&quot;看起来像&quot;的地方。</li><li><b>时效写在件里</b> —— 关键数据一律提示以官方最新发布为准，并记录核验日期，避免把过期口径当现结论。</li></ul></div>
+  <div class="card" style="border-left:3px solid #d4af37"><p><b>Where they win / 对方强在哪</b> —— 权威性。任何二手枢纽都不等于监管机构口径；正式申报以官方原文与受理答复为准，本件只做检索与整理。</p></div>
+</section>
+
 <section>
   <h2>Machine-readable</h2>
   <div class="card"><p><a href="/skills.json">/skills.json</a> (all seven, one fetch) ·

@@ -77,6 +77,16 @@ python scripts/preflight.py &lt;asset-dir&gt; --json</pre>
   claims no external adoption.</p></div>
 </section>
 
+
+<section>
+  <h2>How this differs / 跟别人比差在哪</h2>
+  <p style="color:#5a6a80;font-size:14px;margin:0 0 10px">Read on 2026-11-11. These are the pages a search actually returns for this
+  problem today — so the comparison is against what a reader would otherwise find, not against a straw man.</p>
+  <table><tr><th>what you would find instead</th><th>what it does</th></tr><tr><td><a href="https://slsa.dev/">供应链证明类框架（in-toto / SLSA / sigstore 一类）</a></td><td>业界主流做法：以签名与证明（attestation）覆盖构建到发布链路，强在密码学与生态互认。</td></tr></table>
+  <div class="card"><ul><li><b>给的是四段可跑的链，不是格式规范</b> —— 四个阶段（建链 → 发布前检查 → 合规审计 → 长期留痕）各有一个脚本，一条命令产出可读的链与 SHA-256 清单。不需要先接一套签名基础设施。</li><li><b>零依赖、离线、可 diff</b> —— 纯标准库。换机器、断网、无 CI 都能跑，两次结果可逐条比对。</li><li><b>明说不替代谁</b> —— 不替代签名体系：需要密码学强度与生态互认时，该用 sigstore / in-toto 这类方案；这里解决的是&quot;同一批文件在两次发布之间有没有变、变了哪一条&quot;。</li></ul></div>
+  <div class="card" style="border-left:3px solid #d4af37"><p><b>Where they win / 对方强在哪</b> —— 密码学强度与生态互认。签名、透明日志、跨组织验证是它们的领域，本件不碰，也不宣称等价。</p></div>
+</section>
+
 <section>
   <h2>Machine-readable</h2>
   <div class="card"><p><a href="/skills.json">/skills.json</a> (all seven, one fetch) ·

@@ -43,7 +43,7 @@ footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--mut);fon
 <div class="wrap">
 <section>
   <h2>What it is / 是什么</h2>
-  <div class="card"><p>Four-layer sensitive-data scan (company / machine / personal / confidential) plus falsifiable-claim checks before sharing, listing or publishing any skill, expert pack, document or tool. Use before anything goes outward.</p><p style="color:#5a6a80">发布质量门禁：发布任何 Skill/专家包/文档/工具到外部（分享、上架市场、对外发布）前后的质量检查。发布前执行四层敏感信息检查（公司信息→本机信息→个人信息→机密信息），发布后按 TRACE 五维（Trust/Reliability/Adaptability/Convention/Effectiveness）执行 AI 自测。**发布前另须强制过一道独立专家审（不接受自审自评），并把审查记录登记到发布总账 §四。**当用户说&#x27;准备发布&#x27;、&#x27;发布前检查&#x27;、&#x27;发布后自测&#x27;、&#x27;TRACE 评测&#x27;、&#x27;检查一下发布物&#x27;、&#x27;脱敏检查&#x27;、&#x27;发布质量&#x27;时使用。</p></div>
+  <div class="card"><p>Four-layer sensitive-data scan (company / machine / personal / confidential) plus falsifiable-claim checks before sharing, listing or publishing any skill, expert pack, document or tool. Use before anything goes outward.</p><p style="color:#5a6a80">发布质量门禁：发布任何 Skill/专家包/文档/工具到外部（分享、上架市场、对外发布）前后的质量检查。发布前执行四层敏感信息检查（公司信息→本机信息→个人信息→机密信息），发布后按 TRACE 五维（Trust/Reliability/Adaptability/Convention/Effectiveness）执行 AI 自测。<b>发布前另须强制过一道独立专家审（不接受自审自评），并把审查记录登记到发布总账 §四。</b>当用户说&#x27;准备发布&#x27;、&#x27;发布前检查&#x27;、&#x27;发布后自测&#x27;、&#x27;TRACE 评测&#x27;、&#x27;检查一下发布物&#x27;、&#x27;脱敏检查&#x27;、&#x27;发布质量&#x27;时使用。</p></div>
 </section>
 
 <section>
@@ -74,6 +74,16 @@ python scripts/preflight.py &lt;asset-dir&gt; --json</pre>
   published rubric — weights, tiers and thresholds are in <a href="/EVAL.md">EVAL.md</a>, together with the one
   rubric defect we chose to disclose rather than patch. It is a self-run score, not a certification, and it
   claims no external adoption.</p></div>
+</section>
+
+
+<section>
+  <h2>How this differs / 跟别人比差在哪</h2>
+  <p style="color:#5a6a80;font-size:14px;margin:0 0 10px">Read on 2026-11-11. These are the pages a search actually returns for this
+  problem today — so the comparison is against what a reader would otherwise find, not against a straw man.</p>
+  <table><tr><th>what you would find instead</th><th>what it does</th></tr><tr><td><a href="https://pypi.org/project/harpocrates/">harpocrates（PyPI 1.3.0）</a></td><td>正则 + 香农熵 + 内置 XGBoost（600 棵树）判定，ONNX 本地推理；另有把密钥替换成占位符给 AI agent 读的通道。公布两组基准：gate 口径召回 95.0%、commit 口径 93.9%。</td></tr><tr><td><a href="https://owsp.org/www-community/Free_for_Open_Source_Application_Security_Tools">trufflehog / gitleaks / detect-secrets / CredSweeper</a></td><td>harpocrates 页面自带五工具对照表：TruffleHog 假阳 0.9% 且会拿凭据去厂商接口验证；CredSweeper 与 gitleaks 在特定格式上更强。</td></tr><tr><td><a href="https://pypi.org/project/secret-scan/">leak-hunter / gatekeeper / secret-scan / leakscan</a></td><td>同类的轻量方案：单二进制或零依赖 CLI，扫本地目录、仓库 URL、甚至 git 历史。</td></tr></table>
+  <div class="card"><ul><li><b>守的是发布面，不是凭据召回</b> —— 对方的核心指标是&quot;密钥有没有漏检&quot;。我们守的是<b>对外发布件</b>的四类面：内部绝对路径、内部主机名与工单号、往来邮件头（Message-ID 等）、内部文档名与代号。密钥只是其中一类。</li><li><b>三层分档，不把提示当命中</b> —— 硬凭据 / 内部信息 / 提示级（商号疑似只提示）分开计数，所以&quot;有命中&quot;与&quot;要阻断&quot;不是同一件事。同行的输出通常是扁平的严重度列表。</li><li><b>豁免要署名和日期</b> —— 基线表每条带 <code>name / file / type / matched / reason / reviewer / date</code>，匹配键必须是（文件, 类型, 命中串）三元组。假阳不是&quot;我觉得不是&quot;，是一条可被复核的记录。</li><li><b>RC=0 是算出来的，不是看出来的</b> —— 一次实跑把命中拆成：技术误报 326、规则文本 5、基线豁免 27、<b>真实命中 0</b>。四个数字都在件里，谁也改不了口径而不改数字。</li></ul></div>
+  <div class="card" style="border-left:3px solid #d4af37"><p><b>Where they win / 对方强在哪</b> —— 检测能力。对方有 ML 模型、熵分析、git 历史扫描、甚至拿凭据去厂商接口验证真伪；我们的规则是固定的正则族，召回明显更低，且<b>不扫 git 历史</b>。要查密钥，用它们的；要守发布面并留下可复核的豁免记录，用这个。</p></div>
 </section>
 
 <section>
