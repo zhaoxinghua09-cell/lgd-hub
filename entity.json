@@ -1,0 +1,120 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "#person",
+      "name": "Xinghua Zhao",
+      "alternateName": "赵兴华",
+      "identifier": "https://orcid.org/0009-0001-0512-1237",
+      "jobTitle": "Independent researcher",
+      "knowsAbout": [
+        "AI agent governance",
+        "open-source trust tooling",
+        "medical device regulatory compliance"
+      ],
+      "url": "https://zhaoxinghua09-cell.github.io/lgd-hub/",
+      "sameAs": [
+        "https://orcid.org/0009-0001-0512-1237"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "#synomosai",
+      "name": "SynomosAI",
+      "description": "AI governance and trust infrastructure; brand identity only, no registered entity at present",
+      "founder": {
+        "@id": "#person"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "#medxpert",
+      "name": "MedXpert",
+      "description": "Medical device regulatory compliance tooling; brand identity only, no registered entity at present",
+      "founder": {
+        "@id": "#person"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "#flagships",
+      "name": "Flagship assets",
+      "itemListElement": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "skill-preflight",
+          "applicationCategory": "DeveloperApplication",
+          "author": {
+            "@id": "#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "skill-doctor",
+          "applicationCategory": "DeveloperApplication",
+          "author": {
+            "@id": "#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "evidence-chain-suite",
+          "applicationCategory": "DeveloperApplication",
+          "author": {
+            "@id": "#person"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "publish-quality-gate",
+          "applicationCategory": "DeveloperApplication",
+          "author": {
+            "@id": "#person"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "lgd-gate-methodology",
+          "author": {
+            "@id": "#person"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "uibc-challenge",
+          "author": {
+            "@id": "#person"
+          }
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "medxpert-reg-hub",
+          "author": {
+            "@id": "#person"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zhaoxinghua09-cell.github.io/lgd-hub/",
+      "url": "https://zhaoxinghua09-cell.github.io/lgd-hub/",
+      "name": "LGD Hub — entity page",
+      "publisher": {
+        "@id": "#person"
+      },
+      "about": [
+        {
+          "@id": "#person"
+        },
+        {
+          "@id": "#synomosai"
+        },
+        {
+          "@id": "#medxpert"
+        }
+      ]
+    }
+  ]
+}
