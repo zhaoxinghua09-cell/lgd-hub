@@ -1,0 +1,76 @@
+{
+ "generated_for": "lgd-hub rev H",
+ "site": "https://zhaoxinghua09-cell.github.io/lgd-hub",
+ "packs": [
+  {
+   "name": "skill-preflight",
+   "zip": "/dist/skill-preflight.zip",
+   "bytes": 54590,
+   "sha256": "2e757d820cc8a54366e873b920e4caa42b6e617552372697c1dbc1703936662b",
+   "files": 13,
+   "unzipped_bytes": 122841,
+   "license": "MIT",
+   "skill_md_sha256": "588ec5c1e0d03d881d0f739fe39067e5cfa08dc827e5ffb0a2273f44f81c7e6b"
+  },
+  {
+   "name": "publish-quality-gate",
+   "zip": "/dist/publish-quality-gate.zip",
+   "bytes": 30673,
+   "sha256": "8588947aef6e28ec318637471b6d35e730715448d501aec1f308bea891496344",
+   "files": 13,
+   "unzipped_bytes": 58546,
+   "license": "MIT",
+   "skill_md_sha256": "cf857a14a8b79426198c6b5c85570480177aa08a4cf6ef23fde2c897b72771e4"
+  },
+  {
+   "name": "evidence-chain-suite",
+   "zip": "/dist/evidence-chain-suite.zip",
+   "bytes": 12282,
+   "sha256": "8a54e6fa9187d61e1f7e6d3f84c3d3f57e61b83ce94d4c4707346ef711bbdcc5",
+   "files": 9,
+   "unzipped_bytes": 18378,
+   "license": "MIT",
+   "skill_md_sha256": "857ddde056c3a49e24bff3be7820ed6878056fa7cfec42b76ef10e1f8144726c"
+  },
+  {
+   "name": "medxpert-reg-hub",
+   "zip": "/dist/medxpert-reg-hub.zip",
+   "bytes": 131270,
+   "sha256": "813cd80da4a82805cc40388ba0dbb2e9e9e55509e0b4984e11128d71358ab87e",
+   "files": 43,
+   "unzipped_bytes": 265210,
+   "license": "CC-BY-4.0",
+   "skill_md_sha256": "068da1aa4a1ae1e169613fdfd7568d303c635d97e05504727fd4ad48f8ac5f26"
+  },
+  {
+   "name": "uibc-challenge",
+   "zip": "/dist/uibc-challenge.zip",
+   "bytes": 16675,
+   "sha256": "4feb01c221a00529fa645abf6a2d6ee2b26a7a631a307072d0e6653850d2814c",
+   "files": 12,
+   "unzipped_bytes": 25000,
+   "license": "MIT",
+   "skill_md_sha256": "1d28e6ee000dd740325c1de7ecfc6bf3695aaf273b2e2d4b4de82d59dad301ae"
+  },
+  {
+   "name": "skill-doctor",
+   "zip": "/dist/skill-doctor.zip",
+   "bytes": 25802,
+   "sha256": "ad17056f7f4d54226aad9f30d9ec688ab7dbcfc5705981662826e21e68b48e11",
+   "files": 12,
+   "unzipped_bytes": 47620,
+   "license": "MIT",
+   "skill_md_sha256": "11757c8fce3f06fccb1dce127c6c8a47f0ee683660236bab4967fe285fe89b0c"
+  },
+  {
+   "name": "lgd-gate-methodology",
+   "zip": "/dist/lgd-gate-methodology.zip",
+   "bytes": 22105,
+   "sha256": "2f2d5244c60df43ae3a2dff0c4044db9ef6b227fc2cf84d3d42411f27abe9cef",
+   "files": 21,
+   "unzipped_bytes": 31902,
+   "license": "CC-BY-4.0",
+   "skill_md_sha256": "cb2f6aa9f68e3771ee89f650a5603c2a6e96ee5ada37f1db82d90e22f3ac7ca6"
+  }
+ ]
+}

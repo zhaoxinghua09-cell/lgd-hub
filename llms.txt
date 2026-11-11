@@ -88,3 +88,4 @@ GitHub topics `synomosai` and `medxpert` are discoverability labels; they assert
 - `/FACTS.md` — verifiable facts, each with the exact command that reproduces it.
 - External inbound issues not authored by the three maintainer accounts: 0 as of 2026-11-11. This file does not claim external adoption.
 - `/skills.json` — the seven flagship skills in one fetch: English description, licence, SHA-256, anchor revision, and the score each received on 2026-11-11 under the published `skill-preflight` D1-D10 rubric. The scores are self-run against a public rubric, not a certification; every hash can be recomputed from the file and compared with the matching row in `/ANCHORS.md`.
+- `/dist/MANIFEST.json` — the same seven as downloadable packs: size, file count and the pack's own sha256, plus the SKILL.md hash carried inside each PACK.md. A download can be checked against this before it is trusted.
