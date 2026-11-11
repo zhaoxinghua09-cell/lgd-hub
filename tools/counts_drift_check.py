@@ -9,7 +9,7 @@
   ② 页面写「9 域 rubric 全文」，而理论仓里 rubric 产物为 0；
   ③ 许可表把 MIT / CC BY 4.0 都写成 ARR（把开源说成闭源）。
 后来又经红队变异测试发现：只做「数字+量词」正则时，7/10 变异体能逃过检查。
-所以本门分四段，且自带 selftest（用变异体证明它真会失败）。
+所以本门分五段，且自带 selftest（用变异体证明它真会失败）。
 
   A 跨面数字漂移：以 world.json 的 counts 为唯一真源，扫各散文面。
                  缺省不算错（不是每个面都必须写每个数字），但写了就必须对。
@@ -17,6 +17,9 @@
   C 货不对板：① 禁用说法（产物不存在的宣称）② 许可表 13 仓覆盖 ③ 许可**值**比对
              ④ 分层许可的仓必须同时出现「分层」与「ARR」两类词（防被压成单一许可）。
   D selftest：把已知变异体注入副本，断言本门必须判红（无负对照=无证据）。
+  E 真源新鲜度：world.json 的 revised 超过 7 天未更新即判红（2026-11-12 补：
+                 旧门只核对各面与真源是否一致，真源本身过期（109/14/151 对实测
+                 116/15/160）也不拦——等于只验「抄没抄错」，不验「真源还是不是真的」）。
 
 用法
 ----
@@ -26,6 +29,7 @@
 """
 import json
 import pathlib
+from datetime import date
 import re
 import shutil
 import subprocess
@@ -297,16 +301,40 @@ def check_claims(doc):
     return fails
 
 
+# E 段：真源新鲜度（2026-11-12 审计发现，见上）。
+# 7 天对齐每周审计节奏；边界 ±1 天的时区差不影响结论（date.today() 取系统日期）。
+FRESHNESS_MAX_DAYS = 7
+
+
+def check_freshness(doc, today=None):
+    fails = []
+    today = today or date.today()
+    raw = str(doc.get("revised", "")).strip()
+    try:
+        revised = date.fromisoformat(raw)
+    except ValueError:
+        fails.append(("world.json revised",
+                      f"revised 缺失或不是 ISO 日期（写的是「{raw}」）——无法确认真源新鲜度，先补 revised"))
+        return fails
+    age = (today - revised).days
+    if age > FRESHNESS_MAX_DAYS:
+        fails.append(("world.json revised",
+                      f"revised={raw}，已 {age} 天未更新（上限 {FRESHNESS_MAX_DAYS} 天；今天 {today.isoformat()}）——真源过期，先重新核对数字并更新 world.json 再跑门禁"))
+    return fails
+
+
 def run_all(verbose=False, quiet=False):
     WARNS.clear()
     doc, truth = load_truth()
     hits, pf = check_prose(truth, verbose)
     inf = check_internal(doc, truth)
     cf = check_claims(doc)
+    ef = check_freshness(doc)
     if not quiet:
         print(f"\nA 段·跨面：扫描 {len(PROSE_SURFACES)} 面 / 命中 {hits} 条 / 真源 {TRUTH.name}")
         print(f"B 段·内部：配对 {len(INTERNAL_PAIRS)} 组 + 徽章倍数 + 域论文注记")
         print(f"C 段·货不对板：禁用说法 {len(FORBIDDEN_CLAIMS)} 条 + 许可 {len(LICENSE_TABLE_EXPECTED)} 仓覆盖/值/分层三类")
+        print(f"E 段·真源新鲜度：world.json revised 上限 {FRESHNESS_MAX_DAYS} 天")
     if pf:
         print(f"\n[FAIL] A 段漂移 {len(pf)} 条：")
         for name, line, key, got, want, snip in pf:
@@ -324,7 +352,11 @@ def run_all(verbose=False, quiet=False):
         print(f"\n[FAIL] C 段货不对板 {len(cf)} 条：")
         for w, why in cf:
             print(f"  {w}: {why}")
-    total = len(pf) + len(inf) + len(cf)
+    if ef:
+        print(f"\n[FAIL] E 段真源过期 {len(ef)} 条：")
+        for w, why in ef:
+            print(f"  {w}: {why}")
+    total = len(pf) + len(inf) + len(cf) + len(ef)
     if total:
         return 1
     if not quiet:
@@ -379,7 +411,13 @@ MUTANTS += [
 
 
 def selftest():
-    total = len(MUTANTS)
+    # E 段正对照：夹具归一后 revised 是今天，把它改旧必须判红。锚点用今天的日期
+    # 动态拼（make_case 刚写进去的值），不写死旧值。
+    mutants = list(MUTANTS) + [
+        ("world.json revised 过期（E 段）", "world.json",
+         f'"revised": "{date.today().isoformat()}"', '"revised": "2026-01-01"'),
+    ]
+    total = len(mutants)
     print(f"selftest：{total} 个变异体（必须判红）+ {len(NEGATIVE_MUTANTS)} 个反例（必须不判红）\n")
     tmp = pathlib.Path(tempfile.mkdtemp(prefix="lgd_mut_"))
     escaped, caught, false_pos = [], 0, []
@@ -388,6 +426,14 @@ def selftest():
         # 每个用例一个独立目录：不覆盖、不删除，因此不需要任何 destructive 操作
         work = tmp / ("case_" + re.sub(r"[^0-9A-Za-z]+", "_", tag))
         shutil.copytree(ROOT, work, ignore=shutil.ignore_patterns(".git", "__pycache__"))
+        # E 段夹具归一：把 world.json 的 revised 写成今天，否则基线本身过期，
+        # 每个用例（尤其反例）都会先因 E 段判红。测 E 段的变异体自己再改旧。
+        wj = work / "world.json"
+        if wj.exists():
+            wtext = wj.read_text(encoding="utf-8", errors="replace")
+            wtext2 = re.sub(r'"revised":\s*"[^"]*"', f'"revised": "{date.today().isoformat()}"', wtext, count=1)
+            if wtext2 != wtext:
+                wj.write_text(wtext2, encoding="utf-8")
         return work
 
     def run_case(name, fname, old, new, expect_fail):
@@ -418,7 +464,7 @@ def selftest():
         return False
 
     try:
-        for name, fname, old, new in MUTANTS:
+        for name, fname, old, new in mutants:
             if run_case(name, fname, old, new, True):
                 caught += 1
         for name, fname, old, new in NEGATIVE_MUTANTS:
