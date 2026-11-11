@@ -78,6 +78,8 @@ GitHub topics `synomosai` and `medxpert` are discoverability labels; they assert
 
 - `/EVAL.md` — the scoring rubric with weights and tier thresholds, the 2026-11-11 result (seven A, average 0.952, zero blockers), what changed this round, and one rubric defect we chose to disclose rather than patch.
 
+- `/FEEDBACK.md` — the external-input log: one row per report, verdict accept / reject / unresolved, 7-day acknowledgement, nothing deleted. Currently empty, and stated as empty.
+
 ## Machine-readable entry points
 
 - `/entity.json` — schema.org @graph: Person (ORCID 0009-0001-0512-1237), two brand lines (both explicitly unregistered), and the seven flagship assets. Canonical: https://zhaoxinghua09-cell.github.io/lgd-hub/
