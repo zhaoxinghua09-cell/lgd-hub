@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zhaoxinghua09-cell.github.io/lgd-hub/sitemap.xml

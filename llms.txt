@@ -80,6 +80,8 @@ GitHub topics `synomosai` and `medxpert` are discoverability labels; they assert
 
 - `/FEEDBACK.md` — the external-input log: one row per report, verdict accept / reject / unresolved, 7-day acknowledgement, nothing deleted. Currently empty, and stated as empty.
 
+- [the seven flagships, one page each](https://zhaoxinghua09-cell.github.io/lgd-hub/skills/): what it does, when to use it, sha256, licence and score per asset
+
 ## Machine-readable entry points
 
 - `/entity.json` — schema.org @graph: Person (ORCID 0009-0001-0512-1237), two brand lines (both explicitly unregistered), and the seven flagship assets. Canonical: https://zhaoxinghua09-cell.github.io/lgd-hub/
