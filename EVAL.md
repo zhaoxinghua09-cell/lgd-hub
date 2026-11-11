@@ -88,6 +88,11 @@ sha256sum <asset>/SKILL.md       # compare with /skills.json and /ANCHORS.md
 - Not a timestamp claim. The 31 `.ots` proofs are **pending / not retrievable** — the three public calendars returned `CommitmentNotFoundError` for every one of them, including a control hash submitted in the same session. No Bitcoin block height is written anywhere in this repository.
 - Not a finished scoreboard. D10 still lacks `references/` on 19 library assets, and we declined to fill them with generated restatements of their own bodies. A dimension that can be satisfied by padding is a dimension that should stay unsatisfied until there is a real need for it.
 
+
+## 7. Disagree with any number here?
+
+Every score on this page can be disputed. Send a [rubric dispute](https://github.com/zhaoxinghua09-cell/lgd-hub/issues/new?template=rubric-dispute.md) or an [external use report](https://github.com/zhaoxinghua09-cell/lgd-hub/issues/new?template=external-use.md); each one gets a public row in [`FEEDBACK.md`](FEEDBACK.md) within 7 days with a verdict of accept / reject / unresolved, and an accepted change is re-scored against all seven — including any score that falls. A dispute that lowers a number still lands.
+
 ---
 
 *Rubric and results in Chinese: see `/FACTS.md` and the shelf report. 判据与结果的中文口径见 `/FACTS.md`；本页只写数字、改了什么、以及哪一条我们拒绝去改。*
