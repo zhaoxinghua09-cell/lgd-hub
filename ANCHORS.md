@@ -3,11 +3,11 @@
 Author: Xinghua Zhao (Steven Zhao) · ORCID 0009-0001-0512-1237
 Two revisions are recorded here on purpose — see the note below the first table.
 
-## Current revision (E) — English metadata added, 2026-11-11
+## Current revision (F) — English metadata added, 2026-11-11
 
 These are the hashes of the files as they are now. 27 of the 31 assets gained `display_name_en` and `description_en` on 2026-11-11 so that an English query can find them. Their earlier hashes — revision A (proof-bound) and revision B (paths sanitized) — remain verifiable below.
 
-| # | asset | sha256 (rev E) | proof | bitcoin block |
+| # | asset | sha256 (rev F) | proof | bitcoin block |
 |---|---|---|---|---|
 | 1 | `agent-evolution` | `6592c2ab99f65a6e9ec1da46534caea8bb2a0679e2d8637465a9b64e015905a8` | `SKILL.md.ots` | pending / not retrievable |
 | 2 | `evidence-chain-builder` | `d40b23a015f1c487703bf900684d8997fd066a835523beef0efd067b52d03481` | `SKILL.md.ots` | pending / not retrievable |
@@ -21,14 +21,14 @@ These are the hashes of the files as they are now. 27 of the 31 assets gained `d
 | 10 | `medical-device-qms-gmp` | `e8197884268ce6521fd88a82ed3fc2de360d8e4a3ccda0e83e70190d3b470d78` | `SKILL.md.ots` | pending / not retrievable |
 | 11 | `medical-device-reg-dossier` | `328c2e1c3e28ef1ca972ebe8b6fb239c9b4c247739a883aa828fb816a9ed5b49` | `SKILL.md.ots` | pending / not retrievable |
 | 12 | `medical-device-risk-management` | `890637a0408b23a5c4f916316c3a99b4ed1e7ff796d276e405f93f3a784bc88d` | `SKILL.md.ots` | pending / not retrievable |
-| 13 | `medxpert-reg-hub` | `302164e69b75904f366aca03064bc2a2b5ce6c0975bd45040397f721cd2196a2` | `SKILL.md.ots` | pending / not retrievable |
+| 13 | `medxpert-reg-hub` | `068da1aa4a1ae1e169613fdfd7568d303c635d97e05504727fd4ad48f8ac5f26` | `SKILL.md.ots` | pending / not retrievable |
 | 14 | `medxpert-termbase` | `b8c56de80ce22bdfe36490b725e81fa9618d64b37072604ef1fcca26436bf81b` | `SKILL.md.ots` | pending / not retrievable |
 | 15 | `ots-timestamp-anchor` | `4c289da7cd7a84c25ffdb9cdbb59b7b21d7b7e727d1d221d0472331551ed1123` | `SKILL.md.ots` | pending / not retrievable |
 | 16 | `publish-quality-gate` | `74e7987709a5ebb5b3d19924ef213979383750182288e2c68ae581f58c42841c` | `SKILL.md.ots` | pending / not retrievable |
 | 17 | `publish-redteam-review` | `efa12c82ae1a31c736ea914d9c4391b27a08a568391970fe0c9e241cd5ae0d93` | `SKILL.md.ots` | pending / not retrievable |
 | 18 | `skill-auditor` | `a61ecbcbf629823f83a3dff6a1cca5b4c7e68118043834ee45d9e5a8eca78361` | `SKILL.md.ots` | pending / not retrievable |
 | 19 | `skill-carrier-rights-layer` | `a80bffa087c6687993a4fbddf6e22af4e68ebdc8075cde9f30fc8597c455e6a3` | `SKILL.md.ots` | pending / not retrievable |
-| 20 | `skill-doctor` | `d9011d04f048480eeb99427f25a52c79a26e495333fbdd0d67d6d162996dbb81` | `SKILL.md.ots` | pending / not retrievable |
+| 20 | `skill-doctor` | `11757c8fce3f06fccb1dce127c6c8a47f0ee683660236bab4967fe285fe89b0c` | `SKILL.md.ots` | pending / not retrievable |
 | 21 | `skill-preflight` | `ae24a30284d3ee72b893d82dd90e4e8c97a6bb3639b6bf541113fc00044e5fbf` | `SKILL.md.ots` | pending / not retrievable |
 | 22 | `skill-release-gate` | `cda902c109587830e38d6dc999a4597af5bef65faa99c9804605043310bb72f7` | `SKILL.md.ots` | pending / not retrievable |
 | 23 | `standards-contribution-substantiation` | `7d06f5f912dec22c9925f53dd16b01fe0cd78f5bd7f5fa3c05a8b464cb9a9f64` | `SKILL.md.ots` | pending / not retrievable |
@@ -43,9 +43,9 @@ These are the hashes of the files as they are now. 27 of the 31 assets gained `d
 
 ## Revision A — the bytes the `.ots` proofs commit to
 
-The 31 `.ots` proofs were produced from these hashes. If you are verifying a proof file rather than the current file, use this table. For 4 of the 31 assets rev A and rev E are identical and are not repeated here.
+The 31 `.ots` proofs were produced from these hashes. If you are verifying a proof file rather than the current file, use this table. For 4 of the 31 assets rev A and rev F are identical and are not repeated here.
 
-| asset | sha256 (rev A, proof-bound) | sha256 (rev E, current) | what changed |
+| asset | sha256 (rev A, proof-bound) | sha256 (rev F, current) | what changed |
 |---|---|---|---|
 | `lgd-gate-methodology` | `80b33e13125d4aeeccfdfee5f556c20afd6ac6a3cc96bbe15ed393d967d8fb66` | `498b56e1777f22dc6b73a29b3dbbd44940ea125c9a4dfb7c0e34e3c733841977` | 补英文字段（rev C）；补 `scripts/gate_scorecard.py` + `references/seven-layer-matrix.md` + 红线段与可复跑命令（rev D） |
 | `publish-redteam-review` | `248bf4194edf47aa313f92d08369357279e1e7872a1ea8525e23726082d9d2cd` | `efa12c82ae1a31c736ea914d9c4391b27a08a568391970fe0c9e241cd5ae0d93` | 补 `display_name_en` / `description_en`（非内容改动） |
@@ -63,7 +63,7 @@ The 31 `.ots` proofs were produced from these hashes. If you are verifying a pro
 | `evidence-chain-suite` | `addb9dcad8fb8a7bcb519f618762f8acb597b8d9d089aa65cd7223bd232bbb11` | `857ddde056c3a49e24bff3be7820ed6878056fa7cfec42b76ef10e1f8144726c` | 补英文字段（rev C）；补 `scripts/chain_verify.py` + `references/evidence-chain-rubric.md` + 触发段与红线段（rev E） |
 | `skill-carrier-rights-layer` | `2c14351754bd831159ee20d1daa8f1cc62bb9ea4df1a4e02ad8d12d06d1c0f11` | `a80bffa087c6687993a4fbddf6e22af4e68ebdc8075cde9f30fc8597c455e6a3` | 工作目录路径换成占位符（rev B）；补英文字段（rev C） |
 | `ots-timestamp-anchor` | `1870e25e548d730ff0ad979bf4e0f689cc22085d231aebacc93a17add0eb6add` | `4c289da7cd7a84c25ffdb9cdbb59b7b21d7b7e727d1d221d0472331551ed1123` | 解释器与工作目录路径换成占位符（rev B）；补英文字段（rev C） |
-| `medxpert-reg-hub` | `e352df537d78b44b87ae00657e72d916f7b146ac9c5d62ffb467b515b6a530b2` | `302164e69b75904f366aca03064bc2a2b5ce6c0975bd45040397f721cd2196a2` | 补 `display_name_en` / `description_en`（非内容改动） |
+| `medxpert-reg-hub` | `e352df537d78b44b87ae00657e72d916f7b146ac9c5d62ffb467b515b6a530b2` | `068da1aa4a1ae1e169613fdfd7568d303c635d97e05504727fd4ad48f8ac5f26` | 补英文字段（rev C）；补 `scripts/hub_verify.py`（按 manifest 逐文件复算哈希，含 `--restate`）、顶层 `read_when`、触发词、何时不用段（rev F）；manifest 哈希已同步重述并记录 `restated_utc` |
 | `medical-device-compliance-grader` | `4ccb5e29646fddb745847c6e2e55a24c238174a48b199c57f9adad67217c7b27` | `ba94b808e824779a700355392f465ed24ad926bc38462a949173c40bbf68c16e` | 补 `display_name_en` / `description_en`（非内容改动） |
 | `medical-device-reg-dossier` | `ec9418d1b7f37a2fbd9f727f4dbcbe6bb9d3960f68b180f495382eb76bdd7619` | `328c2e1c3e28ef1ca972ebe8b6fb239c9b4c247739a883aa828fb816a9ed5b49` | 版权行改自然人（去公司名）（rev B）；补英文字段（rev C） |
 | `medical-device-qms-gmp` | `5ed5da23d21c57236229c406628c5087ffcb270157e70dc55e6e759ca7b72f4e` | `e8197884268ce6521fd88a82ed3fc2de360d8e4a3ccda0e83e70190d3b470d78` | 版权行改自然人（去公司名）（rev B）；补英文字段（rev C） |
@@ -72,7 +72,7 @@ The 31 `.ots` proofs were produced from these hashes. If you are verifying a pro
 | `intl-participation-pipeline` | `d44762b5487f93bf693b9c9c8c64067e02adc0b63ae9e28c591413972073b359` | `713ae994ef41b3feaf7a2761ae31cf35011206cad81433c67aff3f595143627d` | 私钥落点与 DPAPI 保险库路径换成占位符（rev B，原文指向明文 key 文件）；补英文字段（rev C） |
 | `standards-contribution-substantiation` | `cf679f8bd87ff0a0a75aa550f333f4e0d49ffb2884f1b3508691da9950b32267` | `7d06f5f912dec22c9925f53dd16b01fe0cd78f5bd7f5fa3c05a8b464cb9a9f64` | 补 `display_name_en` / `description_en`（非内容改动） |
 | `iso-standards-readiness` | `7f0a95e62763c2a8f6157ada4734a640fb79ba85c24bed1a0d9c06bf14a9f97a` | `719b0cc1a5ef94b7bc18749e17de2e7e13e7a9cf373e649a82ffb2c15e1749a2` | 补 `display_name_en` / `description_en`（非内容改动） |
-| `skill-doctor` | `51bd567950e99e6b349c7d114034fc485b3d93686a6cf52d96c46733fea02c54` | `d9011d04f048480eeb99427f25a52c79a26e495333fbdd0d67d6d162996dbb81` | 补 `display_name_en` / `description_en`（非内容改动） |
+| `skill-doctor` | `51bd567950e99e6b349c7d114034fc485b3d93686a6cf52d96c46733fea02c54` | `11757c8fce3f06fccb1dce127c6c8a47f0ee683660236bab4967fe285fe89b0c` | 补英文字段（rev C）；顶层 `read_when`、触发词、何时不用段、红线段、`assets/grade-thresholds.json` 与召回查询模板（rev F） |
 | `skill-auditor` | `b9479596117b1c1595788c70bb4937d156f7bad8ab5dedb529dd12faf4cfcace` | `a61ecbcbf629823f83a3dff6a1cca5b4c7e68118043834ee45d9e5a8eca78361` | 补 `display_name_en` / `description_en`（非内容改动） |
 | `skill-preflight` | `d6593fadda3bc0d86a3061d79bc2a861180743d3baac35f94cd0b2589ae7cd16` | `ae24a30284d3ee72b893d82dd90e4e8c97a6bb3639b6bf541113fc00044e5fbf` | 补 `display_name_en` / `description_en`（非内容改动） |
 | `skill-release-gate` | `8ee2d5210cfcfce1309e8c16fb818b13afa3e77d5d24eee472431e52e77a968b` | `cda902c109587830e38d6dc999a4597af5bef65faa99c9804605043310bb72f7` | 补 `display_name_en` / `description_en`（非内容改动） |
@@ -81,7 +81,7 @@ The 31 `.ots` proofs were produced from these hashes. If you are verifying a pro
 
 1. Get the asset's `SKILL.md`.
 2. Run `sha256sum SKILL.md` (or `Get-FileHash SKILL.md -Algorithm SHA256`).
-3. Compare with the rev E row (current file) or the rev A row (proof-bound file).
+3. Compare with the rev F row (current file) or the rev A row (proof-bound file).
 4. If it matches, this file plus the commit that introduced it give you a public time reference for that exact byte content.
 
 ## Status note (2026-11-11)
@@ -89,4 +89,4 @@ The 31 `.ots` proofs were produced from these hashes. If you are verifying a pro
 - All 31 commitments were submitted and produced `.ots` proof files.
 - Retrieval from `a.pool` / `b.pool` / `alice.btc` calendars returned `CommitmentNotFoundError` on this date, including for a freshly submitted control hash — the calendars, not our files, are the limiting side.
 - No row claims a Bitcoin block height; rows say `pending / not retrievable` and that is deliberate.
-- Revision B exists because publishing machine-specific paths — including one to a plaintext key store — is a disclosure risk. Revision C adds English metadata so an English query can find the assets. Revision D adds a runnable script, a reference sheet and red-line sections to two assets. Revision E does the same for `evidence-chain-suite`. No claim or licence line was changed in C, D or E.
+- Revision B exists because publishing machine-specific paths — including one to a plaintext key store — is a disclosure risk. Revision C adds English metadata so an English query can find the assets. Revision D adds a runnable script, a reference sheet and red-line sections to two assets. Revision E does the same for `evidence-chain-suite`. Revision F closes the last two: `medxpert-reg-hub` gained a package-integrity checker and its manifest hashes were restated with the original timestamps preserved and the reason recorded; `skill-doctor` gained machine-readable grade thresholds. No claim or licence line was changed in C, D, E or F.
