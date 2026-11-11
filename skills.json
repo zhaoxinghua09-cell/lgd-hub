@@ -1,0 +1,181 @@
+{
+ "@context": "https://schema.org",
+ "generated_at": "2026-11-11",
+ "revision": "G",
+ "count": 7,
+ "author": {
+  "name": "Xinghua Zhao",
+  "orcid": "https://orcid.org/0009-0001-0512-1237"
+ },
+ "license_note": "Each entry states its own license. Code MIT, documentation CC-BY-4.0, per the asset's SKILL.md frontmatter.",
+ "how_to_verify": [
+  "Fetch the asset's SKILL.md from its repository.",
+  "Run sha256sum SKILL.md (or Get-FileHash -Algorithm SHA256).",
+  "Compare with the sha256 field here and with the matching row in /ANCHORS.md.",
+  "Re-run the rubric with skill-preflight to reproduce the score."
+ ],
+ "authority_note": "Scores are self-run against a public rubric, not an external certification. No external adoption is claimed; inbound issues from outside the three maintainer accounts: 0 as of 2026-11-11.",
+ "items": [
+  {
+   "name": "skill-preflight",
+   "display_name_en": "Skill Preflight",
+   "description_en": "Zero-token pre-listing check for any SKILL.md against a weighted D1-D10 rubric: trigger design, metadata, structure, verifiability, boundaries, disclosure hygiene, size, provenance, internationalisation, resources. Use before listing or publishing a skill.",
+   "description_zh": "技能上架前的零 token 体检门禁。对任意 SKILL.md 按 D1-D10 十维加权 rubric（触发设计/元数据/可执行性/可验证性/边界诚实/去敏纪律/体量/署名/国际化/资源配套）算出 0-1 分与 A/B/C/D 档，给出在 688 个真实技能库中的百分位、逐维与全库均值的落差、泄密形态扫描结果，以及只列 3 条的补强动作；另附『SkillHub 评测对齐度』诊断（七段式骨架覆盖 + 缺哪段），并支持外部 G1 敏感词表（商号等，不硬编码、不随包发布）。全程读磁盘、不调 LLM、不联网，分数可复算、可 diff、可进 CI。触发词：技能体检、skill 体检、技能评分、skill 打分、技能质量、上架前检查、skill preflight、发布门禁、技能审计、SKILL.md 检查、骨架诊断。",
+   "license": "MIT",
+   "version": "1.2.1",
+   "category": "AI工程方法",
+   "sha256": "ae24a30284d3ee72b893d82dd90e4e8c97a6bb3639b6bf541113fc00044e5fbf",
+   "anchor_revision": "G",
+   "evaluation": {
+    "rubric": "skill-preflight D1-D10 weighted v1.0",
+    "score": 0.894,
+    "tier": "A",
+    "blockers": [],
+    "reported_in": "eval-report-20261111-191846.json"
+   },
+   "timestamp_proof": {
+    "file": "SKILL.md.ots",
+    "state": "pending / not retrievable",
+    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+   }
+  },
+  {
+   "name": "publish-quality-gate",
+   "display_name_en": "Publish Quality Gate",
+   "description_en": "Four-layer sensitive-data scan (company / machine / personal / confidential) plus falsifiable-claim checks before sharing, listing or publishing any skill, expert pack, document or tool. Use before anything goes outward.",
+   "description_zh": "发布质量门禁：发布任何 Skill/专家包/文档/工具到外部（分享、上架市场、对外发布）前后的质量检查。发布前执行四层敏感信息检查（公司信息→本机信息→个人信息→机密信息），发布后按 TRACE 五维（Trust/Reliability/Adaptability/Convention/Effectiveness）执行 AI 自测。**发布前另须强制过一道独立专家审（不接受自审自评），并把审查记录登记到发布总账 §四。**当用户说'准备发布'、'发布前检查'、'发布后自测'、'TRACE 评测'、'检查一下发布物'、'脱敏检查'、'发布质量'时使用。",
+   "license": "CC-BY-4.0",
+   "version": "1.3.0",
+   "category": "AI安全",
+   "sha256": "74e7987709a5ebb5b3d19924ef213979383750182288e2c68ae581f58c42841c",
+   "anchor_revision": "G",
+   "evaluation": {
+    "rubric": "skill-preflight D1-D10 weighted v1.0",
+    "score": 0.845,
+    "tier": "A",
+    "blockers": [],
+    "reported_in": "eval-report-20261111-191846.json"
+   },
+   "timestamp_proof": {
+    "file": "SKILL.md.ots",
+    "state": "pending / not retrievable",
+    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+   }
+  },
+  {
+   "name": "evidence-chain-suite",
+   "display_name_en": "Evidence Chain Suite",
+   "description_en": "One-stop evidence chain toolkit: build, check, traceability audit and audit-trail custody in a single skill. Use whenever a task mentions evidence chain, audit trail, traceability or compliance records.",
+   "description_zh": "证据链全套件：构建 + 检查 + 可追溯性审计 + 审计轨迹保管，一站式完成所有证据链相关工作。当用户要做证据链、审计、可追溯性、合规留痕时使用。整合了原 evidence-chain-builder / evidence-chain-check / traceability-audit-team / audit-trail-keeper 四个技能。",
+   "license": "MIT",
+   "version": "2.0.0",
+   "category": "质量与安全",
+   "sha256": "857ddde056c3a49e24bff3be7820ed6878056fa7cfec42b76ef10e1f8144726c",
+   "anchor_revision": "G",
+   "evaluation": {
+    "rubric": "skill-preflight D1-D10 weighted v1.0",
+    "score": 0.97,
+    "tier": "A",
+    "blockers": [],
+    "reported_in": "eval-report-20261111-191846.json"
+   },
+   "timestamp_proof": {
+    "file": "SKILL.md.ots",
+    "state": "pending / not retrievable",
+    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+   }
+  },
+  {
+   "name": "medxpert-reg-hub",
+   "display_name_en": "MedXpert Regulatory Hub",
+   "description_en": "All-in-one knowledge hub for medical-device registration engineers: global pathways and classification (China NMPA, US FDA, EU MDR, Japan PMDA, ASEAN and LATAM) plus 20 topic hubs - UDI, STED technical file, biocompatibility, GMP, post-market, labelling and IFU, risk, clinical evaluation, design control, software, sterilization, submission, review, after-sales, market access - mapped to the seven-stage lifecycle with verified official links. Use when you need a regulatory pathway, a classification decision or an official source fast.",
+   "description_zh": "医疗器械注册工程师的随身资料库——免费 · 免 API Key · 零数据收集，即装即用。中国 NMPA / 美国 FDA / 欧盟 MDR / 日本 PMDA 及东南亚·拉美全球注册路径与分类，UDI、STED 技术文件、生物相容性(ISO 10993)、GMP 质量体系、上市后监管、标签与 IFU、供应商合规等 20 个专题枢纽按「全生命周期 7 阶段」（需求立项→分类路径→技术文件→质量体系→注册申报→审评获批→上市后）全覆盖，官方直达链接一站备齐。告别资料散落、少查半天、少踩坑，从立项到拿证全程有底。119 条官方链接已浏览器级逐条核验可达。🌐 在线版：https://medxpert.cn/knowledge/（医械注册知识库·免费公开层，20+ 枢纽在线可读）。触发词：医疗器械注册、NMPA 注册、FDA 510(k)、MDR/CE、PMDA、UDI、STED、ISO 10993、GMP、临床评价、变更延续、注册路径、分类判定。",
+   "license": "MIT",
+   "version": "1.6.0",
+   "category": "knowledge-management",
+   "sha256": "068da1aa4a1ae1e169613fdfd7568d303c635d97e05504727fd4ad48f8ac5f26",
+   "anchor_revision": "G",
+   "evaluation": {
+    "rubric": "skill-preflight D1-D10 weighted v1.0",
+    "score": 0.965,
+    "tier": "A",
+    "blockers": [],
+    "reported_in": "eval-report-20261111-191846.json"
+   },
+   "timestamp_proof": {
+    "file": "SKILL.md.ots",
+    "state": "pending / not retrievable",
+    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+   }
+  },
+  {
+   "name": "uibc-challenge",
+   "display_name_en": "uibc-challenge",
+   "description_en": "UIBC challenge: rules, scoring, and participation entry for evaluating AI agents against user-intent benchmarks, with published criteria and reproducible scoring. Use it to submit an agent, run a challenge round, or compare results across versions.",
+   "description_zh": "UIBC 国际自治之物挑战赛（International Union of Beings Challenge）官方赛事助手——赛事体系、赛题规则、评分与反作弊、参赛指南一站式 AI 可读入口。UIBC 是 LGD 全程治理理论体系（凡自治之物：有籍·有证·有门禁）的公开验证场：挑战赛（单场）→ 系列赛（S1 赛季，4 站周更积分制，主题「迁移的判定与问责」）→ 专项赛（GATE 第二届·运行时门禁治理 Runtigil 三律命题）。评分 rubric S/A/B/C/D 五级、反作弊+查重双闸、人工晋级答辩（A³ 法则人类监督不可让渡）。当用户询问 UIBC 挑战赛、报名参赛、赛题规则、评分标准、系列赛赛程、GATE 命题、LGD 治理理论验证时加载本技能。品牌：UIBC（藏青+青绿）；理论母体：LGD（凡自治之物，有籍·有证·有门禁）；发起：SynomosAI 品牌运营。",
+   "license": "CC-BY-4.0",
+   "version": "1.0.0",
+   "category": "标准与评测",
+   "sha256": "9bbbbd005195ff275291574743c3ec33520a93aebffa8b67a9e9e7294a3c4f10",
+   "anchor_revision": "G",
+   "evaluation": {
+    "rubric": "skill-preflight D1-D10 weighted v1.0",
+    "score": 0.928,
+    "tier": "A",
+    "blockers": [],
+    "reported_in": "eval-report-20261111-191846.json"
+   },
+   "timestamp_proof": {
+    "file": "SKILL.md.ots",
+    "state": "pending / not retrievable",
+    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+   }
+  },
+  {
+   "name": "skill-doctor",
+   "display_name_en": "Skill Doctor",
+   "description_en": "Audits installed skills and tells you which actually work: usable, broken, empty shell or duplicate, ranked by grade; detects recall conflicts and checks for duplicates before you add a new skill. Use to answer 'which skills are worth keeping'.",
+   "description_zh": "已装 Skill 的体检与选型器。当需要盘点本机或某个技能根下的技能、判断哪些技能可用/断链/空壳/重复、给技能分级排序、查召回冲突、新增技能前先查重，或回答“这些技能哪几个最好、能不能用”时使用。覆盖 .skills、.user_skills、Doubao\\skills、.agents\\skills 多个根。触发词：技能体检、技能盘点、哪些技能能用、断链、空壳、重复技能、召回冲突、技能分级、加技能前查重、打包技能。",
+   "license": "MIT",
+   "version": "1.0.0",
+   "category": "",
+   "sha256": "11757c8fce3f06fccb1dce127c6c8a47f0ee683660236bab4967fe285fe89b0c",
+   "anchor_revision": "G",
+   "evaluation": {
+    "rubric": "skill-preflight D1-D10 weighted v1.0",
+    "score": 0.964,
+    "tier": "A",
+    "blockers": [],
+    "reported_in": "eval-report-20261111-191846.json"
+   },
+   "timestamp_proof": {
+    "file": "SKILL.md.ots",
+    "state": "pending / not retrievable",
+    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+   }
+  },
+  {
+   "name": "lgd-gate-methodology",
+   "display_name_en": "lgd-gate-methodology",
+   "description_en": "LGD gate methodology: a from-zero playbook for building open-source trust and safety tooling with registration, evidence, and gating built in. Use it to plan version cadence, seven-layer testing, quality gates, and false-positive targets.",
+   "description_zh": "从 0 到 1 做开源信任/安全工具的完整方法论（LGD 三律：有籍、有证、有门禁）。当你要新建一个开源扫描器、评测器或门禁工具，要规划版本迭代节奏、七层测试、质量门禁与误报率目标，或要把自己的理论/框架工程化成可复用工具时使用。",
+   "license": "MIT",
+   "version": "1.0.0",
+   "category": "教程与方法论",
+   "sha256": "498b56e1777f22dc6b73a29b3dbbd44940ea125c9a4dfb7c0e34e3c733841977",
+   "anchor_revision": "G",
+   "evaluation": {
+    "rubric": "skill-preflight D1-D10 weighted v1.0",
+    "score": 0.928,
+    "tier": "A",
+    "blockers": [],
+    "reported_in": "eval-report-20261111-191846.json"
+   },
+   "timestamp_proof": {
+    "file": "SKILL.md.ots",
+    "state": "pending / not retrievable",
+    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+   }
+  }
+ ]
+}
