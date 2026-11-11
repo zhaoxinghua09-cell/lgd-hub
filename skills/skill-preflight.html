@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skill Preflight — skill-preflight | SynomosAI · LGD</title>
+<meta name="description" content="Zero-token pre-listing check for any SKILL.md against a weighted D1-D10 rubric: trigger design, metadata, structure, verifiability, boundaries, disclosure ">
+<link rel="canonical" href="https://zhaoxinghua09-cell.github.io/lgd-hub/skills/skill-preflight.html">
+<link rel="alternate" type="text/markdown" href="https://zhaoxinghua09-cell.github.io/lgd-hub/ANCHORS.md">
+<meta property="og:title" content="Skill Preflight">
+<meta property="og:description" content="Zero-token pre-listing check for any SKILL.md against a weighted D1-D10 rubric: trigger design, metadata, structure, verifiability, boundaries, disclosure ">
+<meta property="og:type" content="article">
+<style>
+:root{--navy:#0b1f3a;--navy2:#12294d;--gold:#d4af37;--ink:#1a2433;--mut:#5a6a80;--line:#e3e8f0;--bg:#f7f9fc;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+a{color:#0f4c81}
+header{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:34px 0 28px;border-bottom:3px solid var(--gold)}
+header .k{letter-spacing:.16em;font-size:12px;color:var(--gold);text-transform:uppercase}
+header h1{margin:.25em 0 .1em;font-size:26px;line-height:1.3}
+header p{margin:.3em 0 0;color:#c9d6e6;font-size:14px}
+section{padding:26px 0}
+h2{font-size:18px;margin:0 0 .5em;padding-left:10px;border-left:3px solid var(--gold)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#eef2f8;font-weight:600}
+code{background:#eef2f8;padding:1px 5px;border-radius:4px;font-size:13px;word-break:break-all}
+pre{background:#0f1b2d;color:#dfe8f4;padding:14px;border-radius:8px;overflow:auto;font-size:13px}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--mut);font-size:13px}
+.badge{display:inline-block;background:var(--gold);color:#221a05;font-weight:700;border-radius:999px;padding:2px 10px;font-size:12px;margin-left:6px}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Skill Preflight", "alternateName": "skill-preflight", "description": "Zero-token pre-listing check for any SKILL.md against a weighted D1-D10 rubric: trigger design, metadata, structure, verifiability, boundaries, disclosure hygiene, size, provenance, internationalisation, resources. Use before listing or publishing a skill.", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any (zero-dependency Python 3, or read-only Markdown)", "version": "1.2.1", "license": "https://opensource.org/licenses/MIT", "isAccessibleForFree": true, "author": {"@type": "Person", "name": "Xinghua Zhao", "identifier": "https://orcid.org/0009-0001-0512-1237"}, "identifier": {"@type": "PropertyValue", "propertyID": "sha256", "value": "588ec5c1e0d03d881d0f739fe39067e5cfa08dc827e5ffb0a2273f44f81c7e6b"}, "url": "https://zhaoxinghua09-cell.github.io/lgd-hub/skills/skill-preflight.html", "sameAs": ["https://zhaoxinghua09-cell.github.io/lgd-hub/skills.json", "https://zhaoxinghua09-cell.github.io/lgd-hub/ANCHORS.md", "https://zhaoxinghua09-cell.github.io/lgd-hub/EVAL.md"]}</script>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="k">LGD shelf · flagship 1 of 7</div>
+  <h1>Skill Preflight<span class="badge">tier A · 0.936</span></h1>
+  <p>skill-preflight · v1.2.1 · MIT · score 0.936/1.00 on a published rubric</p>
+</div></header>
+
+<div class="wrap">
+<section>
+  <h2>What it is / 是什么</h2>
+  <div class="card"><p>Zero-token pre-listing check for any SKILL.md against a weighted D1-D10 rubric: trigger design, metadata, structure, verifiability, boundaries, disclosure hygiene, size, provenance, internationalisation, resources. Use before listing or publishing a skill.</p><p style="color:#5a6a80">技能上架前的零 token 体检门禁。对任意 SKILL.md 按 D1-D10 十维加权 rubric（触发设计/元数据/可执行性/可验证性/边界诚实/去敏纪律/体量/署名/国际化/资源配套）算出 0-1 分与 A/B/C/D 档，给出在 688 个真实技能库中的百分位、逐维与全库均值的落差、泄密形态扫描结果，以及只列 3 条的补强动作；另附『SkillHub 评测对齐度』诊断（七段式骨架覆盖 + 缺哪段），并支持外部 G1 敏感词表（商号等，不硬编码、不随包发布）。全程读磁盘、不调 LLM、不联网，分数可复算、可 diff、可进 CI。触发词：技能体检、skill 体检、技能评分、skill 打分、技能质量、上架前检查、skill preflight、发布门禁、技能审计、SKILL.md 检查、骨架诊断。</p></div>
+</section>
+
+<section>
+  <h2>When to use it / 什么时候用它</h2>
+  <div class="card"><ul><li>技能要发布到任何市场（ClawHub / SkillHub / SkillPie / HF / BuiltinMarket）之前</li>
+<li>上线前需要客观判据判断这件技能够不够格</li>
+<li>想知道一件技能在真实技能库里排第几、差在哪几维</li>
+<li>要把技能质量做成 CI 门禁</li>
+<li>收到外部技能，想先体检再决定装不装</li></ul></div>
+</section>
+
+<section>
+  <h2>Verify before you cite / 引用前先核</h2>
+  <table>
+    <tr><th>field</th><th>value</th></tr>
+    <tr><td>sha256 (revision H)</td><td><code>588ec5c1e0d03d881d0f739fe39067e5cfa08dc827e5ffb0a2273f44f81c7e6b</code></td></tr>
+    <tr><td>evaluation</td><td>score 0.936 · tier A · 0 blocker(s) · rubric <code>skill-preflight</code> D1-D10</td></tr>
+    <tr><td>timestamp proof</td><td>pending / not retrievable</td></tr>
+    <tr><td>licence</td><td>MIT</td></tr>
+  </table>
+  <pre>sha256sum SKILL.md
+# compare with /ANCHORS.md and /skills.json
+python scripts/preflight.py &lt;asset-dir&gt; --json</pre>
+</section>
+
+<section>
+  <h2>Where this number comes from / 分数出处</h2>
+  <div class="card"><p>The score is produced by the same shelf's own <a href="/skills/skill-preflight.html">skill-preflight</a> against a
+  published rubric — weights, tiers and thresholds are in <a href="/EVAL.md">EVAL.md</a>, together with the one
+  rubric defect we chose to disclose rather than patch. It is a self-run score, not a certification, and it
+  claims no external adoption.</p></div>
+</section>
+
+<section>
+  <h2>Machine-readable</h2>
+  <div class="card"><p><a href="/skills.json">/skills.json</a> (all seven, one fetch) ·
+  <a href="/ANCHORS.md">/ANCHORS.md</a> (per-revision hashes) ·
+  <a href="/EVAL.md">/EVAL.md</a> (rubric and results) ·
+  <a href="/FEEDBACK.md">/FEEDBACK.md</a> (report a problem, get a verdict)</p></div>
+  <p><a href="/skills/publish-quality-gate.html">publish-quality-gate →</a></p>
+</section>
+</div>
+
+<footer><div class="wrap">
+  <p>Xinghua Zhao (Steven Zhao), independent researcher · ORCID 0009-0001-0512-1237 ·
+  <a href="/">the entry page</a> · <a href="/skills/">all seven</a></p>
+  <p>No registered company or trademark is claimed here. No Bitcoin block is claimed for any file.</p>
+</div></footer>
+</body>
+</html>
