@@ -1,5 +1,5 @@
-blank_issues_enabled: false
+blank_issues_enabled: true
 contact_links:
-  - name: LGD 治理咨询
-    url: https://github.com/zhaoxinghua09-cell/lgd-hub/issues
-    about: 治理、合规、门禁相关问题请在此提交
+  - name: Verifiable facts and reproduction commands
+    url: https://zhaoxinghua09-cell.github.io/lgd-hub/FACTS.md
+    about: Every claim on the site can be re-run locally; read this before filing a report.
