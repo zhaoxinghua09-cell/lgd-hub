@@ -76,6 +76,16 @@ python scripts/preflight.py &lt;asset-dir&gt; --json</pre>
   claims no external adoption.</p></div>
 </section>
 
+
+<section>
+  <h2>How this differs / 跟别人比差在哪</h2>
+  <p style="color:#5a6a80;font-size:14px;margin:0 0 10px">Read on 2026-11-11. These are the pages a search actually returns for this
+  problem today — so the comparison is against what a reader would otherwise find, not against a straw man.</p>
+  <table><tr><th>what you would find instead</th><th>what it does</th></tr><tr><td><a href="https://www.skillmd.ai/skills/skill-evaluator-2/">SkillMD.ai · skill-evaluator</a></td><td>按 Anthropic 最佳实践给单件技能打分，输出改进建议；面向&quot;这一件好不好&quot;。</td></tr></table>
+  <div class="card"><ul><li><b>看的是一个库，不是一件</b> —— 本件盘点整机所有技能根：断链、空壳、同名副本、可否调用、分级排序，并给召回冲突。装第十个技能之前该问的问题，在这里。</li><li><b>同名跨根按内容判母版</b> —— 带 tests/scripts 的那份才是母版，不按名字判；跨技能引用按真实路径核对，不按字面并入。</li><li><b>只读，不动手</b> —— 报告不自动删除。要处置时把副本移进归档目录并保留回滚路径——一个会自己删东西的体检器，本身就是风险。</li></ul></div>
+  <div class="card" style="border-left:3px solid #d4af37"><p><b>Where they win / 对方强在哪</b> —— 单件深度。对方对一份 SKILL.md 的评审颗粒度更细；本件刻意不做深度评审（那是 preflight 的活），只做盘面。</p></div>
+</section>
+
 <section>
   <h2>Machine-readable</h2>
   <div class="card"><p><a href="/skills.json">/skills.json</a> (all seven, one fetch) ·
