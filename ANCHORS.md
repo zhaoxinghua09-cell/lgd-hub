@@ -3,11 +3,11 @@
 Author: Xinghua Zhao (Steven Zhao) · ORCID 0009-0001-0512-1237
 Two revisions are recorded here on purpose — see the note below the first table.
 
-## Current revision (C) — English metadata added, 2026-11-11
+## Current revision (D) — English metadata added, 2026-11-11
 
 These are the hashes of the files as they are now. 27 of the 31 assets gained `display_name_en` and `description_en` on 2026-11-11 so that an English query can find them. Their earlier hashes — revision A (proof-bound) and revision B (paths sanitized) — remain verifiable below.
 
-| # | asset | sha256 (rev C) | proof | bitcoin block |
+| # | asset | sha256 (rev D) | proof | bitcoin block |
 |---|---|---|---|---|
 | 1 | `agent-evolution` | `6592c2ab99f65a6e9ec1da46534caea8bb2a0679e2d8637465a9b64e015905a8` | `SKILL.md.ots` | pending / not retrievable |
 | 2 | `evidence-chain-builder` | `d40b23a015f1c487703bf900684d8997fd066a835523beef0efd067b52d03481` | `SKILL.md.ots` | pending / not retrievable |
@@ -15,7 +15,7 @@ These are the hashes of the files as they are now. 27 of the 31 assets gained `d
 | 4 | `evidence-chain-suite` | `0e961f18dff1850bf6b132aba038d9984aab36b817f8683cab86553444618988` | `SKILL.md.ots` | pending / not retrievable |
 | 5 | `intl-participation-pipeline` | `713ae994ef41b3feaf7a2761ae31cf35011206cad81433c67aff3f595143627d` | `SKILL.md.ots` | pending / not retrievable |
 | 6 | `iso-standards-readiness` | `719b0cc1a5ef94b7bc18749e17de2e7e13e7a9cf373e649a82ffb2c15e1749a2` | `SKILL.md.ots` | pending / not retrievable |
-| 7 | `lgd-gate-methodology` | `80b33e13125d4aeeccfdfee5f556c20afd6ac6a3cc96bbe15ed393d967d8fb66` | `SKILL.md.ots` | pending / not retrievable |
+| 7 | `lgd-gate-methodology` | `498b56e1777f22dc6b73a29b3dbbd44940ea125c9a4dfb7c0e34e3c733841977` | `SKILL.md.ots` | pending / not retrievable |
 | 8 | `lgd-three-laws-auditor` | `5d5699432104e7b9386b2b89dad624a261a171267911093700f810357c7b2ef7` | `SKILL.md.ots` | pending / not retrievable |
 | 9 | `medical-device-compliance-grader` | `ba94b808e824779a700355392f465ed24ad926bc38462a949173c40bbf68c16e` | `SKILL.md.ots` | pending / not retrievable |
 | 10 | `medical-device-qms-gmp` | `e8197884268ce6521fd88a82ed3fc2de360d8e4a3ccda0e83e70190d3b470d78` | `SKILL.md.ots` | pending / not retrievable |
@@ -32,7 +32,7 @@ These are the hashes of the files as they are now. 27 of the 31 assets gained `d
 | 21 | `skill-preflight` | `ae24a30284d3ee72b893d82dd90e4e8c97a6bb3639b6bf541113fc00044e5fbf` | `SKILL.md.ots` | pending / not retrievable |
 | 22 | `skill-release-gate` | `cda902c109587830e38d6dc999a4597af5bef65faa99c9804605043310bb72f7` | `SKILL.md.ots` | pending / not retrievable |
 | 23 | `standards-contribution-substantiation` | `7d06f5f912dec22c9925f53dd16b01fe0cd78f5bd7f5fa3c05a8b464cb9a9f64` | `SKILL.md.ots` | pending / not retrievable |
-| 24 | `uibc-challenge` | `9dfe360889e341793b6926f809b25e0ee530d81f576bf7e7c51cfb3815742e13` | `SKILL.md.ots` | pending / not retrievable |
+| 24 | `uibc-challenge` | `9bbbbd005195ff275291574743c3ec33520a93aebffa8b67a9e9e7294a3c4f10` | `SKILL.md.ots` | pending / not retrievable |
 | 25 | `uibc-team-crypt` | `f58f7934e62f6825fc9752d1bce53d570071b1cb0bdaac5cde4c8f8f28e95e1a` | `SKILL.md.ots` | pending / not retrievable |
 | 26 | `uibc-team-fin` | `e38e17cf1db15673aca72d06270c76769a6a4ec20894640908d300dedf62bc80` | `SKILL.md.ots` | pending / not retrievable |
 | 27 | `uibc-team-gov` | `5a300eff6169368b2ef9c21451b6f1539b3ed6ea4e76c197626dbac5bb77d4b1` | `SKILL.md.ots` | pending / not retrievable |
@@ -43,12 +43,14 @@ These are the hashes of the files as they are now. 27 of the 31 assets gained `d
 
 ## Revision A — the bytes the `.ots` proofs commit to
 
-The 31 `.ots` proofs were produced from these hashes. If you are verifying a proof file rather than the current file, use this table. For 4 of the 31 assets rev A and rev C are identical and are not repeated here.
+The 31 `.ots` proofs were produced from these hashes. If you are verifying a proof file rather than the current file, use this table. For 4 of the 31 assets rev A and rev D are identical and are not repeated here.
 
-| asset | sha256 (rev A, proof-bound) | sha256 (rev C, current) | what changed |
+| asset | sha256 (rev A, proof-bound) | sha256 (rev D, current) | what changed |
 |---|---|---|---|
+| `lgd-gate-methodology` | `80b33e13125d4aeeccfdfee5f556c20afd6ac6a3cc96bbe15ed393d967d8fb66` | `498b56e1777f22dc6b73a29b3dbbd44940ea125c9a4dfb7c0e34e3c733841977` | 补英文字段（rev C）；补 `scripts/gate_scorecard.py` + `references/seven-layer-matrix.md` + 红线段与可复跑命令（rev D） |
 | `publish-redteam-review` | `248bf4194edf47aa313f92d08369357279e1e7872a1ea8525e23726082d9d2cd` | `efa12c82ae1a31c736ea914d9c4391b27a08a568391970fe0c9e241cd5ae0d93` | 补 `display_name_en` / `description_en`（非内容改动） |
 | `publish-quality-gate` | `77b20aafd9013c9706ecad7c1dc250a4718e31a8d8c29a5981f1330c53455dc3` | `74e7987709a5ebb5b3d19924ef213979383750182288e2c68ae581f58c42841c` | 补 `display_name_en` / `description_en`（非内容改动） |
+| `uibc-challenge` | `9dfe360889e341793b6926f809b25e0ee530d81f576bf7e7c51cfb3815742e13` | `9bbbbd005195ff275291574743c3ec33520a93aebffa8b67a9e9e7294a3c4f10` | 补英文字段（rev C）；补 `scripts/submission_check.py` + `references/rubric.md` + 红线段与自查命令（rev D） |
 | `uibc-team-med` | `1798aea6d4fa37d5ab97358d0b5c96ead747c8a33318ea61ad2d1b672dbcd729` | `b8979ca86c289640a4d7e06ae2e7190d681912ded2c9509c400daedc1779ceb3` | 补 `display_name_en` / `description_en`（非内容改动） |
 | `uibc-team-law` | `24ba9621bed1fcb2fff2586f3800c8d0c1d01b662d5e4db8f87e63856be51203` | `b161ae7dab8289f17c96d8a41f93277fb481b0bdd2dd6746b9ae334f05405e66` | 补 `display_name_en` / `description_en`（非内容改动） |
 | `uibc-team-fin` | `47a6affac39310d08cb0db0b3c7ddf3d7644a7c38e65ccd30653f692fa5802be` | `e38e17cf1db15673aca72d06270c76769a6a4ec20894640908d300dedf62bc80` | 补 `display_name_en` / `description_en`（非内容改动） |
@@ -79,7 +81,7 @@ The 31 `.ots` proofs were produced from these hashes. If you are verifying a pro
 
 1. Get the asset's `SKILL.md`.
 2. Run `sha256sum SKILL.md` (or `Get-FileHash SKILL.md -Algorithm SHA256`).
-3. Compare with the rev C row (current file) or the rev A row (proof-bound file).
+3. Compare with the rev D row (current file) or the rev A row (proof-bound file).
 4. If it matches, this file plus the commit that introduced it give you a public time reference for that exact byte content.
 
 ## Status note (2026-11-11)
@@ -87,19 +89,4 @@ The 31 `.ots` proofs were produced from these hashes. If you are verifying a pro
 - All 31 commitments were submitted and produced `.ots` proof files.
 - Retrieval from `a.pool` / `b.pool` / `alice.btc` calendars returned `CommitmentNotFoundError` on this date, including for a freshly submitted control hash — the calendars, not our files, are the limiting side.
 - No row claims a Bitcoin block height; rows say `pending / not retrievable` and that is deliberate.
-- Revision B exists because publishing machine-specific paths — including one to a plaintext key store — is a disclosure risk. Revision C adds English metadata only: no claim, licence or boundary line was changed.
-
-
-## How to check a row yourself
-
-1. Get the asset's `SKILL.md`.
-2. Run `sha256sum SKILL.md` (or `Get-FileHash SKILL.md -Algorithm SHA256`).
-3. Compare with the rev B row (current file) or the rev A row (proof-bound file).
-4. If it matches, this file plus the commit that introduced it give you a public time reference for that exact byte content.
-
-## Status note (2026-11-11)
-
-- All 31 commitments were submitted and produced `.ots` proof files.
-- Retrieval from `a.pool` / `b.pool` / `alice.btc` calendars returned `CommitmentNotFoundError` on this date, including for a freshly submitted control hash — the calendars, not our files, are the limiting side.
-- No row claims a Bitcoin block height; rows say `pending / not retrievable` and that is deliberate.
-- Revision B exists because publishing machine-specific paths — including one to a plaintext key store — is a disclosure risk. Nothing here claims the rev A bytes were withdrawn; they remain verifiable against their proofs.
+- Revision B exists because publishing machine-specific paths — including one to a plaintext key store — is a disclosure risk. Revision C adds English metadata so an English query can find the assets. Revision D adds a runnable script, a reference sheet and red-line sections to two assets; no claim or licence line was changed in C or D.
