@@ -77,6 +77,16 @@ python scripts/preflight.py &lt;asset-dir&gt; --json</pre>
   claims no external adoption.</p></div>
 </section>
 
+
+<section>
+  <h2>How this differs / 跟别人比差在哪</h2>
+  <p style="color:#5a6a80;font-size:14px;margin:0 0 10px">Read on 2026-11-11. These are the pages a search actually returns for this
+  problem today — so the comparison is against what a reader would otherwise find, not against a straw man.</p>
+  <table><tr><th>what you would find instead</th><th>what it does</th></tr><tr><td><a href="https://www.skillmd.ai/skills/skill-validator/">SkillMD.ai · skill-validator / skill-judge</a></td><td>一个 7,345 字符的 SKILL.md，让模型按 7 类标准（各 0–3 分）打分再按权重汇总成 100 分制；装在 Claude Code / Codex / Cursor / Manus。页面显示 125 次下载，SKILL.md 未声明许可。</td></tr><tr><td><a href="https://skillhub.cloud.tencent.com/skills/optimize-skill">SkillHub（腾讯）· optimize-skill</a></td><td>中文检查表：触发条件是否写明、执行步骤是否可照做，两项为主的定性判定。</td></tr></table>
+  <div class="card"><ul><li><b>判分的是脚本，不是模型</b> —— 对方要求模型读文件后自行打分——同一个技能跑两次可能不同分。我们是一个离线 Python 脚本 <code>preflight.py</code>，不调 LLM、不联网、零 token，同一份字节永远同一个分。</li><li><b>给的是位次，不是绝对分</b> —— 对方给 /100 的绝对分。我们给 0–1 分 + <b>在 688 个真实技能库中的百分位</b>，外加逐维与全库均值的落差，所以&quot;差在哪&quot;可以直接指到某一维。</li><li><b>分数可以进 CI</b> —— <code>--json</code> 输出给机器读，可与上一次结果 diff，可作为门禁阻断合并。对方输出的是给人看的报告。</li><li><b>判据缺陷自己公开</b> —— <code>EVAL.md</code> 写明本判据的作者白名单不含本货架署名，导致 D8 上限 0.75，我们选择不修而公开。</li></ul></div>
+  <div class="card" style="border-left:3px solid #d4af37"><p><b>Where they win / 对方强在哪</b> —— 分发。对方有市场页、一键 ZIP、四种 harness 的安装说明、下载计数；我们只有一个静态页面和命令行。对方对新手更省事：装上就有一个 agent 帮你判；我们要先有 Python 和目录。</p></div>
+</section>
+
 <section>
   <h2>Machine-readable</h2>
   <div class="card"><p><a href="/skills.json">/skills.json</a> (all seven, one fetch) ·
