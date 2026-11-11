@@ -18,8 +18,8 @@ These are the hashes of the files as they are now. Three files were edited on 20
 | 7 | `lgd-gate-methodology` | `80b33e13125d4aeeccfdfee5f556c20afd6ac6a3cc96bbe15ed393d967d8fb66` | `SKILL.md.ots` | pending / not retrievable |
 | 8 | `lgd-three-laws-auditor` | `5d5699432104e7b9386b2b89dad624a261a171267911093700f810357c7b2ef7` | `SKILL.md.ots` | pending / not retrievable |
 | 9 | `medical-device-compliance-grader` | `4ccb5e29646fddb745847c6e2e55a24c238174a48b199c57f9adad67217c7b27` | `SKILL.md.ots` | pending / not retrievable |
-| 10 | `medical-device-qms-gmp` | `5ed5da23d21c57236229c406628c5087ffcb270157e70dc55e6e759ca7b72f4e` | `SKILL.md.ots` | pending / not retrievable |
-| 11 | `medical-device-reg-dossier` | `ec9418d1b7f37a2fbd9f727f4dbcbe6bb9d3960f68b180f495382eb76bdd7619` | `SKILL.md.ots` | pending / not retrievable |
+| 10 | `medical-device-qms-gmp` | `1194894b966f6c0c6416d967e8f008bc37051a08466f393463c53fa7a2fb049b` | `SKILL.md.ots` | pending / not retrievable |
+| 11 | `medical-device-reg-dossier` | `a573dfddfb39de4db2f8ce40ac918c7c55d2cc74f544cd6398b6b0f256d83f7a` | `SKILL.md.ots` | pending / not retrievable |
 | 12 | `medical-device-risk-management` | `c631eb9560512ac1df638952b9189644f1f1f18dff44126db322b7db78e54c3c` | `SKILL.md.ots` | pending / not retrievable |
 | 13 | `medxpert-reg-hub` | `e352df537d78b44b87ae00657e72d916f7b146ac9c5d62ffb467b515b6a530b2` | `SKILL.md.ots` | pending / not retrievable |
 | 14 | `medxpert-termbase` | `03f18d01e1168aa0502a7000acf05c192e06b64f0d9f3686fb23976a42868893` | `SKILL.md.ots` | pending / not retrievable |
@@ -49,6 +49,8 @@ The 31 `.ots` proofs were produced from these hashes. If you are verifying a pro
 |---|---|---|---|
 | `skill-carrier-rights-layer` | `2c14351754bd831159ee20d1daa8f1cc62bb9ea4df1a4e02ad8d12d06d1c0f11` | `a87a94c93e52601e1ee1b223496dd0ac962d6503bf10a4a1bfde04cd4198cd94` | 工作目录路径换为占位符 |
 | `ots-timestamp-anchor` | `1870e25e548d730ff0ad979bf4e0f689cc22085d231aebacc93a17add0eb6add` | `a43651134b2c2c70aec5008dd04bbfe0cf30637d75c505d1c717ca9311b9310e` | 解释器路径与工作目录换为占位符 |
+| `medical-device-reg-dossier` | `ec9418d1b7f37a2fbd9f727f4dbcbe6bb9d3960f68b180f495382eb76bdd7619` | `a573dfddfb39de4db2f8ce40ac918c7c55d2cc74f544cd6398b6b0f256d83f7a` | 版权行改为自然人署名（去公司名），落实既定署名口径 |
+| `medical-device-qms-gmp` | `5ed5da23d21c57236229c406628c5087ffcb270157e70dc55e6e759ca7b72f4e` | `1194894b966f6c0c6416d967e8f008bc37051a08466f393463c53fa7a2fb049b` | 版权行改为自然人署名（去公司名），落实既定署名口径 |
 | `intl-participation-pipeline` | `d44762b5487f93bf693b9c9c8c64067e02adc0b63ae9e28c591413972073b359` | `f8b74785547b97ab53382ce31e5c356c801f0ada29dd2d8202e706847696b710` | 私钥落点路径与 DPAPI 保险库路径换为占位符（原文指向明文 key 文件） |
 
 ## How to check a row yourself
