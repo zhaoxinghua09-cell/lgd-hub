@@ -3,16 +3,16 @@
 Author: Xinghua Zhao (Steven Zhao) · ORCID 0009-0001-0512-1237
 Two revisions are recorded here on purpose — see the note below the first table.
 
-## Current revision (D) — English metadata added, 2026-11-11
+## Current revision (E) — English metadata added, 2026-11-11
 
 These are the hashes of the files as they are now. 27 of the 31 assets gained `display_name_en` and `description_en` on 2026-11-11 so that an English query can find them. Their earlier hashes — revision A (proof-bound) and revision B (paths sanitized) — remain verifiable below.
 
-| # | asset | sha256 (rev D) | proof | bitcoin block |
+| # | asset | sha256 (rev E) | proof | bitcoin block |
 |---|---|---|---|---|
 | 1 | `agent-evolution` | `6592c2ab99f65a6e9ec1da46534caea8bb2a0679e2d8637465a9b64e015905a8` | `SKILL.md.ots` | pending / not retrievable |
 | 2 | `evidence-chain-builder` | `d40b23a015f1c487703bf900684d8997fd066a835523beef0efd067b52d03481` | `SKILL.md.ots` | pending / not retrievable |
 | 3 | `evidence-chain-check` | `50c26142e9cca31a2c372a832c51b5a29749b8c4db7436a88500b61663002d3d` | `SKILL.md.ots` | pending / not retrievable |
-| 4 | `evidence-chain-suite` | `0e961f18dff1850bf6b132aba038d9984aab36b817f8683cab86553444618988` | `SKILL.md.ots` | pending / not retrievable |
+| 4 | `evidence-chain-suite` | `857ddde056c3a49e24bff3be7820ed6878056fa7cfec42b76ef10e1f8144726c` | `SKILL.md.ots` | pending / not retrievable |
 | 5 | `intl-participation-pipeline` | `713ae994ef41b3feaf7a2761ae31cf35011206cad81433c67aff3f595143627d` | `SKILL.md.ots` | pending / not retrievable |
 | 6 | `iso-standards-readiness` | `719b0cc1a5ef94b7bc18749e17de2e7e13e7a9cf373e649a82ffb2c15e1749a2` | `SKILL.md.ots` | pending / not retrievable |
 | 7 | `lgd-gate-methodology` | `498b56e1777f22dc6b73a29b3dbbd44940ea125c9a4dfb7c0e34e3c733841977` | `SKILL.md.ots` | pending / not retrievable |
@@ -43,9 +43,9 @@ These are the hashes of the files as they are now. 27 of the 31 assets gained `d
 
 ## Revision A — the bytes the `.ots` proofs commit to
 
-The 31 `.ots` proofs were produced from these hashes. If you are verifying a proof file rather than the current file, use this table. For 4 of the 31 assets rev A and rev D are identical and are not repeated here.
+The 31 `.ots` proofs were produced from these hashes. If you are verifying a proof file rather than the current file, use this table. For 4 of the 31 assets rev A and rev E are identical and are not repeated here.
 
-| asset | sha256 (rev A, proof-bound) | sha256 (rev D, current) | what changed |
+| asset | sha256 (rev A, proof-bound) | sha256 (rev E, current) | what changed |
 |---|---|---|---|
 | `lgd-gate-methodology` | `80b33e13125d4aeeccfdfee5f556c20afd6ac6a3cc96bbe15ed393d967d8fb66` | `498b56e1777f22dc6b73a29b3dbbd44940ea125c9a4dfb7c0e34e3c733841977` | 补英文字段（rev C）；补 `scripts/gate_scorecard.py` + `references/seven-layer-matrix.md` + 红线段与可复跑命令（rev D） |
 | `publish-redteam-review` | `248bf4194edf47aa313f92d08369357279e1e7872a1ea8525e23726082d9d2cd` | `efa12c82ae1a31c736ea914d9c4391b27a08a568391970fe0c9e241cd5ae0d93` | 补 `display_name_en` / `description_en`（非内容改动） |
@@ -60,7 +60,7 @@ The 31 `.ots` proofs were produced from these hashes. If you are verifying a pro
 | `uibc-team-crypt` | `cbc29f6286db72ea051821c8ec5a8c84a3efb36b3452cd20fb27f78fdf5728ea` | `f58f7934e62f6825fc9752d1bce53d570071b1cb0bdaac5cde4c8f8f28e95e1a` | 补 `display_name_en` / `description_en`（非内容改动） |
 | `evidence-chain-builder` | `3e7b29d0ed0efb2c72169addf4d4b6f0138620edee991520eaf70efa7e4d5b06` | `d40b23a015f1c487703bf900684d8997fd066a835523beef0efd067b52d03481` | 补 `display_name_en` / `description_en`（非内容改动） |
 | `evidence-chain-check` | `c6f71ff117cc4bcf1f014b81b32817c59108c553c10df2787047415a8c003a5b` | `50c26142e9cca31a2c372a832c51b5a29749b8c4db7436a88500b61663002d3d` | 补 `display_name_en` / `description_en`（非内容改动） |
-| `evidence-chain-suite` | `addb9dcad8fb8a7bcb519f618762f8acb597b8d9d089aa65cd7223bd232bbb11` | `0e961f18dff1850bf6b132aba038d9984aab36b817f8683cab86553444618988` | 补 `display_name_en` / `description_en`（非内容改动） |
+| `evidence-chain-suite` | `addb9dcad8fb8a7bcb519f618762f8acb597b8d9d089aa65cd7223bd232bbb11` | `857ddde056c3a49e24bff3be7820ed6878056fa7cfec42b76ef10e1f8144726c` | 补英文字段（rev C）；补 `scripts/chain_verify.py` + `references/evidence-chain-rubric.md` + 触发段与红线段（rev E） |
 | `skill-carrier-rights-layer` | `2c14351754bd831159ee20d1daa8f1cc62bb9ea4df1a4e02ad8d12d06d1c0f11` | `a80bffa087c6687993a4fbddf6e22af4e68ebdc8075cde9f30fc8597c455e6a3` | 工作目录路径换成占位符（rev B）；补英文字段（rev C） |
 | `ots-timestamp-anchor` | `1870e25e548d730ff0ad979bf4e0f689cc22085d231aebacc93a17add0eb6add` | `4c289da7cd7a84c25ffdb9cdbb59b7b21d7b7e727d1d221d0472331551ed1123` | 解释器与工作目录路径换成占位符（rev B）；补英文字段（rev C） |
 | `medxpert-reg-hub` | `e352df537d78b44b87ae00657e72d916f7b146ac9c5d62ffb467b515b6a530b2` | `302164e69b75904f366aca03064bc2a2b5ce6c0975bd45040397f721cd2196a2` | 补 `display_name_en` / `description_en`（非内容改动） |
@@ -81,7 +81,7 @@ The 31 `.ots` proofs were produced from these hashes. If you are verifying a pro
 
 1. Get the asset's `SKILL.md`.
 2. Run `sha256sum SKILL.md` (or `Get-FileHash SKILL.md -Algorithm SHA256`).
-3. Compare with the rev D row (current file) or the rev A row (proof-bound file).
+3. Compare with the rev E row (current file) or the rev A row (proof-bound file).
 4. If it matches, this file plus the commit that introduced it give you a public time reference for that exact byte content.
 
 ## Status note (2026-11-11)
@@ -89,4 +89,4 @@ The 31 `.ots` proofs were produced from these hashes. If you are verifying a pro
 - All 31 commitments were submitted and produced `.ots` proof files.
 - Retrieval from `a.pool` / `b.pool` / `alice.btc` calendars returned `CommitmentNotFoundError` on this date, including for a freshly submitted control hash — the calendars, not our files, are the limiting side.
 - No row claims a Bitcoin block height; rows say `pending / not retrievable` and that is deliberate.
-- Revision B exists because publishing machine-specific paths — including one to a plaintext key store — is a disclosure risk. Revision C adds English metadata so an English query can find the assets. Revision D adds a runnable script, a reference sheet and red-line sections to two assets; no claim or licence line was changed in C or D.
+- Revision B exists because publishing machine-specific paths — including one to a plaintext key store — is a disclosure risk. Revision C adds English metadata so an English query can find the assets. Revision D adds a runnable script, a reference sheet and red-line sections to two assets. Revision E does the same for `evidence-chain-suite`. No claim or licence line was changed in C, D or E.
