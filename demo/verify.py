@@ -11,7 +11,7 @@
 设计约束
 --------
 1. 只用标准库 + git 命令，不装任何依赖；
-2. 三个数字（160 / 7 / 70）写死在这里，**故意不与 world.json 联动**——
+2. 三个数字（164 / 7 / 70）写死在这里，**故意不与 world.json 联动**——
    否则源文件被改错时脚本会跟着一起错，失去"独立复现"的意义；
 3. 找不到 git 或网络不通时，如实报「无法验证」，不假装通过；
 4. 输出 PASS / FAIL 表，任何一项不符即非零退出。
@@ -30,11 +30,11 @@ import subprocess
 import sys
 import tempfile
 
-COMMIT = "dc9eba3146e4e32bb1356f24ce8d72249a64702a"
+COMMIT = "e90f5b98ea395e5421d59780e551c3e7802005f4"
 REPO = "https://github.com/zhaoxinghua09-cell/uibc-core"
 # 页面写的三个数字（刻意不读 world.json，见文件头第 2 条）
 EXPECT = {
-    "unittest": ("Ran 160 tests", 160),
+    "unittest": ("Ran 164 tests", 164),
     "stress": ("Ran 7 tests", 7),
     "cross": ("checks compared: 70", 70),
 }
@@ -116,9 +116,9 @@ def main():
         if bad:
             print(f"[FAIL] {bad} 项与页面所写不符 —— 页面上的数字在这一版上不成立")
             return 1
-        print("[PASS] 三条命令全部复现，数字与页面一致：160 / 7 / 70")
+        print("[PASS] 三条命令全部复现，数字与页面一致：164 / 7 / 70")
         print("       页面还写着「同 commit 的 CI 亦为绿」，CI 记录：")
-        print("       https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/39159391899")
+        print("       https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/43142262486")
         return 0
     finally:
         if tmp and not a.keep:

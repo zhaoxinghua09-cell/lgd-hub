@@ -15,7 +15,7 @@ python demo/verify.py
 1. 把参考实现 `uibc-core` 克隆到临时目录；
 2. 切到门户锚定的那个 commit（`73f31cc`）；
 3. 跑门户上写的三条命令；
-4. **自动比对**门户写的三个数字（160 / 7 / 70）；
+4. **自动比对**门户写的三个数字（164 / 7 / 70）；
 5. 打一张表，任何一项不符就非零退出，跑完把临时目录清掉。
 
 不需要装任何依赖，只要 Python 3 和 git。
@@ -32,7 +32,7 @@ cross_check       70    70      0  PASS
 
 [PASS] 三条命令全部复现，数字与页面一致：151 / 7 / 70
        页面还写着「同 commit 的 CI 亦为绿」，CI 记录：
-       https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/39159391899
+       https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/43142262486
 ```
 
 耗时约 25–40 秒（视网络与机器）。
