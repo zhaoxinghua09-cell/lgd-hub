@@ -47,7 +47,7 @@ GitHub topics `synomosai` and `medxpert` are discoverability labels; they assert
 - `python -m unittest discover -s tests` → Ran 164 tests, OK
 - `python -m unittest tests.stress_test` → Ran 7 tests, OK (about 35 s)
 - `python independent_verifier/cross_check.py` → checks compared: 70, mismatches: 0 — the script itself calls this "spec determinism", i.e. same-author two-implementation agreement, not third-party reproducibility
-- CI on the same commit: https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/39159391899 (green; CI runs pytest rather than unittest)
+- CI on the same commit: https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/43142262486 (green; CI runs pytest rather than unittest)
 
 ## Archive and transparency evidence
 
