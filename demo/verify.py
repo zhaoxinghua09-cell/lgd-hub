@@ -11,7 +11,7 @@
 设计约束
 --------
 1. 只用标准库 + git 命令，不装任何依赖；
-2. 三个数字（160 / 7 / 70）写死在这里，**故意不与 world.json 联动**——
+2. 三个数字（164 / 7 / 70）写死在这里，**故意不与 world.json 联动**——
    否则源文件被改错时脚本会跟着一起错，失去"独立复现"的意义；
 3. 找不到 git 或网络不通时，如实报「无法验证」，不假装通过；
 4. 输出 PASS / FAIL 表，任何一项不符即非零退出。
@@ -116,7 +116,7 @@ def main():
         if bad:
             print(f"[FAIL] {bad} 项与页面所写不符 —— 页面上的数字在这一版上不成立")
             return 1
-        print("[PASS] 三条命令全部复现，数字与页面一致：160 / 7 / 70")
+        print("[PASS] 三条命令全部复现，数字与页面一致：164 / 7 / 70")
         print("       页面还写着「同 commit 的 CI 亦为绿」，CI 记录：")
         print("       https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/39159391899")
         return 0
