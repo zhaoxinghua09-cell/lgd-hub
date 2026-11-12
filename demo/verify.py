@@ -118,7 +118,7 @@ def main():
             return 1
         print("[PASS] 三条命令全部复现，数字与页面一致：164 / 7 / 70")
         print("       页面还写着「同 commit 的 CI 亦为绿」，CI 记录：")
-        print("       https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/39159391899")
+        print("       https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/43142262486")
         return 0
     finally:
         if tmp and not a.keep:
