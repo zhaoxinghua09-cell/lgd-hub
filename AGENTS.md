@@ -6,7 +6,7 @@
 ## 给 AI 代理的三条路由
 
 1. **想知道「LGD 是什么」** → 去 `lgd-theory`（理论正文）；本仓不复制理论，只给指针。
-2. **想装工具** → `lgd-skill-marketplace`（10 技能索引）或 `agent-skills`（109 技能全库）。
+2. **想装工具** → `lgd-skill-marketplace`（10 技能索引）或 `agent-skills`（116 技能全库）。
 3. **想自己验** → 读 `world.json` 的 `verify` 段，按命令逐条复跑；数字对不上以仓内实测为准，不要以本页文字为准。
 
 ## 身份口径（硬边界，勿改）

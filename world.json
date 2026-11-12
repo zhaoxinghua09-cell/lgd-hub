@@ -2,7 +2,7 @@
   "schema_version": "1.1",
   "title": "lgd-world-map",
   "generated": "2026-10-15",
-  "revised": "2026-10-22",
+  "revised": "2026-11-12",
   "revision_note": "1.1: added identity_layers / counts / verify / license blocks, added LGD, agent-skills and assayance entry points, and dropped a stale count carried in 1.0. Every number in this file is meant to be re-checkable, not aspirational.",
   "entry_points": [
     "any skill",
@@ -51,26 +51,27 @@
   },
   "counts": {
     "skills_marketplace": 10,
-    "skills_library_total": 109,
+    "skills_library_total": 116,
     "skills_curated": 81,
-    "skills_curated_note": "human-curated subset of the 109; not machine-derivable, so read it as a curation statement rather than a computable count",
+    "skills_curated_note": "human-curated subset of the 116; not machine-derivable, so read it as a curation statement rather than a computable count",
     "domain_papers": 13,
     "domain_papers_note": "13 papers numbered #1-#14; the missing number is #11, which is MED-001 (unpublished). The 12 domain codes are AUT/BIO/CRYPT/DAT/EDU/FIN/GOV/IND/LAW/MED/ROB/UAS; FIN and MED each carry two papers (FIN-001/002, MED-002), which is why 12 codes yield 13 papers.",
     "badge_directions": 16,
     "badge_svgs": 32,
     "badge_note": "16 directions x EN/CN = 32 SVGs; badge count is not paper count",
-    "silent_failure_patterns": 14,
-    "uibc_core_tests": 151,
+    "silent_failure_patterns": 15,
+    "uibc_core_tests": 160,
     "uibc_core_cross_checks": 70,
     "uibc_core_stress_scenarios": 7,
-    "verified_on": "2026-10-22",
-    "verification_note": "recomputed from the live repositories on 2026-10-22, not copied from earlier READMEs",
+    "verified_on": "2026-11-11",
+    "verification_note": "recomputed from the live repositories on 2026-11-11: uibc-core@dc9eba3 re-ran `Ran 160 tests, OK`; agent-skills skills/ holds 116 directories, each with SKILL.md; catalog failures/ holds SF-001..SF-015",
     "domain_codes": 12,
     "skills_flagship": 9,
     "skills_gov": 31,
     "skills_eng": 16,
     "skills_sec": 10,
-    "skills_eff": 15
+    "skills_eff": 15,
+    "silent_failure_patterns_note": "15 on main (SF-015 is a candidate); release v0.1.3 carries 14"
   },
   "identity_layers": {
     "policy": "do not merge",
@@ -118,7 +119,7 @@
       "lgd-skill-marketplace": "MIT",
       "xlgd": "MIT",
       "awesome-trusted-agents": "MIT",
-      "agent-skills": "layered — executable code MIT, SKILL.md / README / theory text All Rights Reserved",
+      "agent-skills": "layered — executable code MIT, SKILL.md / README / theory text CC BY 4.0 (restored 2026-11-03)",
       "assayance": "custom Theory Names and Definitions License — terms and definitions ARR, citation must trace back to source"
     },
     "note": "A repository showing 'Other' / NOASSERTION on GitHub is not unlicensed; it carries a custom licence — read the repo's own LICENSE. This table is not claimed to be exhaustive: repos absent from it are NOT implied to be All Rights Reserved.",
@@ -127,7 +128,7 @@
   "verify": {
     "pinned_commit": {
       "repo": "uibc-core",
-      "commit": "73f31ccf58df63772cd5fc084839341a2bca31aa",
+      "commit": "dc9eba3146e4e32bb1356f24ce8d72249a64702a",
       "note": "the three commands below were run against this commit. A number without a commit is only an author statement; a commit is what makes it checkable."
     },
     "environment": {
@@ -138,7 +139,7 @@
     },
     "uibc_core_tests": {
       "command": "python -m unittest discover -s tests",
-      "expected": "Ran 151 tests ... OK",
+      "expected": "Ran 160 tests ... OK",
       "observed_seconds": 17.4,
       "ci_run": "https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/39159391899",
       "ci_note": "the repo CI runs pytest rather than unittest, on the same commit, and is green"

@@ -38,7 +38,7 @@ scored_list: https://github.com/zhaoxinghua09-cell/awesome-trusted-agents
 contribution_entry: https://github.com/zhaoxinghua09-cell/LGD
 
 verification:
-  tests: python -m unittest discover -s tests   # in uibc-core -> Ran 151 tests, OK
+  tests: python -m unittest discover -s tests   # in uibc-core -> Ran 160 tests, OK
   cross_check: python independent_verifier/cross_check.py   # -> 70 compared, 0 mismatches
   swh: https://archive.softwareheritage.org/api/1/origin/https://github.com/zhaoxinghua09-cell/lgd-theory/visits/
   rekor: https://rekor.sigstore.dev/api/v1/log/entries?logIndex=2883389783
