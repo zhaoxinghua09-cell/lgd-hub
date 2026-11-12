@@ -35,8 +35,8 @@
    },
    "timestamp_proof": {
     "file": "SKILL.md.ots",
-    "state": "pending / not retrievable",
-    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+    "state": "Confirmed · block 975424 + 975429",
+    "note": "proof carries a Bitcoin block attestation, verified offline against a local block header (proof tree contains the block merkle root)"
    }
   },
   {
@@ -58,8 +58,8 @@
    },
    "timestamp_proof": {
     "file": "SKILL.md.ots",
-    "state": "pending / not retrievable",
-    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+    "state": "Confirmed · block 975424 + 975429",
+    "note": "proof carries a Bitcoin block attestation, verified offline against a local block header (proof tree contains the block merkle root)"
    }
   },
   {
@@ -81,8 +81,8 @@
    },
    "timestamp_proof": {
     "file": "SKILL.md.ots",
-    "state": "pending / not retrievable",
-    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+    "state": "Confirmed · block 975424 + 975429",
+    "note": "proof carries a Bitcoin block attestation, verified offline against a local block header (proof tree contains the block merkle root)"
    }
   },
   {
@@ -104,8 +104,8 @@
    },
    "timestamp_proof": {
     "file": "SKILL.md.ots",
-    "state": "pending / not retrievable",
-    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+    "state": "Confirmed · block 975424 + 975429",
+    "note": "proof carries a Bitcoin block attestation, verified offline against a local block header (proof tree contains the block merkle root)"
    }
   },
   {
@@ -127,8 +127,8 @@
    },
    "timestamp_proof": {
     "file": "SKILL.md.ots",
-    "state": "pending / not retrievable",
-    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+    "state": "Confirmed · block 975424 + 975429",
+    "note": "proof carries a Bitcoin block attestation, verified offline against a local block header (proof tree contains the block merkle root)"
    }
   },
   {
@@ -150,8 +150,8 @@
    },
    "timestamp_proof": {
     "file": "SKILL.md.ots",
-    "state": "pending / not retrievable",
-    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+    "state": "Confirmed · block 975424 + 975429",
+    "note": "proof carries a Bitcoin block attestation, verified offline against a local block header (proof tree contains the block merkle root)"
    }
   },
   {
@@ -173,8 +173,8 @@
    },
    "timestamp_proof": {
     "file": "SKILL.md.ots",
-    "state": "pending / not retrievable",
-    "note": "commitment submitted; the three public calendars returned CommitmentNotFoundError on 2026-11-11, so no Bitcoin block is claimed"
+    "state": "Confirmed · block 975422 + 975424",
+    "note": "proof carries a Bitcoin block attestation, verified offline against a local block header (proof tree contains the block merkle root)"
    }
   }
  ]
