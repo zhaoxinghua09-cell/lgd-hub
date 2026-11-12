@@ -9,37 +9,37 @@ These are the hashes of the files as they are now. Revision H raises trigger des
 
 | # | asset | sha256 (rev H) | proof | bitcoin block |
 |---|---|---|---|---|
-| 1 | `agent-evolution` | `6592c2ab99f65a6e9ec1da46534caea8bb2a0679e2d8637465a9b64e015905a8` | `SKILL.md.ots` | pending / not retrievable |
-| 2 | `evidence-chain-builder` | `d40b23a015f1c487703bf900684d8997fd066a835523beef0efd067b52d03481` | `SKILL.md.ots` | pending / not retrievable |
-| 3 | `evidence-chain-check` | `50c26142e9cca31a2c372a832c51b5a29749b8c4db7436a88500b61663002d3d` | `SKILL.md.ots` | pending / not retrievable |
-| 4 | `evidence-chain-suite` | `857ddde056c3a49e24bff3be7820ed6878056fa7cfec42b76ef10e1f8144726c` | `SKILL.md.ots` | pending / not retrievable |
-| 5 | `intl-participation-pipeline` | `f335d29905cf0fe3e01f41458c92109a7f44ee38ab42ec2b9cb987756c13fdb5` | `SKILL.md.ots` | pending / not retrievable |
-| 6 | `iso-standards-readiness` | `719b0cc1a5ef94b7bc18749e17de2e7e13e7a9cf373e649a82ffb2c15e1749a2` | `SKILL.md.ots` | pending / not retrievable |
-| 7 | `lgd-gate-methodology` | `cb2f6aa9f68e3771ee89f650a5603c2a6e96ee5ada37f1db82d90e22f3ac7ca6` | `SKILL.md.ots` | pending / not retrievable |
-| 8 | `lgd-three-laws-auditor` | `5d5699432104e7b9386b2b89dad624a261a171267911093700f810357c7b2ef7` | `SKILL.md.ots` | pending / not retrievable |
-| 9 | `medical-device-compliance-grader` | `ba94b808e824779a700355392f465ed24ad926bc38462a949173c40bbf68c16e` | `SKILL.md.ots` | pending / not retrievable |
-| 10 | `medical-device-qms-gmp` | `e8197884268ce6521fd88a82ed3fc2de360d8e4a3ccda0e83e70190d3b470d78` | `SKILL.md.ots` | pending / not retrievable |
-| 11 | `medical-device-reg-dossier` | `328c2e1c3e28ef1ca972ebe8b6fb239c9b4c247739a883aa828fb816a9ed5b49` | `SKILL.md.ots` | pending / not retrievable |
-| 12 | `medical-device-risk-management` | `890637a0408b23a5c4f916316c3a99b4ed1e7ff796d276e405f93f3a784bc88d` | `SKILL.md.ots` | pending / not retrievable |
-| 13 | `medxpert-reg-hub` | `068da1aa4a1ae1e169613fdfd7568d303c635d97e05504727fd4ad48f8ac5f26` | `SKILL.md.ots` | pending / not retrievable |
-| 14 | `medxpert-termbase` | `b8c56de80ce22bdfe36490b725e81fa9618d64b37072604ef1fcca26436bf81b` | `SKILL.md.ots` | pending / not retrievable |
-| 15 | `ots-timestamp-anchor` | `4c289da7cd7a84c25ffdb9cdbb59b7b21d7b7e727d1d221d0472331551ed1123` | `SKILL.md.ots` | pending / not retrievable |
-| 16 | `publish-quality-gate` | `cf857a14a8b79426198c6b5c85570480177aa08a4cf6ef23fde2c897b72771e4` | `SKILL.md.ots` | pending / not retrievable |
-| 17 | `publish-redteam-review` | `efa12c82ae1a31c736ea914d9c4391b27a08a568391970fe0c9e241cd5ae0d93` | `SKILL.md.ots` | pending / not retrievable |
-| 18 | `skill-auditor` | `a61ecbcbf629823f83a3dff6a1cca5b4c7e68118043834ee45d9e5a8eca78361` | `SKILL.md.ots` | pending / not retrievable |
-| 19 | `skill-carrier-rights-layer` | `a80bffa087c6687993a4fbddf6e22af4e68ebdc8075cde9f30fc8597c455e6a3` | `SKILL.md.ots` | pending / not retrievable |
-| 20 | `skill-doctor` | `11757c8fce3f06fccb1dce127c6c8a47f0ee683660236bab4967fe285fe89b0c` | `SKILL.md.ots` | pending / not retrievable |
-| 21 | `skill-preflight` | `588ec5c1e0d03d881d0f739fe39067e5cfa08dc827e5ffb0a2273f44f81c7e6b` | `SKILL.md.ots` | pending / not retrievable |
-| 22 | `skill-release-gate` | `cda902c109587830e38d6dc999a4597af5bef65faa99c9804605043310bb72f7` | `SKILL.md.ots` | pending / not retrievable |
-| 23 | `standards-contribution-substantiation` | `7d06f5f912dec22c9925f53dd16b01fe0cd78f5bd7f5fa3c05a8b464cb9a9f64` | `SKILL.md.ots` | pending / not retrievable |
-| 24 | `uibc-challenge` | `1d28e6ee000dd740325c1de7ecfc6bf3695aaf273b2e2d4b4de82d59dad301ae` | `SKILL.md.ots` | pending / not retrievable |
-| 25 | `uibc-team-crypt` | `f58f7934e62f6825fc9752d1bce53d570071b1cb0bdaac5cde4c8f8f28e95e1a` | `SKILL.md.ots` | pending / not retrievable |
-| 26 | `uibc-team-fin` | `e38e17cf1db15673aca72d06270c76769a6a4ec20894640908d300dedf62bc80` | `SKILL.md.ots` | pending / not retrievable |
-| 27 | `uibc-team-gov` | `5a300eff6169368b2ef9c21451b6f1539b3ed6ea4e76c197626dbac5bb77d4b1` | `SKILL.md.ots` | pending / not retrievable |
-| 28 | `uibc-team-law` | `b161ae7dab8289f17c96d8a41f93277fb481b0bdd2dd6746b9ae334f05405e66` | `SKILL.md.ots` | pending / not retrievable |
-| 29 | `uibc-team-med` | `b8979ca86c289640a4d7e06ae2e7190d681912ded2c9509c400daedc1779ceb3` | `SKILL.md.ots` | pending / not retrievable |
-| 30 | `uibc-team-rob` | `ff0f26b70ebd64a4ed476191d4fb9244855390d4c7c3d0699ebf864847516507` | `SKILL.md.ots` | pending / not retrievable |
-| 31 | `uibc-team-uas` | `6686bbb33aa71bc5e463ecc0d829cf4356090b99fe1a195cc5eaec0ad4938fd8` | `SKILL.md.ots` | pending / not retrievable |
+| 1 | `agent-evolution` | `6592c2ab99f65a6e9ec1da46534caea8bb2a0679e2d8637465a9b64e015905a8` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 2 | `evidence-chain-builder` | `d40b23a015f1c487703bf900684d8997fd066a835523beef0efd067b52d03481` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 3 | `evidence-chain-check` | `50c26142e9cca31a2c372a832c51b5a29749b8c4db7436a88500b61663002d3d` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 4 | `evidence-chain-suite` | `857ddde056c3a49e24bff3be7820ed6878056fa7cfec42b76ef10e1f8144726c` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 5 | `intl-participation-pipeline` | `f335d29905cf0fe3e01f41458c92109a7f44ee38ab42ec2b9cb987756c13fdb5` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 6 | `iso-standards-readiness` | `719b0cc1a5ef94b7bc18749e17de2e7e13e7a9cf373e649a82ffb2c15e1749a2` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 7 | `lgd-gate-methodology` | `cb2f6aa9f68e3771ee89f650a5603c2a6e96ee5ada37f1db82d90e22f3ac7ca6` | `SKILL.md.ots` | Confirmed · block 975422 + 975424 |
+| 8 | `lgd-three-laws-auditor` | `5d5699432104e7b9386b2b89dad624a261a171267911093700f810357c7b2ef7` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 9 | `medical-device-compliance-grader` | `ba94b808e824779a700355392f465ed24ad926bc38462a949173c40bbf68c16e` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 10 | `medical-device-qms-gmp` | `e8197884268ce6521fd88a82ed3fc2de360d8e4a3ccda0e83e70190d3b470d78` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 11 | `medical-device-reg-dossier` | `328c2e1c3e28ef1ca972ebe8b6fb239c9b4c247739a883aa828fb816a9ed5b49` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 12 | `medical-device-risk-management` | `890637a0408b23a5c4f916316c3a99b4ed1e7ff796d276e405f93f3a784bc88d` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 13 | `medxpert-reg-hub` | `068da1aa4a1ae1e169613fdfd7568d303c635d97e05504727fd4ad48f8ac5f26` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 14 | `medxpert-termbase` | `b8c56de80ce22bdfe36490b725e81fa9618d64b37072604ef1fcca26436bf81b` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 15 | `ots-timestamp-anchor` | `4c289da7cd7a84c25ffdb9cdbb59b7b21d7b7e727d1d221d0472331551ed1123` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 16 | `publish-quality-gate` | `cf857a14a8b79426198c6b5c85570480177aa08a4cf6ef23fde2c897b72771e4` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 17 | `publish-redteam-review` | `efa12c82ae1a31c736ea914d9c4391b27a08a568391970fe0c9e241cd5ae0d93` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 18 | `skill-auditor` | `a61ecbcbf629823f83a3dff6a1cca5b4c7e68118043834ee45d9e5a8eca78361` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 19 | `skill-carrier-rights-layer` | `a80bffa087c6687993a4fbddf6e22af4e68ebdc8075cde9f30fc8597c455e6a3` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 20 | `skill-doctor` | `11757c8fce3f06fccb1dce127c6c8a47f0ee683660236bab4967fe285fe89b0c` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 21 | `skill-preflight` | `588ec5c1e0d03d881d0f739fe39067e5cfa08dc827e5ffb0a2273f44f81c7e6b` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 22 | `skill-release-gate` | `cda902c109587830e38d6dc999a4597af5bef65faa99c9804605043310bb72f7` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 23 | `standards-contribution-substantiation` | `7d06f5f912dec22c9925f53dd16b01fe0cd78f5bd7f5fa3c05a8b464cb9a9f64` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 24 | `uibc-challenge` | `1d28e6ee000dd740325c1de7ecfc6bf3695aaf273b2e2d4b4de82d59dad301ae` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 25 | `uibc-team-crypt` | `f58f7934e62f6825fc9752d1bce53d570071b1cb0bdaac5cde4c8f8f28e95e1a` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 26 | `uibc-team-fin` | `e38e17cf1db15673aca72d06270c76769a6a4ec20894640908d300dedf62bc80` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 27 | `uibc-team-gov` | `5a300eff6169368b2ef9c21451b6f1539b3ed6ea4e76c197626dbac5bb77d4b1` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 28 | `uibc-team-law` | `b161ae7dab8289f17c96d8a41f93277fb481b0bdd2dd6746b9ae334f05405e66` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 29 | `uibc-team-med` | `b8979ca86c289640a4d7e06ae2e7190d681912ded2c9509c400daedc1779ceb3` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 30 | `uibc-team-rob` | `ff0f26b70ebd64a4ed476191d4fb9244855390d4c7c3d0699ebf864847516507` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
+| 31 | `uibc-team-uas` | `6686bbb33aa71bc5e463ecc0d829cf4356090b99fe1a195cc5eaec0ad4938fd8` | `SKILL.md.ots` | Confirmed · block 975424 + 975429 |
 
 ## Revision A — the bytes the `.ots` proofs commit to
 
@@ -87,6 +87,7 @@ The 31 `.ots` proofs were produced from these hashes. If you are verifying a pro
 ## Status note (2026-11-11)
 
 - All 31 commitments were submitted and produced `.ots` proof files.
-- Retrieval from `a.pool` / `b.pool` / `alice.btc` calendars returned `CommitmentNotFoundError` on this date, including for a freshly submitted control hash — the calendars, not our files, are the limiting side.
-- No row claims a Bitcoin block height; rows say `pending / not retrievable` and that is deliberate.
+- On 2026-11-11 retrieval from `a.pool` / `b.pool` / `alice.btc` returned `CommitmentNotFoundError` (kept as history: at that moment no aggregated proof was served), including for a freshly submitted control hash — the calendars, not our files, are the limiting side.
+- Every row now names the Bitcoin blocks its proof commits to. Each was checked offline: the proof tree contains a node equal to that block's merkle root, parsed from a locally held 80-byte header whose double SHA-256 equals the block hash — no calendar or block explorer is trusted.
+- Blocks: 30 assets at **975424** and **975429**; `lgd-gate-methodology` at **975422** and **975424**.
 - Revision B exists because publishing machine-specific paths — including one to a plaintext key store — is a disclosure risk. Revision C adds English metadata so an English query can find the assets. Revision D adds a runnable script, a reference sheet and red-line sections to two assets. Revision E does the same for `evidence-chain-suite`. Revision F closes the last two: `medxpert-reg-hub` gained a package-integrity checker and its manifest hashes were restated with the original timestamps preserved and the reason recorded; `skill-doctor` gained machine-readable grade thresholds. Revision H raises trigger design in four assets: `read_when` is now a top-level key, so the trigger conditions a reader could already see are also visible to a scorer — in `skill-preflight` it had been nested under `metadata:`. Same rubric, same weights, no scorer edit; shelf average 0.928 → 0.952. Revision G had finished the disclosure sweep: remaining machine-specific paths became placeholders, a correspondence receipt had its message identifier and personal address redacted in place, the credential helpers now take their key-file location from an environment variable, and every `EVIDENCE.md` was re-generated from one gate run. No claim or licence line was changed in C, D, E, F or G.

@@ -85,7 +85,7 @@ sha256sum <asset>/SKILL.md       # compare with /skills.json and /ANCHORS.md
 
 - Not a certification, an accreditation, or a third-party audit. The scorer is ours; the audit trail is public so that the claim can be checked rather than trusted.
 - Not a claim of external adoption. Inbound issues from accounts outside the three maintainers: **0** as of 2026-11-11.
-- Not a timestamp claim. The 31 `.ots` proofs are **pending / not retrievable** — the three public calendars returned `CommitmentNotFoundError` for every one of them, including a control hash submitted in the same session. No Bitcoin block height is written anywhere in this repository.
+- Not a timestamp claim beyond what the proofs show. The 31 `.ots` proofs carry Bitcoin block attestations at **975424** and **975429** (30 assets) and **975422** / **975424** (`lgd-gate-methodology`). Each was verified offline: a node in the proof tree equals the block's merkle root, read from a locally held header whose `sha256d` is the block hash. The 2026-11-11 `CommitmentNotFoundError` from the calendars is kept as history, not as the current state.
 - Not a finished scoreboard. D10 still lacks `references/` on 19 library assets, and we declined to fill them with generated restatements of their own bodies. A dimension that can be satisfied by padding is a dimension that should stay unsatisfied until there is a real need for it.
 
 
