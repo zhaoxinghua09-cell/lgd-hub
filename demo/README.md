@@ -15,7 +15,7 @@ python demo/verify.py
 1. 把参考实现 `uibc-core` 克隆到临时目录；
 2. 切到门户锚定的那个 commit（`73f31cc`）；
 3. 跑门户上写的三条命令；
-4. **自动比对**门户写的三个数字（151 / 7 / 70）；
+4. **自动比对**门户写的三个数字（160 / 7 / 70）；
 5. 打一张表，任何一项不符就非零退出，跑完把临时目录清掉。
 
 不需要装任何依赖，只要 Python 3 和 git。
@@ -26,7 +26,7 @@ python demo/verify.py
 当前 commit：73f31cc（页面锚定 73f31cc）
 
 检查                实测    应得    退出码  判定
-unittest         151   151      0  PASS
+unittest         160   160      0  PASS
 stress             7     7      0  PASS
 cross_check       70    70      0  PASS
 
@@ -61,5 +61,5 @@ python demo/verify.py --dir <path>      # 用已有的 uibc-core 克隆（省一
 
 ## 没覆盖什么
 
-- 只验 `uibc-core` 那三个数字；技能数（109 / 81）、域论文（13）、静默失效模式（14）、SWHID、Rekor 条目、DOI **不在本脚本内**；
+- 只验 `uibc-core` 那三个数字；技能数（116 / 81）、域论文（13）、静默失效模式（15，main；发布版 v0.1.3 为 14）、SWHID、Rekor 条目、DOI **不在本脚本内**；
 - 那些要么需要公开登记库（DataCite / SWH / Rekor），要么需要遍历另一个仓库，属于 `PREDELIVER.md` 里另外几项。
