@@ -1,0 +1,41 @@
+{
+  "schema": "proof-claims/1",
+  "note": "七件上架名单的外锚定值表。heights 必须与 .ots 离线复验得到的区块高度完全一致；sha256 是 SKILL.md 的哈希（即被时间戳的原件）。改动本表等同于改判据，需与 ANCHORS.md / skills.json / EVAL.md / FACTS.md 同步，并重跑 tools/proof_claim_check.py。",
+  "claims": [
+    {
+      "name": "skill-preflight",
+      "sha256": "588ec5c1e0d03d881d0f739fe39067e5cfa08dc827e5ffb0a2273f44f81c7e6b",
+      "heights": [975424, 975429]
+    },
+    {
+      "name": "publish-quality-gate",
+      "sha256": "cf857a14a8b79426198c6b5c85570480177aa08a4cf6ef23fde2c897b72771e4",
+      "heights": [975424, 975429]
+    },
+    {
+      "name": "evidence-chain-suite",
+      "sha256": "857ddde056c3a49e24bff3be7820ed6878056fa7cfec42b76ef10e1f8144726c",
+      "heights": [975424, 975429]
+    },
+    {
+      "name": "medxpert-reg-hub",
+      "sha256": "068da1aa4a1ae1e169613fdfd7568d303c635d97e05504727fd4ad48f8ac5f26",
+      "heights": [975424, 975429]
+    },
+    {
+      "name": "uibc-challenge",
+      "sha256": "1d28e6ee000dd740325c1de7ecfc6bf3695aaf273b2e2d4b4de82d59dad301ae",
+      "heights": [975424, 975429]
+    },
+    {
+      "name": "skill-doctor",
+      "sha256": "11757c8fce3f06fccb1dce127c6c8a47f0ee683660236bab4967fe285fe89b0c",
+      "heights": [975424, 975429]
+    },
+    {
+      "name": "lgd-gate-methodology",
+      "sha256": "cb2f6aa9f68e3771ee89f650a5603c2a6e96ee5ada37f1db82d90e22f3ac7ca6",
+      "heights": [975422, 975424]
+    }
+  ]
+}
