@@ -7,7 +7,7 @@
 
 | # | 检查 | 命令 | 判据 |
 |---|---|---|---|
-| 1 | **数字能被第三方复现** | `python demo/verify.py` | 退出码 0，输出 `151 / 7 / 70` 三项 PASS |
+| 1 | **数字能被第三方复现** | `python demo/verify.py` | 退出码 0，输出 `160 / 7 / 70` 三项 PASS |
 | 2 | **页面数字与真源一致** | `python tools/counts_drift_check.py` | `[PASS]`，且 A 段命中数 > 0（命中 0 说明正则没匹配上，等于没检查） |
 | 3 | **这道门本身能失败** | `python tools/counts_drift_check.py selftest` | `N/N 个变异体被拦下；反例误报 0/2` |
 | 4 | **结构门** | `python tools/repo_gate_check.py check` | `GREEN`，`0 failed` |

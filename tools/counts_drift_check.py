@@ -118,7 +118,7 @@ LICENSE_EXPECTED_MD = {
 # 没有这条，把「代码 MIT + 正文 ARR」压成单一许可（红队变异体 #6）就能过门。
 LAYERED_REQUIRED = {
     "silent-failure-catalog": (r"分层|layered", r"保留所有权利|All Rights Reserved|ARR"),
-    "agent-skills": (r"分层|layered", r"保留所有权利|All Rights Reserved|ARR"),
+    "agent-skills": (r"分层|layered", r"保留所有权利|All Rights Reserved|ARR|CC BY"),
     "uibc-core": (r"分层|layered", r"保留所有权利|All Rights Reserved|ARR"),
 }
 
@@ -147,10 +147,13 @@ def check_prose(truth, verbose):
             if key not in truth:
                 continue
             for m in re.finditer(rx, text):
+                # 跳过词只看本数字自己的短语（数字前 24 字符的限定区 + 单位后 4 字符），
+                # 不看整行：同一行并列的另一个计数（如 “160 tests · 70 cross-checks” 里的
+                # cross）曾把整行的每个匹配都跳过，使本门对 llms.txt 的陈旧数字全盲
+                # （2026-11-11 实测：world 真源改 160 后，写着 151 的 llms 行仍 PASS）。
                 ls = text.rfind("\n", 0, m.start()) + 1
-                le = text.find("\n", m.end())
-                line_txt = text[ls: le if le > 0 else len(text)].lower()
-                if any(w in line_txt for w in skip_words):
+                phrase = text[max(ls, m.start() - 24): m.end() + 4].lower()
+                if any(w in phrase for w in skip_words):
                     continue
                 hits += 1
                 got, want = int(m.group(1)), truth[key]
