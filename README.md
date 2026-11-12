@@ -48,7 +48,7 @@
 
 | 可验什么 | 怎么验 | 入口 |
 |---|---|---|
-| 160 项测试真能跑 | 零依赖，单条命令 | [uibc-core](https://github.com/zhaoxinghua09-cell/uibc-core)（代码 Apache-2.0；理论文本 ARR，见该仓 NOTICE.md）· `python -m unittest discover -s tests` |
+| 164 项测试真能跑 | 零依赖，单条命令 | [uibc-core](https://github.com/zhaoxinghua09-cell/uibc-core)（代码 Apache-2.0；理论文本 ARR，见该仓 NOTICE.md）· `python -m unittest discover -s tests` |
 | 理论全文是否真公开 | 直接读 | [lgd-theory](https://github.com/zhaoxinghua09-cell/lgd-theory) |
 | 15 个静默失效模式（main；SF-015 为候选，发布版 v0.1.3 收 14）| SF-001…SF-015 逐条有判据 | [silent-failure-catalog](https://github.com/zhaoxinghua09-cell/silent-failure-catalog) |
 | 内容是否被第三方存档 | 查归档快照（SWHID） | [SWH: lgd-theory](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Flgd-theory%2F) · [SWH: uibc-core](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Fuibc-core%2F) |
@@ -71,7 +71,7 @@
 ---
 ## 自己跑一遍 · Run it yourself
 
-不想读、只想验：`python demo/verify.py` —— 克隆参考实现、切到页面锚定的 commit、跑三条命令、自动比对 160 / 7 / 70，任何一项不符即非零退出。详见 [demo/](https://github.com/zhaoxinghua09-cell/lgd-hub/tree/main/demo)。
+不想读、只想验：`python demo/verify.py` —— 克隆参考实现、切到页面锚定的 commit、跑三条命令、自动比对 164 / 7 / 70，任何一项不符即非零退出。详见 [demo/](https://github.com/zhaoxinghua09-cell/lgd-hub/tree/main/demo)。
 
 发布前该跑哪些检查、每项的判据是什么，写在 [PREDELIVER.md](https://github.com/zhaoxinghua09-cell/lgd-hub/blob/main/PREDELIVER.md)：八项，全绿才发。
 
