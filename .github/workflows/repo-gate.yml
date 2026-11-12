@@ -42,3 +42,6 @@ jobs:
         run: |
           python3 /tmp/src/tools/repo_gate_check.py check \
             --root /tmp/src --repo "${{ github.repository }}"
+
+      - name: "Proof-claim reconciliation (ANCHORS / skills.json / EVAL / FACTS)"
+        run: python3 /tmp/src/tools/proof_claim_check.py --root /tmp/src
