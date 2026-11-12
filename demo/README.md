@@ -32,7 +32,7 @@ cross_check       70    70      0  PASS
 
 [PASS] 三条命令全部复现，数字与页面一致：151 / 7 / 70
        页面还写着「同 commit 的 CI 亦为绿」，CI 记录：
-       https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/39159391899
+       https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/43142262486
 ```
 
 耗时约 25–40 秒（视网络与机器）。
