@@ -30,11 +30,11 @@ import subprocess
 import sys
 import tempfile
 
-COMMIT = "dc9eba3146e4e32bb1356f24ce8d72249a64702a"
+COMMIT = "e90f5b98ea395e5421d59780e551c3e7802005f4"
 REPO = "https://github.com/zhaoxinghua09-cell/uibc-core"
 # 页面写的三个数字（刻意不读 world.json，见文件头第 2 条）
 EXPECT = {
-    "unittest": ("Ran 160 tests", 160),
+    "unittest": ("Ran 164 tests", 164),
     "stress": ("Ran 7 tests", 7),
     "cross": ("checks compared: 70", 70),
 }
