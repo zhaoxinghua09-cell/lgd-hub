@@ -2,7 +2,7 @@
   "schema_version": "1.1",
   "title": "lgd-world-map",
   "generated": "2026-10-15",
-  "revised": "2026-11-12",
+  "revised": "2026-11-17",
   "revision_note": "1.1: added identity_layers / counts / verify / license blocks, added LGD, agent-skills and assayance entry points, and dropped a stale count carried in 1.0. Every number in this file is meant to be re-checkable, not aspirational.",
   "entry_points": [
     "any skill",
@@ -59,19 +59,19 @@
     "badge_directions": 16,
     "badge_svgs": 32,
     "badge_note": "16 directions x EN/CN = 32 SVGs; badge count is not paper count",
-    "silent_failure_patterns": 15,
-    "uibc_core_tests": 164,
+    "silent_failure_patterns": 16,
+    "uibc_core_tests": 289,
     "uibc_core_cross_checks": 70,
     "uibc_core_stress_scenarios": 7,
-    "verified_on": "2026-11-12",
-    "verification_note": "recomputed from the live repositories on 2026-11-12: uibc-core@e90f5b98 re-ran `Ran 164 tests, OK`; agent-skills skills/ holds 116 directories, each with SKILL.md; catalog failures/ holds SF-001..SF-015",
+    "verified_on": "2026-11-17",
+    "verification_note": "recomputed from the live repositories on 2026-11-17: uibc-core@e6519c3a re-ran `Ran 289 tests, OK (skipped=10)` in a clean stdlib-only environment, plus 7 stress scenarios OK and cross_check 70/0; the repo README quotes 305, which counts optional-dependency test modules that skip on a clean install; agent-skills skills/ holds 116 directories, each with SKILL.md; catalog failures/ holds SF-001..SF-016",
     "domain_codes": 12,
     "skills_flagship": 9,
     "skills_gov": 31,
     "skills_eng": 16,
     "skills_sec": 10,
     "skills_eff": 15,
-    "silent_failure_patterns_note": "15 on main (SF-015 is a candidate); release v0.1.3 carries 14"
+    "silent_failure_patterns_note": "16 on main (SF-001..SF-016); release v0.1.3 carries 14"
   },
   "identity_layers": {
     "policy": "do not merge",
@@ -109,7 +109,7 @@
     "checked": "2026-10-22, each repo's LICENSE file read directly",
     "by_repo": {
       "lgd-hub": "All Rights Reserved (custom ARR)",
-      "lgd-theory": "All Rights Reserved (custom ARR; citation with attribution permitted)",
+      "lgd-theory": "CC BY 4.0 (since 2026-11-17, D1 ruling case C; snapshots taken earlier keep the terms they were taken under)",
       "silent-failure-catalog": "layered — code LICENSE is MIT, catalogue prose LICENSE-CONTENT is All Rights Reserved",
       "lgd-glossary": "CC BY 4.0 (commercial use allowed with attribution)",
       "uibc-core": "layered — code Apache-2.0, theory text / methodology / normative statements All Rights Reserved (its NOTICE.md states this)",
@@ -128,21 +128,21 @@
   "verify": {
     "pinned_commit": {
       "repo": "uibc-core",
-      "commit": "e90f5b98ea395e5421d59780e551c3e7802005f4",
+      "commit": "e6519c3af3c3037995444fe4bf8417baaeda722f",
       "note": "the three commands below were run against this commit. A number without a commit is only an author statement; a commit is what makes it checkable."
     },
     "environment": {
-      "python": "3.12.11",
-      "os": "Linux cloud host (re-run 2026-11-12, not the author's CI)",
+      "python": "3.12.3",
+      "os": "Linux cloud host (re-run 2026-11-17, not the author's CI)",
       "dependencies": "none beyond the Python standard library",
-      "run_date": "2026-11-12"
+      "run_date": "2026-11-17"
     },
     "uibc_core_tests": {
       "command": "python -m unittest discover -s tests",
-      "expected": "Ran 164 tests ... OK",
+      "expected": "Ran 289 tests ... OK",
       "observed_seconds": 7.8,
-      "ci_run": "https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/43142262486",
-      "ci_note": "the repo CI runs pytest rather than unittest, on the same commit, and is green"
+      "ci_run": "https://github.com/zhaoxinghua09-cell/uibc-core/commit/e6519c3af3c3037995444fe4bf8417baaeda722f/checks",
+      "ci_note": "the repo CI runs the test matrix (3.10-3.13) plus demo/gate/codeql on the pinned commit; all checks green as of 2026-11-17"
     },
     "uibc_core_stress": {
       "command": "python -m unittest tests.stress_test",
