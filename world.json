@@ -2,8 +2,8 @@
   "schema_version": "1.1",
   "title": "lgd-world-map",
   "generated": "2026-10-15",
-  "revised": "2026-11-20",
-  "revision_note": "1.1: added identity_layers / counts / verify / license blocks, added LGD, agent-skills and assayance entry points, and dropped a stale count carried in 1.0. Every number in this file is meant to be re-checkable, not aspirational.",
+  "revised": "2026-11-21",
+  "revision_note": "1.1: added identity_layers / counts / verify / license blocks, added LGD, agent-skills and assayance entry points, and dropped a stale count carried in 1.0. Every number in this file is meant to be re-checkable, not aspirational. 1.2 (2026-11-21): the Rekor block now states the inclusion proof as verified, records its own correction of a false negative, and lists what inclusion still does not prove (equivocation, cross-shard consistency, entry.logIndex semantics); consistency between two signed heads of the active tree is now verified too.",
   "entry_points": [
     "any skill",
     "any repo",
@@ -184,11 +184,13 @@
       "entry_api": "https://rekor.sigstore.dev/api/v1/log/entries?logIndex=2883389783",
       "can_prove": [
         "a private key signed this sha256 digest",
-        "the signature is in the log and has not been tampered with"
+        "this entry is included in the tree the log signed: the RFC 9162 inclusion path folds the entry's leaf to the checkpoint's root, and the checkpoint's ECDSA P-256 signature verifies against the log's published key"
       ],
       "cannot_prove": [
         "who the signer is - the entry carries no identity binding",
-        "which file or version the digest belongs to - the entry carries no filename or version"
+        "which file or version the digest belongs to - the entry carries no filename or version",
+        "that the log never signed a conflicting tree - a valid signature is not an equivocation audit",
+        "consistency across shards - Rekor lists inactive shards with their own tree ids, and this portal does not claim the active tree extends any shard's tree"
       ],
       "pipeline_status": "the repo's automated build-provenance workflow was failing as of 2026-10-18 (the attestation step lacked the attestations: write permission); a fix is prepared and not yet merged, so this log entry is a historical manual item rather than output of a working pipeline",
       "log_id": "c0d23d6ad406973f9559f3ba2d1ca01f84147d8ffc5b8445c224f98b9591801d",
@@ -196,7 +198,29 @@
       "tree_id": 1193050959916656506,
       "tree_id_note": "value returned by /api/v1/log as treeID; independently recomputed by two reviewers on 2026-10-22 and confirmed equal. It also happens to equal the first 8 bytes of this entry's UUID — noted so a reader who notices is not confused; it is a tree identifier, not an identity claim.",
       "integrated_time_utc": "2026-09-18T05:50:12Z",
-      "kind_note": "the value is read from the entry body (body.kind); the entries API returns entry.kind = null at the top level, so a reader checking entry.kind will see null and may think the field is missing"
+      "kind_note": "the value is read from the entry body (body.kind); the entries API returns entry.kind = null at the top level, so a reader checking entry.kind will see null and may think the field is missing",
+      "inclusion_proof": {
+        "verified": true,
+        "verified_on": "2026-11-21",
+        "proof_log_index": 2761485521,
+        "proof_tree_size": "read from the entry at verification time (the log grows, so this number is not pinned here)",
+        "root_hash": "read from the entry at verification time; equality with the checkpoint's root line is checked, not asserted here",
+        "checkpoint_signature": "ECDSA P-256 over SHA-256 of the three checkpoint text lines; key id c0d23d6a",
+        "reproduce": "python tools/verify_rekor_inclusion.py --log-index 2883389783 (uibc-core; verifies leaf, path, root and checkpoint signature)",
+        "correction": "this portal previously carried 'the inclusion proof does not verify, by our reading or by a third party's'. That was wrong and it was our error: the leaf is SHA-256(0x00 || body bytes) (we hashed the body first and hashed the digest again), and the path must be folded against verification.inclusionProof.logIndex, which differs from entry.logIndex. Full account: uibc-core docs/REKOR-INCLUSION-2026-11-21.md",
+        "third_party_check": "the same tool, unchanged, verifies an entry from dfr.derappar.at (uuid 108e9186...439bd6b455165f1e02), so the defect was in the reading and not in the log",
+        "entry_log_index_note": "entry.logIndex (2883389783) and verification.inclusionProof.logIndex (2761485521) are different numbers for this entry. The proof is only checkable against the index it carries; we record the top-level difference without asserting what it means"
+      },
+      "consistency": {
+        "verified": true,
+        "verified_on": "2026-11-21",
+        "from_size": 3906098540,
+        "to_size": 3906098796,
+        "proof_nodes": 20,
+        "folded_root": "40ec802d4cd5834b2f4bce0ed804e487dd41dad140c4c029a1060ce48c310416",
+        "note": "both heads signed under rekor.sigstore.dev - 1193050959916656506 and both signatures verified; sizes are a point-in-time pair, not a pinned claim, because the log keeps growing",
+        "reproduce": "python tools/verify_rekor_inclusion.py --consistency --from <receipt.json> (uibc-core; folds the consistency proof with the RFC 6962 algorithm ported from transparency-dev/merkle proof/verify.go)"
+      }
     }
   },
   "ai_channels": [
