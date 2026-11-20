@@ -64,7 +64,7 @@
     "uibc_core_cross_checks": 70,
     "uibc_core_stress_scenarios": 7,
     "verified_on": "2026-11-12",
-    "verification_note": "{carried over from main: 2026-11-12 pass}",
+    "verification_note": "recomputed from the live repositories on 2026-11-12: uibc-core@e90f5b98 re-ran `Ran 164 tests, OK`; agent-skills skills/ holds 116 directories, each with SKILL.md; catalog failures/ holds SF-001..SF-015",
     "domain_codes": 12,
     "skills_flagship": 9,
     "skills_gov": 31,
