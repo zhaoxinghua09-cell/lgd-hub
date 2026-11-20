@@ -38,13 +38,13 @@ GitHub topics `synomosai` and `medxpert` are discoverability labels; they assert
 - domain papers: 13, numbered #1–#14 with #11 unpublished; 12 domain codes
 - badges: 16 directions x EN/CN = 32 SVGs — a self-declared marker set, not ACM or OpenSSF badges
 - silent-failure patterns: 14
-- uibc-core: 164 tests · 7 stress scenarios · 70 spec-conformance cross-checks with 0 mismatches
+- uibc-core: 858 tests · 7 stress scenarios · 70 spec-conformance cross-checks with 0 mismatches
 
 ## Verify it yourself (anchored to a commit, not to a date)
 
-- pinned commit: `uibc-core@e90f5b98ea395e5421d59780e551c3e7802005f4`
-- environment where the numbers below were reproduced: Python 3.13.14, Windows 11, no third-party dependency
-- `python -m unittest discover -s tests` → Ran 164 tests, OK
+- pinned commit: `uibc-core@a08d6ea62b64c717a5f829a7eafa9323494864ad`
+- environment where the numbers below were reproduced: Python 3.13.18, Windows 11, no third-party dependency (a `git` executable must be on PATH — two tests shell out to `git`, and a PATH that exposes only a `git.cmd` shim makes them error out for reasons that have nothing to do with the code)
+- `python -m unittest discover -s tests` → Ran 858 tests, OK (skipped 25, about 137 s)
 - `python -m unittest tests.stress_test` → Ran 7 tests, OK (about 35 s)
 - `python independent_verifier/cross_check.py` → checks compared: 70, mismatches: 0 — the script itself calls this "spec determinism", i.e. same-author two-implementation agreement, not third-party reproducibility
 - CI on the same commit: https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/43142262486 (green; CI runs pytest rather than unittest)

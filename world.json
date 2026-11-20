@@ -2,7 +2,7 @@
   "schema_version": "1.1",
   "title": "lgd-world-map",
   "generated": "2026-10-15",
-  "revised": "2026-11-12",
+  "revised": "2026-11-20",
   "revision_note": "1.1: added identity_layers / counts / verify / license blocks, added LGD, agent-skills and assayance entry points, and dropped a stale count carried in 1.0. Every number in this file is meant to be re-checkable, not aspirational.",
   "entry_points": [
     "any skill",
@@ -60,11 +60,11 @@
     "badge_svgs": 32,
     "badge_note": "16 directions x EN/CN = 32 SVGs; badge count is not paper count",
     "silent_failure_patterns": 15,
-    "uibc_core_tests": 164,
+    "uibc_core_tests": 858,
     "uibc_core_cross_checks": 70,
     "uibc_core_stress_scenarios": 7,
-    "verified_on": "2026-11-12",
-    "verification_note": "recomputed from the live repositories on 2026-11-12: uibc-core@e90f5b98 re-ran `Ran 164 tests, OK`; agent-skills skills/ holds 116 directories, each with SKILL.md; catalog failures/ holds SF-001..SF-015",
+    "verified_on": "2026-11-20",
+    "verification_note": "recomputed on 2026-11-20 against uibc-core@a08d6ea62b64c717a5f829a7eafa9323494864ad: `python -m unittest discover -s tests` -> Ran 858 tests, OK (skipped 25, 146.8 s); `python -m unittest tests.stress_test` -> Ran 7 tests, OK; `python independent_verifier/cross_check.py` -> checks compared: 70, mismatches: 0. Host: Windows 11, Python 3.13.18, no third-party dependency. Earlier counts in this block (skills / papers / badges / silent-failure patterns) were NOT re-derived on 2026-11-20 and still carry their 2026-11-12 provenance. The jump from 164 to 858 is the suite having grown, not a correction of the old figure.",
     "domain_codes": 12,
     "skills_flagship": 9,
     "skills_gov": 31,
@@ -128,26 +128,27 @@
   "verify": {
     "pinned_commit": {
       "repo": "uibc-core",
-      "commit": "e90f5b98ea395e5421d59780e551c3e7802005f4",
+      "commit": "a08d6ea62b64c717a5f829a7eafa9323494864ad",
       "note": "the three commands below were run against this commit. A number without a commit is only an author statement; a commit is what makes it checkable."
     },
     "environment": {
-      "python": "3.12.11",
-      "os": "Linux cloud host (re-run 2026-11-12, not the author's CI)",
-      "dependencies": "none beyond the Python standard library",
-      "run_date": "2026-11-12"
+      "python": "3.13.18",
+      "os": "Windows 11 (author's workstation, re-run 2026-11-20)",
+      "dependencies": "none beyond the Python standard library; two tests shell out to `git`, so a real git executable must be on PATH (a `git.cmd` shim alone is not enough)",
+      "run_date": "2026-11-20"
     },
     "uibc_core_tests": {
       "command": "python -m unittest discover -s tests",
-      "expected": "Ran 164 tests ... OK",
-      "observed_seconds": 7.8,
-      "ci_run": "https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/43142262486",
-      "ci_note": "the repo CI runs pytest rather than unittest, on the same commit, and is green"
+      "expected": "Ran 858 tests ... OK",
+      "observed_seconds": 146.8,
+      "skipped": 25,
+      "ci_run": "https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/44721319224",
+      "ci_note": "the `CI` workflow is green on this exact commit (2026-11-20). It runs pytest rather than unittest, so it corroborates rather than reproduces the count above. One separate workflow, `Release lab bundle`, failed on the same commit and is outside the three commands claimed here."
     },
     "uibc_core_stress": {
       "command": "python -m unittest tests.stress_test",
       "expected": "Ran 7 tests ... OK",
-      "observed_seconds": 34.9
+      "observed_seconds": 13.9
     },
     "uibc_core_cross_check": {
       "command": "python independent_verifier/cross_check.py",
