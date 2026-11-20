@@ -1,7 +1,7 @@
 {
   "$comment": "外部运行台账。一行 = 一次由不写这套代码的人产生、并且有记录可查的运行。这个文件是唯一真源：叙述性文档里出现的任何外部回执数字，都必须能由这里算出来；算不出、或与这里不等，tools/external_runs_gate.py 判红。字段缺失时写 null 并在 *_note 里说明，不删字段——缺席的字段和未记录的事实，在 diff 里看起来一样。",
   "schema": "external-runs/1",
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "updated_note": "首次建立。此前'外部回执 = 1'只写在 EVIDENCE-INDEX 的散文里，没有台账，也没有门——所以它可以被悄悄改大而没人发现。",
   "run_label_scale": {
     "author-produced": "本生态作者跑自己的代码",
@@ -14,7 +14,17 @@
     "directed": "运行方事先知道预期结果，或按邀请包里的判据去对齐",
     "note": "directed 不贬低结果，但它证明的是'能否按判据复现'，不是'能否独立发现'。"
   },
-  "required_fields": ["who", "date", "repo", "commit", "command", "result", "run_label", "evidence", "receipt_ref"],
+  "required_fields": [
+    "who",
+    "date",
+    "repo",
+    "commit",
+    "command",
+    "result",
+    "run_label",
+    "evidence",
+    "receipt_ref"
+  ],
   "runs": [
     {
       "id": "xr-001",
@@ -49,6 +59,10 @@
     {
       "what": "A1/A2 派单（inbox 20261120_01/02）",
       "why": "状态 DISPATCHED / AWAITING RECEIPT，尚无回执；未回执的派单不进 runs"
+    },
+    {
+      "what": "邀请 issue 已发：transparency-dev/merkle #271（2026-11-21，以 zhaoxinghua09-cell 署名）",
+      "why": "已发出但尚无回执，按本台账自己的规矩不进 runs；回执到达（conformance_harness 生成的 receipt）才计入，届时该行补 receipt_ref"
     }
   ]
 }
