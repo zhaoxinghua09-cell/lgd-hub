@@ -53,7 +53,7 @@
 | 理论全文是否真公开 | 直接读 | [lgd-theory](https://github.com/zhaoxinghua09-cell/lgd-theory) |
 | 15 个静默失效模式（main；SF-015 为候选，发布版 v0.1.3 收 14）| SF-001…SF-015 逐条有判据 | [silent-failure-catalog](https://github.com/zhaoxinghua09-cell/silent-failure-catalog) |
 | 内容是否被第三方存档 | 查归档快照（SWHID） | [SWH: lgd-theory](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Flgd-theory%2F) · [SWH: uibc-core](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Fuibc-core%2F) |
-| **uibc-core v0.2.1 的 zip** 摘要是否进透明日志 | 查 logIndex 并比对 sha256 `59cc1c91…` | [Rekor `2883389783`](https://search.sigstore.dev/?logIndex=2883389783)（本仓自身没有签名产物，主语不是「本仓发布件」） |
+| **uibc-core v0.2.1 的 zip** 摘要是否进透明日志 | 查 logIndex 并比对 sha256 `59cc1c91…`；**包含证明 + 树头签名 + 两树头间一致性均于 2026-11-21 验过** | [Rekor `2883389783`](https://search.sigstore.dev/?logIndex=2883389783)（本仓自身没有签名产物，主语不是「本仓发布件」）· 复跑 `python tools/verify_rekor_inclusion.py --log-index 2883389783`（uibc-core） |
 | 各处许可到底是什么 | 逐仓读 LICENSE | 见 [NOTICE.md](NOTICE.md) 的分层许可表（13 个仓逐个核过）——**本生态是分层许可，不是统一开源，也不都是 ARR** |
 | 怎么参与 | 公开 issue / PR | [LGD 主仓](https://github.com/zhaoxinghua09-cell/LGD)（Apache-2.0） |
 
