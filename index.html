@@ -85,6 +85,33 @@
   </div>
 </div>
 
+<section id="three-doors">
+  <div class="wrap">
+    <h2>Three load-bearing doors <span class="zh">三个承重门 — 先走这三扇</span></h2>
+    <p class="secsub">Everything else on this page hangs off these three. Each door below gives you one command that produces a verdict in seconds, and says where other people's receipts are filed. · 其余各件都挂在这三扇门上；每扇门给一条命令，几秒出一个判定，并指出别人的回执在哪。</p>
+    <div class="doors">
+      <div class="card">
+        <h3>1 · The verifier <span class="zh">验器</span></h3>
+        <p><b>uibc-core</b> — machine-checkable reference implementation: registry, evidence, gates.</p>
+        <pre style="white-space:pre-wrap;font-size:13px;background:#0b1f3a;color:#fff;padding:10px;border-radius:6px">git clone --depth 1 https://github.com/zhaoxinghua09-cell/uibc-core
+cd uibc-core &amp;&amp; python tools/external_node_check.py</pre>
+        <p class="fact">Prints <code>CONSISTENT</code> only if a second, independently written implementation agrees <b>and</b> three packages that must be rejected are rejected. Receipts: <a href="https://github.com/zhaoxinghua09-cell/uibc-core/blob/main/EVIDENCE-INDEX.md">EVIDENCE-INDEX</a> — external nodes: 1.</p>
+      </div>
+      <div class="card">
+        <h3>2 · The theory <span class="zh">理论</span></h3>
+        <p><b>lgd-theory</b> — the doctrine text itself: three laws, decision semantics, domain profiles (CC BY 4.0). Not a product repo; no verifier inside.</p>
+        <pre style="white-space:pre-wrap;font-size:13px;background:#0b1f3a;color:#fff;padding:10px;border-radius:6px">git clone --depth 1 https://github.com/zhaoxinghua09-cell/lgd-theory
+cd lgd-theory &amp;&amp; python tools/lgd_gate_check.py check --root .</pre>
+        <p class="fact">Ends in <code>lgd-gate: GREEN</code> — it judges whether the repository is self-consistent (required files, version agreement, links resolving), <b>not</b> whether the theory is right. Receipts: <a href="https://github.com/zhaoxinghua09-cell/lgd-theory/blob/main/EVIDENCE-INDEX.md">lgd-theory/EVIDENCE-INDEX</a>.</p>
+      </div>
+      <div class="card">
+        <h3>3 · The vocabulary <span class="zh">术语</span></h3>
+        <p><b>lgd-glossary</b> — candidate definitions offered to FG-TIDA terminology work. Prose only, no scripts; entries can be harmonized away.</p>
+        <p class="fact">Its binding check runs in door 1 (the verifier). Receipts for this repository itself: <b>0</b> — we do not borrow another repository's number.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="wrap">
     <h2>The shelf <span class="zh">货架 — 每件都可带走</span></h2>
@@ -93,7 +120,7 @@
       <div class="card">
         <h3>Reference implementation <span class="zh">参考实现</span></h3>
         <p><b>uibc-core</b> — the machine-checkable reference implementation of the three laws: registry, evidence, gates, with conformance tests and an independent cross-check.</p>
-        <p class="fact">164 unit tests · 70 cross-checks, 0 mismatches (re-run 2026-11-12) · v0.3.0: three-valued verdicts + Ed25519 public seal · Apache-2.0 · Software DOI 10.5281/zenodo.22821834</p>
+        <p class="fact">v0.4.1 (PyPI and git tag agree, 2026-11-20) · suite green on Linux/Python 3.12 · second implementation agrees with the reference, 0 mismatches (2026-11-20) · Apache-2.0 · Software DOI 10.5281/zenodo.22821834</p>
         <p class="go"><a href="https://github.com/zhaoxinghua09-cell/uibc-core">github.com/zhaoxinghua09-cell/uibc-core →</a></p>
       </div>
       <div class="card">
