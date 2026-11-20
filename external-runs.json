@@ -63,6 +63,10 @@
     {
       "what": "邀请 issue 已发：transparency-dev/merkle #271（2026-11-21，以 zhaoxinghua09-cell 署名）",
       "why": "已发出但尚无回执，按本台账自己的规矩不进 runs；回执到达（conformance_harness 生成的 receipt）才计入，届时该行补 receipt_ref"
+    },
+    {
+      "what": "邀请 02–05 已发（2026-11-21，zhaoxinghua09-cell）：sigstore-python #1987、sigstore-js #1798、sigsum-go #1、rekor #3091",
+      "why": "四封均已发出但尚无回执，不进 runs；owner 明确要求加速，原草稿的\"一封后 ≥3 天\"节奏被本行取代，但仍按同一规则处理：没有 conformance_harness 回执就不计入"
     }
   ]
 }
