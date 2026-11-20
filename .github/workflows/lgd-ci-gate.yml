@@ -32,8 +32,14 @@ jobs:
       - name: counts-drift (numbers + phantom artifacts + licences, can fail)
         run: python3 tools/counts_drift_check.py
 
+      - name: external-runs (ledger is the truth source, can fail)
+        run: python3 tools/external_runs_gate.py
+
       - name: Prove both gates can fail (negative control)
         run: python3 tools/repo_gate_check.py selftest
+
+      - name: Prove the external-runs gate can fail (negative control)
+        run: python3 tools/external_runs_gate.py --selftest
 
   secret-scan:
     name: secret-scan (non-blocking)

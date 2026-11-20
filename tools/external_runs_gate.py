@@ -25,7 +25,8 @@ import os
 import re
 import sys
 
-ROOT = os.path.abspath(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ROOT = os.environ.get("LGD_HUB_ROOT") or os.path.abspath(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LEDGER = "external-runs.json"
 RESULT_SCALE = {"PASS", "PASS-with-changes", "FAIL", "INCONCLUSIVE"}
 
@@ -45,7 +46,10 @@ def load(path):
         return json.load(f)
 
 
-def main():
+def main(root=None):
+    global ROOT
+    if root:
+        ROOT = root
     path = os.path.join(ROOT, LEDGER)
     try:
         doc = load(path)
@@ -130,5 +134,57 @@ def main():
     return 0
 
 
+def selftest():
+    """证这道门在 CI 里也能失败：把叙述数字改大一，必须判红。
+
+    2026-10-22 的教训是「一个永远绿的必需门禁等于没有门禁」。所以每道进来的门
+    都要自带一条能在 CI 里跑红的负控，而不是只在提交者机器上跑过一次。
+    """
+    import shutil
+    import tempfile
+
+    src = os.path.abspath(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    tmp = tempfile.mkdtemp(prefix="xr-selftest-")
+    try:
+        for f in [LEDGER] + SURFACES:
+            s = os.path.join(src, f)
+            if os.path.isfile(s):
+                shutil.copy2(s, os.path.join(tmp, f))
+        doc = load(os.path.join(tmp, LEDGER))
+        counted = sum(
+            1 for r in (doc.get("runs") or [])
+            if r.get("run_label") == "independent" and r.get("receipt_ref")
+            and r.get("counts_toward_m4") is True
+        )
+        inflated = counted + 1
+        touched = 0
+        for surf in SURFACES:
+            p = os.path.join(tmp, surf)
+            if not os.path.isfile(p):
+                continue
+            txt = open(p, encoding="utf-8").read()
+            for pat in NUM_PATTERNS:
+                new, n = re.subn(pat, lambda m: m.group(0).replace(
+                    m.group(1), str(inflated), 1), txt)
+                if n:
+                    touched += n
+                    txt = new
+            open(p, "w", encoding="utf-8").write(txt)
+        if touched == 0:
+            print("[SELFTEST] 跳过：叙述面里没有可被改大的数字，无法证负控")
+            return 0
+        print("[SELFTEST] 把叙述数字改大为 %d（真值 %d），期望判红" % (inflated, counted))
+        rc = main(tmp)
+        if rc == 1:
+            print("[SELFTEST] PASS —— 门在数字被改大时确实红了")
+            return 0
+        print("[SELFTEST] FAIL —— 数字被改大了却没判红，这道门是装饰")
+        return 1
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    if "--selftest" in sys.argv:
+        sys.exit(selftest())
+    sys.exit(main() or 0)
