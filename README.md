@@ -49,6 +49,7 @@
 | 可验什么 | 怎么验 | 入口 |
 |---|---|---|
 | 858 项测试真能跑（`a08d6ea62b64c717a5f829a7eafa9323494864ad`，2026-11-20 实测） | 零依赖，单条命令 | [uibc-core](https://github.com/zhaoxinghua09-cell/uibc-core)（代码 Apache-2.0；理论文本 ARR，见该仓 NOTICE.md）· `python -m unittest discover -s tests` |
+| 外部第三方的复跑回执 | 一条命令看得出数字从哪来 | **外部回执 1**（Correctover，2026-11-20T01:44:01Z，Linux/Python 3.12.14）——数字由 [external-runs.json](external-runs.json) 推出，python tools/external_runs_gate.py 判它是否与叙述一致；本仓自己跑的不计入 |
 | 理论全文是否真公开 | 直接读 | [lgd-theory](https://github.com/zhaoxinghua09-cell/lgd-theory) |
 | 15 个静默失效模式（main；SF-015 为候选，发布版 v0.1.3 收 14）| SF-001…SF-015 逐条有判据 | [silent-failure-catalog](https://github.com/zhaoxinghua09-cell/silent-failure-catalog) |
 | 内容是否被第三方存档 | 查归档快照（SWHID） | [SWH: lgd-theory](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Flgd-theory%2F) · [SWH: uibc-core](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Fuibc-core%2F) |
