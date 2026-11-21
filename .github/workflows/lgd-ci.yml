@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   ci:
-    uses: LGD-AI/lgd-ci/.github/workflows/lgd-reusable-ci.yml@5b556b8174bb5420169ec4c632c2a2961ed584b0
+    uses: LGD-AI/lgd-ci/.github/workflows/lgd-reusable-ci.yml@9a12df6b2ee664db1aa915a178e1d8f46754771b
     with:
       python-version: "3.11"
       run-tests: false
