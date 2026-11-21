@@ -1,5 +1,6 @@
 name: LGD CI
 
+# 该仓已有自己的 CI（lgd-ci-gate / test），共享 CI 只做布局与 JSON 卫生检查。
 on:
   pull_request:
   push:
@@ -13,5 +14,5 @@ jobs:
     uses: LGD-AI/lgd-ci/.github/workflows/lgd-reusable-ci.yml@b893e1b54505a8c96e23839cff6b9a98859fbe04
     with:
       python-version: "3.11"
-      run-tests: true
+      run-tests: false
       require-skill-md: false
