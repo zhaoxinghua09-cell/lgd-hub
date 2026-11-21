@@ -1,0 +1,72 @@
+{
+  "$comment": "外部运行台账。一行 = 一次由不写这套代码的人产生、并且有记录可查的运行。这个文件是唯一真源：叙述性文档里出现的任何外部回执数字，都必须能由这里算出来；算不出、或与这里不等，tools/external_runs_gate.py 判红。字段缺失时写 null 并在 *_note 里说明，不删字段——缺席的字段和未记录的事实，在 diff 里看起来一样。",
+  "schema": "external-runs/1",
+  "updated": "2026-11-21",
+  "updated_note": "首次建立。此前'外部回执 = 1'只写在 EVIDENCE-INDEX 的散文里，没有台账，也没有门——所以它可以被悄悄改大而没人发现。",
+  "run_label_scale": {
+    "author-produced": "本生态作者跑自己的代码",
+    "second-party-same-code": "别人跑作者的代码",
+    "independent": "别人跑作者没写过的实现",
+    "note": "与 evidence 是两根不同的轴：evidence 说'实现方有没有先看过答案'，run_label 说'谁写的实现'。同一作者的两个实现永远不记 independent。"
+  },
+  "evidence_scale": {
+    "blind": "运行前未向运行方提供预期结果",
+    "directed": "运行方事先知道预期结果，或按邀请包里的判据去对齐",
+    "note": "directed 不贬低结果，但它证明的是'能否按判据复现'，不是'能否独立发现'。"
+  },
+  "required_fields": [
+    "who",
+    "date",
+    "repo",
+    "commit",
+    "command",
+    "result",
+    "run_label",
+    "evidence",
+    "receipt_ref"
+  ],
+  "runs": [
+    {
+      "id": "xr-001",
+      "who": "Correctover",
+      "date": "2026-11-20T01:44:01Z",
+      "repo": "uibc-core",
+      "commit": "5e03b89",
+      "commit_note": "运行方当时取用的提交；短哈希按原文转录，未扩写",
+      "command": "python -m unittest discover -s tests",
+      "result": "PASS-with-changes",
+      "result_note": "原文给出的是其环境下的通过结论与基线条数；与本仓 2026-11-20 的 916 项不是同一次计数，不可互换",
+      "environment": "Linux / Python 3.12.14",
+      "run_label": "independent",
+      "evidence": "blind",
+      "evidence_note": "运行前未向其提供预期条数",
+      "receipt_ref": "bridge: ai-seats-bridge 回执登记（Correctover 回传）",
+      "posting": null,
+      "posting_note": "未见公开张贴位置（issue/讨论串）；仪表只记'未张贴'，不替它编一个链接",
+      "counts_toward_m4": true,
+      "counts_note": "M4 的'外部回执 ≥6'只认 run_label=independent 且 receipt_ref 非空的行；行数由本文件推出，不由叙述推出"
+    }
+  ],
+  "not_counted": [
+    {
+      "what": "第六向量进主干（PR #331）",
+      "why": "我方自己的动作，不是外部运行"
+    },
+    {
+      "what": "三仓首屏改动、门户三承重门（PR #42/#43/#69/#71，uibc-core #342）",
+      "why": "同上；另 #342 修的是我们自己的 JCS 数值形态 bug"
+    },
+    {
+      "what": "A1/A2 派单（inbox 20261120_01/02）",
+      "why": "状态 DISPATCHED / AWAITING RECEIPT，尚无回执；未回执的派单不进 runs"
+    },
+    {
+      "what": "邀请 issue 已发：transparency-dev/merkle #271（2026-11-21，以 zhaoxinghua09-cell 署名）",
+      "why": "已发出但尚无回执，按本台账自己的规矩不进 runs；回执到达（conformance_harness 生成的 receipt）才计入，届时该行补 receipt_ref"
+    },
+    {
+      "what": "邀请 02–05 已发（2026-11-21，zhaoxinghua09-cell）：sigstore-python #1987、sigstore-js #1798、sigsum-go #1、rekor #3091",
+      "why": "四封均已发出但尚无回执，不进 runs；owner 明确要求加速，原草稿的\"一封后 ≥3 天\"节奏被本行取代，但仍按同一规则处理：没有 conformance_harness 回执就不计入"
+    }
+  ]
+}

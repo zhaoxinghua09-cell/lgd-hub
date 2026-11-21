@@ -38,13 +38,13 @@ GitHub topics `synomosai` and `medxpert` are discoverability labels; they assert
 - domain papers: 13, numbered #1–#14 with #11 unpublished; 12 domain codes
 - badges: 16 directions x EN/CN = 32 SVGs — a self-declared marker set, not ACM or OpenSSF badges
 - silent-failure patterns: 14
-- uibc-core: 164 tests · 7 stress scenarios · 70 spec-conformance cross-checks with 0 mismatches
+- uibc-core: 858 tests · 7 stress scenarios · 70 spec-conformance cross-checks with 0 mismatches
 
 ## Verify it yourself (anchored to a commit, not to a date)
 
-- pinned commit: `uibc-core@e90f5b98ea395e5421d59780e551c3e7802005f4`
-- environment where the numbers below were reproduced: Python 3.13.14, Windows 11, no third-party dependency
-- `python -m unittest discover -s tests` → Ran 164 tests, OK
+- pinned commit: `uibc-core@a08d6ea62b64c717a5f829a7eafa9323494864ad`
+- environment where the numbers below were reproduced: Python 3.13.18, Windows 11, no third-party dependency (a `git` executable must be on PATH — two tests shell out to `git`, and a PATH that exposes only a `git.cmd` shim makes them error out for reasons that have nothing to do with the code)
+- `python -m unittest discover -s tests` → Ran 858 tests, OK (skipped 25, about 147 s)
 - `python -m unittest tests.stress_test` → Ran 7 tests, OK (about 35 s)
 - `python independent_verifier/cross_check.py` → checks compared: 70, mismatches: 0 — the script itself calls this "spec determinism", i.e. same-author two-implementation agreement, not third-party reproducibility
 - CI on the same commit: https://github.com/zhaoxinghua09-cell/uibc-core/actions/runs/43142262486 (green; CI runs pytest rather than unittest)
@@ -52,7 +52,7 @@ GitHub topics `synomosai` and `medxpert` are discoverability labels; they assert
 ## Archive and transparency evidence
 
 - Software Heritage: lgd-theory `swh:1:snp:3b18d3eb73efd6a57279bc9c3dd1ae0a0955b4cb` (visit 1, full, git, 2026-10-15) · lgd-hub `swh:1:snp:c3fb183cdefe49f292d81f603800062c619b941d` (visit 1, full, git, 2026-10-15). A SWHID identifies content in that snapshot; per the SWHID spec retrieval is not guaranteed, so this is archival evidence, not an availability promise.
-- Sigstore Rekor: logIndex 2883389783 · logID c0d23d6ad406973f9559f3ba2d1ca01f84147d8ffc5b8445c224f98b9591801d (= SHA-256 of the log public key; recomputable) · treeID 1193050959916656506 (as returned by /api/v1/log; independently recomputed) · hashedrekord · integratedTime 1789710612 (2026-09-18T05:50:12Z). It proves a private key signed that sha256 digest and the entry is in the log untampered; it does not prove who the signer is, nor which file or version the digest belongs to. The ecosystem's automated SLSA provenance workflow has been failing since 2026-10-18 (missing `attestations: write`), so this entry is a historical manual artifact rather than pipeline output.
+- Sigstore Rekor: logIndex 2883389783 · logID c0d23d6ad406973f9559f3ba2d1ca01f84147d8ffc5b8445c224f98b9591801d (= SHA-256 of the log public key; recomputable) · treeID 1193050959916656506 (as returned by /api/v1/log; independently recomputed) · hashedrekord · integratedTime 1789710612 (2026-09-18T05:50:12Z). As of 2026-11-21 three things verify with uibc-core `tools/verify_rekor_inclusion.py`: the inclusion path folds to the checkpoint root (`--log-index 2883389783`), the checkpoint's ECDSA signature verifies against the log key (`key id c0d23d6a`), and consistency between two signed heads of the active tree folds (`--consistency`). The proof must be folded against `verification.inclusionProof.logIndex` (2761485521), which is a different number from `entry.logIndex` (2883389783); the leaf is SHA-256(0x00 || body bytes). An earlier statement here that the inclusion proof did not verify was our reading error, retracted 2026-11-21. These prove a private key signed that sha256 digest and the entry is in the tree the log signed; they do not prove who the signer is, nor which file or version the digest belongs to, nor that the log never signed a conflicting tree, nor consistency across shards. The ecosystem's automated SLSA provenance workflow has been failing since 2026-10-18 (missing `attestations: write`), so this entry is a historical manual artifact rather than pipeline output.
 - ORCID: https://orcid.org/0009-0001-0512-1237
 - Zenodo: version DOI for v1.7.0 https://doi.org/10.5281/zenodo.23446125 · concept DOI (all versions) https://doi.org/10.5281/zenodo.22456647 · term registry https://doi.org/10.5281/zenodo.23385209
 - ITU-T FG-TIDA: https://github.com/FG-TIDA

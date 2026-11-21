@@ -48,11 +48,12 @@
 
 | 可验什么 | 怎么验 | 入口 |
 |---|---|---|
-| 164 项测试真能跑 | 零依赖，单条命令 | [uibc-core](https://github.com/zhaoxinghua09-cell/uibc-core)（代码 Apache-2.0；理论文本 ARR，见该仓 NOTICE.md）· `python -m unittest discover -s tests` |
+| 858 项测试真能跑（`a08d6ea62b64c717a5f829a7eafa9323494864ad`，2026-11-20 实测） | 零依赖，单条命令 | [uibc-core](https://github.com/zhaoxinghua09-cell/uibc-core)（代码 Apache-2.0；理论文本 ARR，见该仓 NOTICE.md）· `python -m unittest discover -s tests` |
+| 外部第三方的复跑回执 | 一条命令看得出数字从哪来 | **外部回执 1**（Correctover，2026-11-20T01:44:01Z，Linux/Python 3.12.14）——数字由 [external-runs.json](external-runs.json) 推出，python tools/external_runs_gate.py 判它是否与叙述一致；本仓自己跑的不计入 |
 | 理论全文是否真公开 | 直接读 | [lgd-theory](https://github.com/zhaoxinghua09-cell/lgd-theory) |
 | 15 个静默失效模式（main；SF-015 为候选，发布版 v0.1.3 收 14）| SF-001…SF-015 逐条有判据 | [silent-failure-catalog](https://github.com/zhaoxinghua09-cell/silent-failure-catalog) |
 | 内容是否被第三方存档 | 查归档快照（SWHID） | [SWH: lgd-theory](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Flgd-theory%2F) · [SWH: uibc-core](https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https%3A%2F%2Fgithub.com%2Fzhaoxinghua09-cell%2Fuibc-core%2F) |
-| **uibc-core v0.2.1 的 zip** 摘要是否进透明日志 | 查 logIndex 并比对 sha256 `59cc1c91…` | [Rekor `2883389783`](https://search.sigstore.dev/?logIndex=2883389783)（本仓自身没有签名产物，主语不是「本仓发布件」） |
+| **uibc-core v0.2.1 的 zip** 摘要是否进透明日志 | 查 logIndex 并比对 sha256 `59cc1c91…`；**包含证明 + 树头签名 + 两树头间一致性均于 2026-11-21 验过** | [Rekor `2883389783`](https://search.sigstore.dev/?logIndex=2883389783)（本仓自身没有签名产物，主语不是「本仓发布件」）· 复跑 `python tools/verify_rekor_inclusion.py --log-index 2883389783`（uibc-core） |
 | 各处许可到底是什么 | 逐仓读 LICENSE | 见 [NOTICE.md](NOTICE.md) 的分层许可表（13 个仓逐个核过）——**本生态是分层许可，不是统一开源，也不都是 ARR** |
 | 怎么参与 | 公开 issue / PR | [LGD 主仓](https://github.com/zhaoxinghua09-cell/LGD)（Apache-2.0） |
 
@@ -71,7 +72,7 @@
 ---
 ## 自己跑一遍 · Run it yourself
 
-不想读、只想验：`python demo/verify.py` —— 克隆参考实现、切到页面锚定的 commit、跑三条命令、自动比对 164 / 7 / 70，任何一项不符即非零退出。详见 [demo/](https://github.com/zhaoxinghua09-cell/lgd-hub/tree/main/demo)。
+不想读、只想验：`python demo/verify.py` —— 克隆参考实现、切到页面锚定的 commit、跑三条命令、自动比对 858 / 7 / 70，任何一项不符即非零退出。详见 [demo/](https://github.com/zhaoxinghua09-cell/lgd-hub/tree/main/demo)。
 
 发布前该跑哪些检查、每项的判据是什么，写在 [PREDELIVER.md](https://github.com/zhaoxinghua09-cell/lgd-hub/blob/main/PREDELIVER.md)：八项，全绿才发。
 

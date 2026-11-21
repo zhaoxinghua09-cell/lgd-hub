@@ -7,7 +7,13 @@
     "@id": "https://zhaoxinghua09-cell.github.io/lgd-hub/",
     "name": "LGD 生态"
   },
-  "license": "https://spdx.org/licenses/MIT.html",
+  "license": "https://github.com/zhaoxinghua09-cell/lgd-hub/blob/main/LICENSE",
+  "copyrightHolder": {
+    "@type": "Person",
+    "name": "Zhao Xinghua (Steven Zhao)",
+    "identifier": "https://orcid.org/0009-0001-0512-1237"
+  },
+  "conditionsOfAccess": "All rights reserved; attribution-preserving citation permitted under LICENSE §3, redistribution or derivative use requires written permission.",
   "sameAs": [
     "https://zhaoxinghua09-cell.github.io/lgd-hub/"
   ]
