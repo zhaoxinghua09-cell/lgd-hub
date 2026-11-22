@@ -1,0 +1,12 @@
+{
+  "schema": "ai-manifest/v1",
+  "repository": "zhaoxinghua09-cell/lgd-hub",
+  "role": "Theory repo: papers, judges, and the doctrine SSOT.",
+  "what_it_is": "Seven agent skills that make governance runnable: a SKILL.md scorer on a published weighted rubric, a release gate for disclosure leaks, an evidence chain, a registration hub, a challenge rubric, a skill diagnoser, and the gate methodology. Every asset ships its SHA-256 and its audit trail.",
+  "what_it_is_not": "Not a third-party certification, compliance finding, or regulatory approval. Claims about quality are the author's own and separately labelled.",
+  "reproduce": "See the repository README for how to run or read the material; commands are verbatim and require no private network.",
+  "contact": "zhaoxinghua09-cell",
+  "evidence_state": "Machine-generated manifest, 2026-11-22. Descriptive fields mirror the repository description verbatim; no quality claim is asserted here.",
+  "last_verified": "2026-11-22",
+  "claims_policy": "No first-in-class, greenfield, or only-implementation claims. Each comparison states its own boundary."
+}
