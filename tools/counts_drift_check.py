@@ -88,7 +88,7 @@ LICENSE_TABLE_EXPECTED = [
 
 LICENSE_EXPECTED = {
     "lgd-hub": "All Rights Reserved",
-    "lgd-theory": "All Rights Reserved",
+    "lgd-theory": "CC BY 4.0",
     "silent-failure-catalog": "MIT",
     "lgd-glossary": "CC BY 4.0",
     "uibc-core": "Apache-2.0",
@@ -104,7 +104,7 @@ LICENSE_EXPECTED = {
 
 LICENSE_EXPECTED_MD = {
     "lgd-hub": ["保留所有权利"],
-    "lgd-theory": ["保留所有权利"],
+    "lgd-theory": ["CC BY 4.0"],
     "silent-failure-catalog": ["MIT"],
     "lgd-glossary": ["CC BY 4.0"],
     "uibc-core": ["Apache-2.0"],
