@@ -12,7 +12,7 @@ Copyright (c) 2026 赵兴华 / Steven Zhao·China（ORCID 0009-0001-0512-1237）
 | 仓 | 实际许可（2026-10-22 核） |
 |---|---|
 | `lgd-hub` | 保留所有权利（自定义 ARR） |
-| `lgd-theory` | **CC BY 4.0**（2026-11-19 起理论线全部文本；已发布的 Zenodo 快照按彼时标注不变） |
+| `lgd-theory` | **CC BY 4.0**（2026-11-17 起理论线全部文本；已发布的 Zenodo 快照按彼时标注不变） |
 | `silent-failure-catalog` | **分层**：代码 `LICENSE` = MIT；目录正文 `LICENSE-CONTENT` = 保留所有权利 |
 | `lgd-glossary` | **CC BY 4.0**（可商用，须署名） |
 | `uibc-core` | **分层**：代码 Apache-2.0；理论文本 / 方法论 / 规范性表述保留所有权利（该仓 NOTICE.md 明写） |
