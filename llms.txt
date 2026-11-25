@@ -59,9 +59,9 @@ GitHub topics `synomosai` and `medxpert` are discoverability labels; they assert
 
 ## Licence (layered — read the target repo's own LICENSE)
 
-- All Rights Reserved (custom): lgd-hub, lgd-theory
+- All Rights Reserved (custom): lgd-hub
 - layered: silent-failure-catalog — code LICENSE is MIT, catalogue prose LICENSE-CONTENT is ARR
-- CC BY 4.0: lgd-glossary
+- CC BY 4.0: lgd-theory, lgd-glossary
 - layered: uibc-core — code Apache-2.0, theory text / methodology ARR (its NOTICE.md says so explicitly)
 - Apache-2.0: LGD, skill-scorecard, theoriturgy
 - MIT: lgd-skill-marketplace, xlgd, awesome-trusted-agents
