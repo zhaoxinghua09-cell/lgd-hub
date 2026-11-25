@@ -23,7 +23,7 @@ GitHub topics 里的 `synomosai`、`medxpert` 是检索标签，不构成法人�
 ## 许可（分层，逐仓不同；2026-10-22 逐仓读 LICENSE 核过）
 
 - 本仓 `lgd-hub`：**保留所有权利**（见 `LICENSE`），不授予 Apache-2.0 / MIT。
-- `lgd-theory`：保留所有权利（允许署名引用）
+- `lgd-theory`：**CC BY 4.0**（可商用，须署名）
 - `silent-failure-catalog`：**分层**——代码 MIT，目录正文 `LICENSE-CONTENT` 保留所有权利
 - `lgd-glossary`：**CC BY 4.0**（可商用，须署名）
 - `uibc-core`：**分层**——代码 Apache-2.0，理论文本 / 方法论 / 规范性表述保留所有权利（见该仓 NOTICE.md）
