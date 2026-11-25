@@ -5,12 +5,14 @@ Copyright (c) 2026 赵兴华 / Steven Zhao·China（ORCID 0009-0001-0512-1237）
 - **本仓定位**：lgd-hub 是 LGD 生态的**枢纽层（Tier 0 世界地图 / 门户）**，承载索引、结构与可核验入口，**不承载理论正文**（理论正文在 `lgd-theory`）。本仓内容（含文档、页面、世界地图数据与配套脚本）权属 赵兴华 / Steven Zhao·China。
 - **本仓许可**：**全部内容保留所有权利**（All Rights Reserved），完整条款见根目录 [LICENSE](LICENSE)。
   **本仓不授予 Apache-2.0 / MIT**——此前本文件曾表述为「代码以 Apache-2.0 授权」，与 LICENSE 不一致，现以 LICENSE 为准改正。
+
+- **引用与复用，不必事先征得我们同意**：本生态各仓内容按其各自 LICENSE 授权；引用、转载、复用、复跑均不必另行来问——许可证本身已允许。本声明是澄清，不是改许可证：CC BY 4.0 的作品署名是许可证的要求，Apache-2.0 的代码保留许可证声明；各仓自己的 LICENSE 仍为准。本仓（lgd-hub）自身内容仍为保留所有权利，按根目录 LICENSE 执行。
 - **本生态是分层许可，逐仓不同**。下表于 2026-10-22 逐仓读 LICENSE 正文核对；引用前仍请以目标仓当时的 LICENSE 为准：
 
 | 仓 | 实际许可（2026-10-22 核） |
 |---|---|
 | `lgd-hub` | 保留所有权利（自定义 ARR） |
-| `lgd-theory` | 保留所有权利（自定义 ARR；允许署名引用）。**尾巴**：该仓部分论文与徽记文件历史标注 CC BY 4.0，已发布的 Zenodo 快照按彼时标注不变；冲突时以该仓 LICENSE 为准 |
+| `lgd-theory` | **CC BY 4.0**（2026-11-19 起理论线全部文本；已发布的 Zenodo 快照按彼时标注不变） |
 | `silent-failure-catalog` | **分层**：代码 `LICENSE` = MIT；目录正文 `LICENSE-CONTENT` = 保留所有权利 |
 | `lgd-glossary` | **CC BY 4.0**（可商用，须署名） |
 | `uibc-core` | **分层**：代码 Apache-2.0；理论文本 / 方法论 / 规范性表述保留所有权利（该仓 NOTICE.md 明写） |
